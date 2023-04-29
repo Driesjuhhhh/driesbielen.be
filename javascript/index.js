@@ -18,5 +18,5 @@ function calculateAge() {
 
 window.onload = function() {
     const ageParagraph = document.getElementById("age");
-    ageParagraph.textContent = ` ${calculateAge()} jaar oud`;
+    ageParagraph.textContent = ` ${calculateAge()} jaar`;
 }

@@ -101,8 +101,38 @@ main img {
     background-color: #3b5998;
 }
 
+.social-button.github:hover:before {
+    content: "Github";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3b5998;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
 .social-button.spotify {
     background-color: #1ed760;
+}
+
+.social-button.spotify:hover:before {
+    content: "Spotify";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1ed760;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
 }
 
 /* Email */
@@ -110,8 +140,57 @@ main img {
     background-color: cornflowerblue;
 }
 
+.social-button.email:hover:before {
+    content: "Contact";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+.social-button.youtube {
+    background-color: #ff0000;
+}
+
+.social-button.youtube:hover:before {
+    content: "Youtube";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff0000;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
 .social-button.twitter {
     background-color: #1da1f2;
+}
+
+.social-button.twitter:hover:before {
+    content: "Twitter";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1da1f2;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
 }
 
 .social-button.twitch {
@@ -126,12 +205,46 @@ main img {
     );
 }
 
+.social-button.twitch:hover:before {
+    content: "Twitch";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(
+            135deg,
+            #405de6,
+            #5851db,
+            #833ab4,
+            #c13584,
+            #e1306c,
+            #fd1d1d
+    );
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
 .social-button.linkedin {
     background-color: #0077b5;
 }
 
-.social-button.youtube {
-    background-color: #ff0000;
+.social-button.linkedin:hover:before {
+    content: "Linkedin";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0077b5;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
 }
 
 .w1 {

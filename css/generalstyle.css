@@ -67,6 +67,9 @@ main {
     text-align: center;
 }
 
+.big-font {
+    font-size: 20px;
+}
 
 .w1 {
     width: calc(100% / 12);
@@ -114,4 +117,23 @@ main {
 
 .w12 {
     width: 100%;
+}
+
+.margin1{
+    margin-left:  10px;
+}
+@media screen and (max-width: 1150px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .person-picture {
+        margin-bottom: 1rem;
+        width: calc(100% * 5 / 12);;
+    }
+    .big-font{
+        font-size: 17px;
+    }
+
 }

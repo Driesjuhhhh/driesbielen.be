@@ -16,7 +16,7 @@ function calculateAge() {
     return age;
 }
 
-window.onload = function() {
+window.onload = function () {
     const ageParagraph = document.getElementById("age");
     ageParagraph.textContent = ` ${calculateAge()} jaar`;
-}
+};

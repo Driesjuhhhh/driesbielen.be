@@ -119,9 +119,10 @@ main {
     width: 100%;
 }
 
-.margin1{
-    margin-left:  10px;
+.margin1 {
+    margin-left: 10px;
 }
+
 @media screen and (max-width: 1150px) {
     .card {
         display: flex;
@@ -130,10 +131,9 @@ main {
     }
     .person-picture {
         margin-bottom: 1rem;
-        width: calc(100% * 5 / 12);;
+        width: calc(100% * 5 / 12);
     }
-    .big-font{
+    .big-font {
         font-size: 17px;
     }
-
 }

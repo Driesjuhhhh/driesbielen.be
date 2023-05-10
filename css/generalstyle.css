@@ -123,6 +123,12 @@ main {
     margin-left: 10px;
 }
 
+.top-left{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
 @media screen and (max-width: 1150px) {
     .card {
         display: flex;

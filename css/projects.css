@@ -57,6 +57,26 @@
     margin-top: 5px;
 }
 
+.social-button.code {
+    background-color: #3b5998;
+}
+
+.social-button.code:hover:before {
+    content: "Open project";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #3b5998;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+
 .margin-top{
     margin-top: 7px;
 }

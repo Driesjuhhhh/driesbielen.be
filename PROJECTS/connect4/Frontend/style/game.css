@@ -1,0 +1,59 @@
+td {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: lightgray;
+    padding: 5px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 12px;
+}
+
+.board {
+    background: rgba(0, 0, 255, 75%);
+    z-index: 1;
+    border: 4px solid black;
+}
+
+aside.card {
+    position: absolute;
+    left: 1rem;
+    padding: 2rem;
+}
+
+dt {
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.badge {
+    font-weight: bold;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.badge.red,
+td.red {
+    background-color: red;
+}
+
+.badge.yellow,
+td.yellow {
+    background-color: yellow;
+}
+
+
+@media screen and (max-width: 1600px) {
+    td {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: lightgray;
+        padding: 5px;
+    }
+
+}

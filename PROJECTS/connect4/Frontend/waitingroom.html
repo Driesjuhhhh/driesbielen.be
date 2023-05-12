@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>Waitingroom</title>
+        <meta charset="utf-8" />
+        <link
+            rel="shortcut icon"
+            href="assets/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/waitingroom.css" />
+        <script type="module" src="./js/waitingroom.js" defer></script>
+        <script type="module" src="./js/scripts.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">
+                <img
+                    id="rotate-on-join"
+                    class="rotate-element-hover"
+                    src="assets/logo.png"
+                    alt="logo"
+                />
+            </a>
+            <nav>
+                <a class="d-none" id="login" href="index.html">Login</a>
+                <a class="d-none" id="logout" href="index.html">Logout</a>
+                <a href="register.html">Register</a>
+                <a href="waitingroom.html">Waitingroom</a>
+                <a href="team.html">Team</a>
+            </nav>
+        </header>
+        <main class="d-flex flex-column">
+            <div class="w6 card text-center">
+                <h1>Choose your game field size</h1>
+            </div>
+            <div class="w6 card text-center">
+                <h1>Field size:</h1>
+                <section class="w12 form-buttons">
+                    <div
+                        class="d-flex justify-content-center align-content-center text-center pb-3"
+                    >
+                        <input
+                            class="w2 btn border-1"
+                            id="gameRowCount"
+                            type="number"
+                            min="4"
+                            max="8"
+                            value="6"
+                        />
+                        <div class="d-flex align-content-center w1">
+                            <span
+                                class="d-flex justify-content-center align-items-center bold big-font"
+                            >
+                                X
+                            </span>
+                        </div>
+                        <input
+                            class="w2 btn border-1"
+                            id="gameColumnCount"
+                            type="number"
+                            min="4"
+                            max="8"
+                            value="7"
+                        />
+                    </div>
+                </section>
+            </div>
+            <div class="w6 card text-center" id="joinQueue">
+                <h1>Join Waiting Pool</h1>
+                <section class="w12 form-buttons">
+                    <div
+                        class="d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <span class="d-none error-message" id="errorMessage">
+                            Something went wrong :(
+                        </span>
+                        <button class="btn btn-primary w4" id="joinRoom">
+                            Join Match Queue
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <div class="w6 card text-center d-none" id="matchmaking">
+                <h1>Matchmaking</h1>
+                <section class="w12 pb-3">
+                    <span id="waiting-status">Searching for opponent...</span>
+                </section>
+                <section class="w12 form-buttons mt-4">
+                    <div
+                        class="d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <button class="btn btn-danger w4" id="cancelMatch">
+                            Cancel Matchmaking
+                        </button>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

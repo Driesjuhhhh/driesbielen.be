@@ -1,0 +1,280 @@
+:root {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+        "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+    height: 100%;
+    background-image: linear-gradient(
+        to right top,
+        #4d0f5e,
+        #651779,
+        #7d1f95,
+        #9727b2,
+        #b22fd0,
+        #b22fd0,
+        #b22fd0,
+        #b22fd0,
+        #9727b2,
+        #7d1f95,
+        #651779,
+        #4d0f5e
+    );
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    width: 100%;
+    background-color: #00000044;
+    height: 60px;
+    backdrop-filter: opacity(0.25);
+}
+
+header img {
+    position: fixed;
+    top: 9px;
+    left: 100px;
+    width: 90px;
+}
+
+header nav {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 20%;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+
+header nav a:hover {
+    transition: 0.5s;
+    color: gray;
+}
+
+.element {
+    float: left;
+    text-align: center;
+}
+
+.row,
+.element,
+input,
+select {
+    box-sizing: border-box;
+}
+
+.row {
+    clear: both;
+    overflow: auto;
+    margin: 30px;
+}
+
+input,
+label,
+select,
+span {
+    display: block;
+    width: 100%;
+}
+
+.w1 {
+    width: calc(100% / 12);
+}
+
+.w2 {
+    width: calc(100% / 6);
+}
+
+.w3 {
+    width: 25%;
+}
+
+.w4 {
+    width: calc(100% / 3);
+}
+
+.w5 {
+    width: calc(100% * 5 / 12);
+}
+
+.w6 {
+    width: 50%;
+}
+
+.w7 {
+    width: calc(100% * 7 / 12);
+}
+
+.w8 {
+    width: calc(100% * 2 / 3);
+}
+
+.w9 {
+    width: 75%;
+}
+
+.w10 {
+    width: calc(100% * 5 / 6);
+}
+
+.w11 {
+    width: calc(100% * 11 / 12);
+}
+
+.w12 {
+    width: 100%;
+}
+
+.rotate-element-hover:hover {
+    animation: rotation 0.5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.btn {
+    padding: 0.8rem 2.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    filter: brightness(0.9);
+    transition: 0.2s;
+}
+
+.btn[disabled] {
+    cursor: not-allowed;
+    filter: brightness(0.8);
+    background-color: gray;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card {
+    box-shadow: 0px 0px 5.3px rgba(0, 0, 0, 0.04),
+        0px 0px 17.9px rgba(0, 0, 0, 0.06), 0px 0px 80px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff99;
+    border-radius: 1rem;
+    padding: 0.75rem;
+    margin: 1rem;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.rounded {
+    border-radius: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.error-message {
+    color: red;
+    margin: 1.5rem;
+}
+
+.succes-message {
+    color: green;
+    margin: 1.5rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.border-1 {
+    border: 1px solid black;
+}
+
+.align-content-center {
+    align-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+.big-font {
+    font-size: 23px;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.pb-3 {
+    padding-bottom: 1rem;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}

@@ -1,0 +1,24 @@
+.main-content {
+    width: 75%;
+}
+
+p {
+    display: block;
+}
+
+main article h1 {
+    font-size: 26px;
+}
+
+.rotate-on-join {
+    animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}

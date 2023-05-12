@@ -4,12 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            rel="shortcut icon"
-            href="assets/favicon.ico"
-            type="image/x-icon"
-        />
-        <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+        <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="style/style.css" />
         <link rel="stylesheet" href="style/game.css" />
         <script type="module" src="./js/game.js" defer></script>
@@ -33,12 +29,16 @@
             </nav>
         </header>
         <main>
+            <p id="result_paragraaf" class="result"></p>
             <article class="input-form card board">
                 <output id="grid_output"></output>
-                <span class="d-none error-message" id="errorMessage">
-                    Something went wrong :(
-                </span>
             </article>
+            <span
+                class="error-message text-center card w2 d-none"
+                id="errorMessage"
+            >
+                Something went wrong :(
+            </span>
         </main>
         <aside class="card">
             <h1>Information</h1>

@@ -66,6 +66,20 @@ async function userJoinWaitingPool() {
         document.querySelector("#matchmaking").classList.remove("d-none");
         document.querySelector("#joinQueue").classList.add("d-none");
         document.querySelector("#rotate-on-join").classList.add("rotate-on-join");
+
+        // logo mini-game: logo teleports instead of going to index.html
+        const logoLink = document.getElementById('logoLink');
+        const logo = document.getElementById("rotate-on-join");
+
+        logoLink.href="#";
+        logoLink.addEventListener("click", function(e){
+            const randX = (Math.random() * 100).toString();
+            const randY = (Math.random() * 100).toString();
+            logo.style.top = randY + "vh";
+            logo.style.left = randX + "vw";
+        })
+        // end logo mini game
+
         const interval = setInterval(() => {
             showCandidacyStatus();
         }, 3000);
@@ -149,6 +163,12 @@ async function leaveWaitingPool() {
             document.querySelector("#rotate-on-join").classList.remove("rotate-on-join");
             document.querySelector("#matchmaking").classList.add("d-none");
             document.querySelector("#joinQueue").classList.remove("d-none");
+
+            // logo position reset
+            const logo = document.getElementById("rotate-on-join");
+            logo.style.top = "9px";
+            logo.style.left = "100px";
+            logoLink.href="index.html";
         } else {
             showError(
                 "Something went wrong while leaving the waiting pool... Please try again later"

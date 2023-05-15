@@ -45,11 +45,6 @@ td.red {
 td.yellow {
     background-color: yellow;
 }
-.result{
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-}
 
 .result {
     font-size: 3rem;

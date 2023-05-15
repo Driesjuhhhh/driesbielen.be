@@ -14,6 +14,8 @@ async function slideDiscIn(column) {
 
     if (game.playerToPlayId != user.user.id) return;
 
+    if (game.finished) return;
+
     console.log("Sliding disc in column " + column);
 
     const gameID = localStorage.getItem("gameId");
@@ -56,13 +58,20 @@ async function slideDiscIn(column) {
 /**
  * Refreshes the game board and colors the cells
  * @param {*} game
+ * @param {IMove[]} possibleMoves
  */
-function updateGameBoard(game) {
+function updateGameBoard(game, possibleMoves) {
     const table = document.querySelector("table");
 
     for (let i = 0; i < game.grid.numberOfRows; i++) {
         for (let j = 0; j < game.grid.numberOfColumns; j++) {
             const td = table.rows[i].cells[j];
+
+            if (possibleMoves && possibleMoves.some(x => x.column == j)) {
+                td.classList.remove("blocked");
+            } else {
+                td.classList.add("blocked");
+            }
 
             if (game.grid.cells[i][j] == null) continue;
 
@@ -112,6 +121,43 @@ function switchPlayerTurn(game, user) {
 }
 
 /**
+ * Returns all the possible moves for the current game
+ * @param {IGame} game 
+ * @returns All possible moves
+ */
+async function getAllPossibleMoves(game) {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (game.playerToPlayId != user.user.id) return;
+
+    if (game.finished) return;
+
+    const url = BACKEND_URL + "Games/" + game.id + "/possible-moves";
+
+    const response = await fetch(url, {
+        method: "GET",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + user.token,
+        },
+    }).catch((error) => showError(error));
+
+    // Check if the response is valid
+    if (!response) return;
+
+    // Check if the response is ok
+    if (response.ok) {
+        return await response.json();
+    } else {
+        showError(
+            "Invalid response from server, something might have gone wrong while setting up the game."
+        );
+    }
+
+}
+
+/**
  * Checks if the game is finished and lets the players know if it is
  * @param {*} game
  */
@@ -124,4 +170,4 @@ function checkGameFinished(game) {
     finishGame(game);
 }
 
-export { slideDiscIn, updateGameBoard, switchPlayerTurn, checkGameFinished };
+export { slideDiscIn, updateGameBoard, switchPlayerTurn, getAllPossibleMoves, checkGameFinished };

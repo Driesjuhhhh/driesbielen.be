@@ -1,5 +1,7 @@
 body {
   height: auto;
+  /* Page itself is already long, use the longer image here to fill the screen */
+  background: url('/assets/connect4Phone.png');
 }
 
 .group-image {

@@ -6,6 +6,7 @@ import {
     updateGameBoard,
     switchPlayerTurn,
     checkGameFinished,
+    getAllPossibleMoves
 } from "./game.update.js";
 
 if (localStorage.getItem("user") === null) {
@@ -30,8 +31,10 @@ async function gameSync() {
     // Get the user from the local storage
     const user = JSON.parse(localStorage.getItem("user"));
 
+    const possibleMoves = await getAllPossibleMoves(game);
+
     // Update the game board
-    updateGameBoard(game);
+    updateGameBoard(game, possibleMoves);
 
     // Switch the player turn
     switchPlayerTurn(game, user.user);

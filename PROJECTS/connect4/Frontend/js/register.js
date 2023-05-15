@@ -161,7 +161,7 @@ async function doRegisterUser() {
         window.location = "./index.html";
     } else {
         // Response from server was not ok
-        showError("Something went wrong :(");
+        showError((await response.json()).message);
     }
 }
 

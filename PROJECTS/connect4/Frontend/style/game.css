@@ -51,6 +51,29 @@ td.yellow {
     font-weight: bold;
 }
 
+.result {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#gameHeader {
+    margin: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.result.victory {
+    color: green;
+}
+
+.result.defeat {
+    color: red;
+}
+
+.result.draw {
+    color: blue;
+}
 
 @media screen and (max-width: 1600px) {
     td {
@@ -60,9 +83,63 @@ td.yellow {
         background-color: lightgray;
         padding: 5px;
     }
-
 }
 
 main {
     flex-direction: column;
+}
+
+table td.winning {
+    animation: highlight 1s ease-in-out infinite alternate;
+}
+
+@keyframes highlight {
+    from {
+        filter: brightness(1);
+    }
+
+    to {
+        filter: brightness(0.5);
+    }
+}
+
+.game-win-modal {
+    border: 0;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2.5rem;
+    width: 50%;
+}
+
+dialog[open] {
+    animation: animateDialog 1.25s ease-in-out;
+}
+
+dialog[open]::backdrop {
+    /* background: rgba(0, 0, 0, 0); */
+    animation: animateDialog 1.25s ease-in-out;
+}
+
+@keyframes animateDialog {
+    from {
+        transform: translate(0%, 225%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+.blocked {
+    cursor: not-allowed;
+}
+
+.possible-column {
+    cursor: pointer;
+    filter: brightness(1.25);
+}
+
+.blocked.possible-column {
+    cursor: not-allowed;
+    filter: brightness(1);
 }

@@ -31,7 +31,13 @@
             </nav>
         </header>
         <main>
-            <p id="result_paragraaf" class="result"></p>
+            <dialog class="game-win-modal" id="gameDialog">
+                <form method="dialog" onsubmit="window.location.href='/waitingroom.html'">
+                    <h1 id="gameResult" class="result"></h1>
+                    <button type="submit" class="btn btn-primary">Back to Waiting Room</button>
+                </form>
+            </dialog>
+            <h2 id="gameHeader" class="result d-none"></h2>
             <article class="input-form card board">
                 <output id="grid_output"></output>
             </article>

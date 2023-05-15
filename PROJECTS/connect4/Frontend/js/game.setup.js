@@ -85,12 +85,34 @@ function createGrid(rows, columns) {
             const td = document.createElement("td");
 
             td.addEventListener("click", () => slideDiscIn(j));
+            td.addEventListener("mouseover", () => highlightHoveringColumn(j));
+            td.addEventListener("mouseout", () => removeColumnHighlight(j));
 
             tr.appendChild(td);
         }
     }
 
     output.appendChild(table);
+}
+
+function highlightHoveringColumn(column) {
+    const table = document.querySelector("#grid_output table");
+    
+    for (let i = 0; i < table.rows.length; i++) {
+        const td = table.rows[i].cells[column];
+
+        td.classList.add("possible-column");
+    }
+}
+
+function removeColumnHighlight(column) {
+    const table = document.querySelector("#grid_output table");
+    
+    for (let i = 0; i < table.rows.length; i++) {
+        const td = table.rows[i].cells[column];
+
+        td.classList.remove("possible-column");
+    }
 }
 
 export { setUpGame };

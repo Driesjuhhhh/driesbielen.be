@@ -66,13 +66,15 @@ async function userJoinWaitingPool() {
         document.querySelector("#matchmaking").classList.remove("d-none");
         document.querySelector("#joinQueue").classList.add("d-none");
         document.querySelector("#rotate-on-join").classList.add("rotate-on-join");
+        const audioPlayer = document.getElementById("audioPlayer");
+        audioPlayer.play();
 
         // logo mini-game: logo teleports instead of going to index.html
-        const logoLink = document.getElementById('logoLink');
+        const logoLink = document.getElementById("logoLink");
         const logo = document.getElementById("rotate-on-join");
 
-        logoLink.href="#";
-        logoLink.addEventListener("click", function(e){
+        logoLink.href = "#";
+        logoLink.addEventListener("click", function(e) {
             const randX = (Math.random() * 100).toString();
             const randY = (Math.random() * 100).toString();
             logo.style.top = randY + "vh";
@@ -163,12 +165,14 @@ async function leaveWaitingPool() {
             document.querySelector("#rotate-on-join").classList.remove("rotate-on-join");
             document.querySelector("#matchmaking").classList.add("d-none");
             document.querySelector("#joinQueue").classList.remove("d-none");
+            const audioPlayer = document.getElementById("audioPlayer");
+            audioPlayer.pause();
 
             // logo position reset
             const logo = document.getElementById("rotate-on-join");
             logo.style.top = "9px";
             logo.style.left = "100px";
-            logoLink.href="index.html";
+            logoLink.href = "index.html";
         } else {
             showError(
                 "Something went wrong while leaving the waiting pool... Please try again later"

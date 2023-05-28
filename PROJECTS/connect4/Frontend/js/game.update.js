@@ -8,6 +8,7 @@ import { getGame, showError } from "./game.shared.js";
  * Sends a request to the server to slide a disc in the given column
  * @param {Number} column
  */
+
 async function slideDiscIn(column) {
     const game = await getGame();
     const user = JSON.parse(localStorage.getItem("user"));
@@ -44,7 +45,7 @@ async function slideDiscIn(column) {
         const game = await getGame();
 
         // Update the game board
-        updateGameBoard(game);
+        //updateGameBoard(game);
 
         // Switch the player turn
         switchPlayerTurn(game, user.user);
@@ -67,7 +68,7 @@ function updateGameBoard(game, possibleMoves) {
         for (let j = 0; j < game.grid.numberOfColumns; j++) {
             const td = table.rows[i].cells[j];
 
-            if (possibleMoves && possibleMoves.some(x => x.column == j)) {
+            if (possibleMoves && possibleMoves.some((x) => x.column == j)) {
                 td.classList.remove("blocked");
             } else {
                 td.classList.add("blocked");
@@ -75,13 +76,13 @@ function updateGameBoard(game, possibleMoves) {
 
             if (game.grid.cells[i][j] == null) continue;
 
-            td.classList.remove("red");
-            td.classList.remove("yellow");
+            td.classList.remove("player1-color");
+            td.classList.remove("player2-color");
 
             if (game.grid.cells[i][j].Color == 1) {
-                td.classList.add("red");
+                td.classList.add("player1-color");
             } else {
-                td.classList.add("yellow");
+                td.classList.add("player2-color");
             }
         }
     }
@@ -98,31 +99,31 @@ function switchPlayerTurn(game, user) {
     if (game.playerToPlayId == user.id) {
         playerTurn.innerHTML = "Your turn";
 
-        playerTurn.classList.remove("yellow");
-        playerTurn.classList.remove("red");
+        playerTurn.classList.remove("player2-color");
+        playerTurn.classList.remove("player1-color");
 
         if (game.player1.id == user.id) {
-            playerTurn.classList.add("red");
+            playerTurn.classList.add("player1-color");
         } else {
-            playerTurn.classList.add("yellow");
+            playerTurn.classList.add("player2-color");
         }
     } else {
         playerTurn.innerHTML = "Opponent turn";
 
-        playerTurn.classList.remove("yellow");
-        playerTurn.classList.remove("red");
+        playerTurn.classList.remove("player2-color");
+        playerTurn.classList.remove("player1-color");
 
         if (game.player1.id == user.id) {
-            playerTurn.classList.add("yellow");
+            playerTurn.classList.add("player2-color");
         } else {
-            playerTurn.classList.add("red");
+            playerTurn.classList.add("player1-color");
         }
     }
 }
 
 /**
  * Returns all the possible moves for the current game
- * @param {IGame} game 
+ * @param {IGame} game
  * @returns All possible moves
  */
 async function getAllPossibleMoves(game) {
@@ -154,7 +155,6 @@ async function getAllPossibleMoves(game) {
             "Invalid response from server, something might have gone wrong while setting up the game."
         );
     }
-
 }
 
 /**
@@ -170,4 +170,10 @@ function checkGameFinished(game) {
     finishGame(game);
 }
 
-export { slideDiscIn, updateGameBoard, switchPlayerTurn, getAllPossibleMoves, checkGameFinished };
+export {
+    slideDiscIn,
+    updateGameBoard,
+    switchPlayerTurn,
+    getAllPossibleMoves,
+    checkGameFinished,
+};

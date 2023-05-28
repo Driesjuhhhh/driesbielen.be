@@ -1,3 +1,12 @@
+:root {
+    --color-player1: red;
+    --color-player2: yellow;
+}
+
+main {
+    padding-top: 0;
+}
+
 td {
     width: 90px;
     height: 90px;
@@ -13,14 +22,20 @@ table {
 
 .board {
     background: rgba(0, 0, 255, 75%);
-    z-index: 1;
+    width: fit-content;
     border: 4px solid black;
 }
 
-aside.card {
-    position: absolute;
-    left: 1rem;
-    padding: 2rem;
+aside.game-info {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+}
+
+div.card:not(.chat-card) {
+    padding: 2.5rem;
+    width: 85%;
 }
 
 dt {
@@ -36,14 +51,16 @@ dt {
     text-align: center;
 }
 
-.badge.red,
-td.red {
-    background-color: red;
+.badge.player1-color,
+td.player1-color,
+#discAnimation.player1-color {
+    background-color: var(--color-player1);
 }
 
-.badge.yellow,
-td.yellow {
-    background-color: yellow;
+.badge.player2-color,
+td.player2-color,
+#discAnimation.player2-color {
+    background-color: var(--color-player2);
 }
 
 .result {
@@ -70,6 +87,17 @@ td.yellow {
     color: blue;
 }
 
+#discAnimation {
+    left: -100px;
+    top: -100px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: green;
+    z-index: 999;
+}
+
 @media screen and (max-width: 1600px) {
     td {
         width: 50px;
@@ -78,14 +106,21 @@ td.yellow {
         background-color: lightgray;
         padding: 5px;
     }
-}
 
-main {
-    flex-direction: column;
+    #discAnimation {
+        left: -100px;
+        top: -100px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: absolute;
+        background-color: green;
+        z-index: 999;
+    }
 }
 
 table td.winning {
-    animation: highlight 1s ease-in-out infinite alternate;
+    animation: highlight 0.5s ease-in-out infinite alternate;
 }
 
 @keyframes highlight {
@@ -137,4 +172,33 @@ dialog[open]::backdrop {
 .blocked.possible-column {
     cursor: not-allowed;
     filter: brightness(1);
+}
+
+#helpButton {
+    z-index: 999;
+}
+@media screen and (max-width: 800px) {
+    .input-form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .input-form {
+        width: 100%;
+        margin-top: 120px;
+    }
+}
+
+aside.connected-users {
+    grid-row: 2;
+    grid-column: 3;
+
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+}
+
+div.chat-card {
+    grid-row: 2;
+    text-align: center;
 }

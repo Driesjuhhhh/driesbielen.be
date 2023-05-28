@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.getElementById("logout").addEventListener("click", logout);
+document.getElementById("headerButton").addEventListener("click", showheader);
+
 
 function checkIfUserIsLoggedIn() {
     const isLoggedIn = localStorage.getItem("user");
@@ -26,4 +28,16 @@ function checkIfUserIsLoggedIn() {
 function logout() {
     localStorage.removeItem("user");
     localStorage.removeItem("gameId");
+}
+
+function showheader(){
+    const header = document.getElementById("header");
+    const inputForm = document.getElementsByClassName("input-form");
+    if (header.style.display === "none") {
+        header.style.display = "block";
+        header.style.height = "110px";
+        inputForm.style.marginTop = "150px";
+    } else  {
+        header.style.display = "none";
+    }
 }

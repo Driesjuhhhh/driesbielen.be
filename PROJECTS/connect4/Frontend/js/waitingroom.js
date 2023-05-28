@@ -1,5 +1,10 @@
 "use strict";
 import { BACKEND_URL, GUID_EMPTY } from "./config.js";
+import {
+    SendMessage,
+    GetAllUsers,
+    ConnectSignalR,
+} from "./waitingroom.chat.js";
 
 if (localStorage.getItem("user") === null) {
     // if the user is not logged in, redirect to the login page
@@ -8,11 +13,46 @@ if (localStorage.getItem("user") === null) {
 
 let count = 0;
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await ConnectSignalR();
+
     const button = document.getElementById("joinRoom");
     button.addEventListener("click", userJoinWaitingPool);
     const leaveButton = document.getElementById("cancelMatch");
     leaveButton.addEventListener("click", leaveWaitingPool);
+    //helpbutton start
+    const helpButton = document.getElementById("helpButton");
+    helpButton.addEventListener("click", showHelp);
+    //helpbutton end
+
+    const chatInput = document.getElementById("chat-input");
+    chatInput.onkeyup = async (event) => {
+        if (event.key === "Enter") {
+            await SendMessage(event);
+        }
+    };
+
+    const chatButton = document.getElementById("send-chat");
+    chatButton.onclick = async (event) => {
+        await SendMessage(event);
+    };
+
+    const viewUsers = document.getElementById("view-users");
+
+    viewUsers.onclick = async () => {
+        await GetAllUsers();
+    };
+
+    const viewChat = document.getElementById("view-chat");
+
+    viewChat.onclick = () => {
+        const chat = document.getElementById("chat-screen");
+        const users = document.getElementById("user-screen");
+        chat.classList.remove("d-none");
+        users.classList.add("d-none");
+        viewChat.classList.add("active");
+        viewUsers.classList.remove("active");
+    };
 });
 
 function checkInput() {
@@ -65,7 +105,9 @@ async function userJoinWaitingPool() {
 
         document.querySelector("#matchmaking").classList.remove("d-none");
         document.querySelector("#joinQueue").classList.add("d-none");
-        document.querySelector("#rotate-on-join").classList.add("rotate-on-join");
+        document
+            .querySelector("#rotate-on-join")
+            .classList.add("rotate-on-join");
         const audioPlayer = document.getElementById("audioPlayer");
         audioPlayer.play();
 
@@ -74,12 +116,12 @@ async function userJoinWaitingPool() {
         const logo = document.getElementById("rotate-on-join");
 
         logoLink.href = "#";
-        logoLink.addEventListener("click", function(e) {
+        logoLink.addEventListener("click", function (e) {
             const randX = (Math.random() * 100).toString();
             const randY = (Math.random() * 100).toString();
             logo.style.top = randY + "vh";
             logo.style.left = randX + "vw";
-        })
+        });
         // end logo mini game
 
         const interval = setInterval(() => {
@@ -162,7 +204,9 @@ async function leaveWaitingPool() {
 
         if (response.ok) {
             console.log(response);
-            document.querySelector("#rotate-on-join").classList.remove("rotate-on-join");
+            document
+                .querySelector("#rotate-on-join")
+                .classList.remove("rotate-on-join");
             document.querySelector("#matchmaking").classList.add("d-none");
             document.querySelector("#joinQueue").classList.remove("d-none");
             const audioPlayer = document.getElementById("audioPlayer");
@@ -190,4 +234,14 @@ function showError(message) {
     error.classList.remove("d-none");
     error.innerHTML = message;
     console.error(message);
+}
+
+//helpbutton start
+async function showHelp() {
+    const help = document.getElementById("help");
+    if (help.style.visibility === "hidden" || help.style.visibility === "") {
+        help.style.visibility = "visible";
+    } else {
+        help.style.visibility = "hidden";
+    }
 }

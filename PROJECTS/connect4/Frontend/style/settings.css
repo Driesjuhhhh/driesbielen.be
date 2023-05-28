@@ -1,0 +1,105 @@
+.main-content {
+    width: 75%;
+}
+
+p {
+    display: block;
+}
+
+main article h1 {
+    font-size: 26px;
+}
+
+.color-picker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#colorSelect {
+    padding: 8px;
+}
+#colorSelect2 {
+    padding: 8px;
+}
+
+#colorDisplay {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+#colorDisplay2 {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+}
+
+#colorSelect option[value="#ff0000"] {
+    background-color: #ff0000;
+    color: #fff;
+}
+#colorSelect2 option[value="#ff0000"] {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+#colorSelect option[value="#00ff00"] {
+    background-color: #00ff00;
+    color: #000;
+}
+#colorSelect2 option[value="#00ff00"] {
+    background-color: #00ff00;
+    color: #000;
+}
+
+#colorSelect option[value="#0000ff"] {
+    background-color: #0000ff;
+    color: #fff;
+}
+#colorSelect2 option[value="#0000ff"] {
+    background-color: #0000ff;
+    color: #fff;
+}
+
+#colorSelect option[value="#ffff00"] {
+    background-color: #ffff00;
+    color: #000;
+}
+#colorSelect2 option[value="#ffff00"] {
+    background-color: #ffff00;
+    color: #000;
+}
+
+#colorSelect option[value="#ff00ff"] {
+    background-color: #ff00ff;
+    color: #000;
+}
+#colorSelect2 option[value="#ff00ff"] {
+    background-color: #ff00ff;
+    color: #000;
+}
+
+#colorSelect option[value="#00ffff"] {
+    background-color: #00ffff;
+    color: #000;
+}
+#colorSelect2 option[value="#00ffff"] {
+    background-color: #00ffff;
+    color: #000;
+}
+
+@media screen and (max-width: 800px) {
+    .input-form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .input-form {
+        width: 100%;
+        margin-top: 120px;
+    }
+}

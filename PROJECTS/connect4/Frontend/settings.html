@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    xmlns="http://www.w3.org/1999/html"
+    xmlns="http://www.w3.org/1999/html"
+>
+    <head>
+        <title>Connect 4 | Settings</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+        <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/settings.css" />
+        <script type="module" src="./js/settings.js" defer></script>
+        <script type="module" src="./js/scripts.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/c2e4631732.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <button class="" id="headerButton">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <header id="header">
+            <a href="index.html">
+                <img
+                    class="rotate-element-hover"
+                    src="assets/Logo.png"
+                    alt="logo"
+                />
+            </a>
+            <nav id="responsive-nav">
+                <a class="d-none" id="login" href="index.html">Login</a>
+                <a class="d-none" id="logout" href="index.html">Logout</a>
+                <a href="register.html">Register</a>
+                <a href="waitingroom.html">Waitingroom</a>
+                <a href="team.html">Team</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </header>
+        <main class="d-flex flex-column">
+            <div class="w12 card text-center">
+                <h1>Choose your game colors</h1>
+            </div>
+            <div class="w12 card text-center">
+                <h1>Colors:</h1>
+                <section class="w12 form-buttons">
+                    <div
+                        class="d-flex justify-content-center align-content-center text-center pb-3"
+                    >
+                        <div class="color-picker">
+                            <select id="colorSelect">
+                                <option value="#ff0000">Default color</option>
+                                <option value="#00ff00">Green</option>
+                                <option value="#0000ff">Blue</option>
+                                <option value="#ffff00">Yellow</option>
+                                <option value="#ff00ff">Magenta</option>
+                                <option value="#00ffff">Cyan</option>
+                            </select>
+                        </div>
+                        <div class="d-flex align-content-center w1">
+                            <span
+                                class="d-flex justify-content-center align-items-center bold big-font"
+                            >
+                                X
+                            </span>
+                        </div>
+                        <div class="color-picker">
+                            <select id="colorSelect2">
+                                <option value="#ffff00">Default color</option>
+                                <option value="#ff0000">Red</option>
+                                <option value="#00ff00">Green</option>
+                                <option value="#0000ff">Blue</option>
+                                <option value="#ff00ff">Magenta</option>
+                                <option value="#00ffff">Cyan</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="w12 card text-center" id="joinQueue">
+                <section class="w12 form-buttons">
+                    <div
+                        class="d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <span class="d-none error-message" id="errorMessage">
+                            You have selected the same colors
+                        </span>
+                        <span class="d-none succes-message" id="succesMessage">
+                            Colors are set up
+                        </span>
+                        <button class="btn btn-primary w4" id="setupColor">
+                            Submit
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <div class="w12 card text-center d-none" id="matchmaking">
+                <h1>Matchmaking</h1>
+                <section class="w12 pb-3">
+                    <span id="waiting-status">Searching for opponent...</span>
+                </section>
+                <section class="w12 form-buttons mt-4">
+                    <div
+                        class="d-flex justify-content-center align-items-center flex-column"
+                    >
+                        <button class="btn btn-danger w4" id="cancelMatch">
+                            Cancel Matchmaking
+                        </button>
+                        <audio
+                            id="audioPlayer"
+                            class="d-none"
+                            src="assets/waitingmusic.mp3"
+                        ></audio>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="rules" id="help">
+                <h1>Settings:</h1>
+                <p>- You can't select the same colors</p>
+            </aside>
+            <button id="helpButton">
+                <img alt="help" src="assets/helpButton.png" />
+            </button>
+        </main>
+    </body>
+</html>

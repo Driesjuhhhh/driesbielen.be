@@ -15,6 +15,6 @@ iframe {
 @media screen and (max-width: 430px) {
     iframe{
         width: 250px;
-        height: 600px;
+        height: 500px;
     }
 }

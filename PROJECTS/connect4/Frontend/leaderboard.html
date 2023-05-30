@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html
+    lang="en"
+    xmlns="http://www.w3.org/1999/html"
+    xmlns="http://www.w3.org/1999/html"
+>
+    <head>
+        <title>Connect 4 | Settings</title>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+        <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="style/leaderboard.css" />
+        <script type="module" src="./js/scripts.js" defer></script>
+        <script type="module" src="./js/leaderboard.js" defer></script>
+    </head>
+    <body>
+        <button class="" id="headerButton">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <header id="header">
+            <a href="index.html">
+                <img
+                    class="rotate-element-hover"
+                    src="assets/Logo.png"
+                    alt="logo"
+                />
+            </a>
+            <nav id="responsive-nav">
+                <a class="d-none" id="login" href="index.html">Login</a>
+                <a class="d-none" id="logout" href="index.html">Logout</a>
+                <a href="register.html">Register</a>
+                <a href="waitingroom.html">Waitingroom</a>
+                <a href="team.html">Team</a>
+                <a href="leaderboard.html">Leaderboard</a>
+                <a href="settings.html">Settings</a>
+            </nav>
+        </header>
+        <main class="d-flex flex-column">
+            <div class="card d-flex flex-column">
+                <h1 class="title">Leaderboard</h1>
+                <ol id="leaderboard"></ol>
+            </div>
+        </main>
+    </body>
+</html>

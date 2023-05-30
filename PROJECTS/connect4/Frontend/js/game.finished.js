@@ -1,10 +1,12 @@
 "use strict";
 
+import { BACKEND_URL } from "./config.js";
+
 /**
  * Show and change the game board to show the winner
  * @param {*} game
  */
-function finishGame(game) {
+async function finishGame(game) {
     const gameResult = document.getElementById("gameResult");
     const gameHeader = document.getElementById("gameHeader");
 
@@ -31,6 +33,8 @@ function finishGame(game) {
 
         gameResult.innerText = "Victory!";
         gameHeader.innerText = "You won!";
+
+        await updateLeaderboardWithGame(game.id);
     } else {
         gameResult.classList.add("defeat");
         gameHeader.classList.add("defeat");
@@ -125,6 +129,23 @@ function drawGame() {
     gameHeader.innerText = "Draw!";
 
     gameHeader.classList.remove("d-none");
+}
+
+async function updateLeaderboardWithGame(gameId) {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    const url = BACKEND_URL + `Leaderboard/evaluate-game/${gameId}`;
+
+    await fetch(url, {
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+        },
+    }).catch((error) => {
+        console.error(error);
+    });
 }
 
 export { finishGame };

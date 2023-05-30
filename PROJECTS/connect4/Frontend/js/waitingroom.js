@@ -111,6 +111,9 @@ async function userJoinWaitingPool() {
         const audioPlayer = document.getElementById("audioPlayer");
         audioPlayer.play();
 
+        document.querySelector("#gameRowCount").disabled = true;
+        document.querySelector("#gameColumnCount").disabled = true;
+
         // logo mini-game: logo teleports instead of going to index.html
         const logoLink = document.getElementById("logoLink");
         const logo = document.getElementById("rotate-on-join");
@@ -211,6 +214,9 @@ async function leaveWaitingPool() {
             document.querySelector("#joinQueue").classList.remove("d-none");
             const audioPlayer = document.getElementById("audioPlayer");
             audioPlayer.pause();
+
+            document.querySelector("#gameRowCount").disabled = false;
+            document.querySelector("#gameColumnCount").disabled = false;
 
             // logo position reset
             const logo = document.getElementById("rotate-on-join");

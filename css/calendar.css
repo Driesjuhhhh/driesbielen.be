@@ -2,18 +2,18 @@ iframe {
     border: 0;
     width: 800px;
     height: 600px;
+    border-radius: 0.75rem;
 }
 
-
 @media screen and (max-width: 800px) {
-    iframe{
+    iframe {
         width: 700px;
         height: 500px;
     }
 }
 
 @media screen and (max-width: 430px) {
-    iframe{
+    iframe {
         width: 250px;
         height: 500px;
     }

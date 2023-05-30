@@ -127,7 +127,6 @@ function checkAllValidation() {
  * Sends a post request to the server to register a user
  */
 async function doRegisterUser() {
-
     if (!checkAllValidation()) return;
 
     // Build the url

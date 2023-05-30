@@ -10,6 +10,11 @@
         <link rel="stylesheet" href="style/style.css" />
         <link rel="stylesheet" href="style/game.css" />
         <link rel="stylesheet" href="style/chat.css" />
+        <script type="module" src="./js/help.js" defer></script>
+        <script
+            src="https://kit.fontawesome.com/c2e4631732.js"
+            crossorigin="anonymous"
+        ></script>
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"
             integrity="sha512-k8WL9L2jG8KyG3pCJA4mHMdg2YSoWrdB5QNqLIhROv69udwp87WvbqzbsiAL65wy7T9jHU7rAoePr1ToPBc0Lw=="
@@ -84,7 +89,7 @@
                 </dl>
             </div>
         </aside>
-        <aside class="rules" id="help">
+        <!-- <aside class="rules" id="help">
             <h1>How to play</h1>
             <p>
                 - The goal is to get <b>the chosen amount</b> of discs of
@@ -107,12 +112,12 @@
                 - You can only place a disc when it is your turn (this is
                 indicated on the left)
             </p>
-        </aside>
+        </aside> -->
 
         <aside class="connected-users">
             <div class="card chat-card">
                 <div id="chat-screen">
-                    <h1>Waiting Room Chat</h1>
+                    <h1>Game Chat</h1>
                     <div class="chat-container">
                         <ul id="chat"></ul>
                     </div>
@@ -131,8 +136,8 @@
             </div>
         </aside>
 
-        <button id="helpButton">
+        <!-- <button id="helpButton">
             <img alt="help" src="assets/helpButton.png" />
-        </button>
+        </button> -->
     </body>
 </html>

@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.getElementById("logout").addEventListener("click", logout);
 document.getElementById("headerButton").addEventListener("click", showheader);
 
-
 function checkIfUserIsLoggedIn() {
     const isLoggedIn = localStorage.getItem("user");
     const login = document.getElementById("login");
@@ -30,14 +29,14 @@ function logout() {
     localStorage.removeItem("gameId");
 }
 
-function showheader(){
+function showheader() {
     const header = document.getElementById("header");
     const inputForm = document.getElementsByClassName("input-form");
     if (header.style.display === "none") {
         header.style.display = "block";
         header.style.height = "110px";
         inputForm.style.marginTop = "150px";
-    } else  {
+    } else {
         header.style.display = "none";
     }
 }

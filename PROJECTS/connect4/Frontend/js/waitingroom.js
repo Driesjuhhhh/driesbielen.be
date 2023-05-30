@@ -20,10 +20,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     button.addEventListener("click", userJoinWaitingPool);
     const leaveButton = document.getElementById("cancelMatch");
     leaveButton.addEventListener("click", leaveWaitingPool);
-    //helpbutton start
-    const helpButton = document.getElementById("helpButton");
-    helpButton.addEventListener("click", showHelp);
-    //helpbutton end
+    // //helpbutton start
+    // const helpButton = document.getElementById("helpButton");
+    // helpButton.addEventListener("click", showHelp);
+    // //helpbutton end
 
     const chatInput = document.getElementById("chat-input");
     chatInput.onkeyup = async (event) => {
@@ -83,9 +83,17 @@ async function userJoinWaitingPool() {
 
     const rows = document.getElementById("gameRowCount").value;
     const columns = document.getElementById("gameColumnCount").value;
+    const connectionSize = Number(
+        document.getElementById("gameConnectionSize").value
+    );
 
     // GameSettings model is available in the backend
-    const gameSettings = { GridRows: rows, GridColumns: columns };
+    const gameSettings = {
+        GridRows: rows,
+        GridColumns: columns,
+        ConnectionSize: connectionSize,
+    };
+
     const user = JSON.parse(localStorage.getItem("user"));
 
     const response = await fetch(url, {
@@ -242,12 +250,12 @@ function showError(message) {
     console.error(message);
 }
 
-//helpbutton start
-async function showHelp() {
-    const help = document.getElementById("help");
-    if (help.style.visibility === "hidden" || help.style.visibility === "") {
-        help.style.visibility = "visible";
-    } else {
-        help.style.visibility = "hidden";
-    }
-}
+// //helpbutton start
+// async function showHelp() {
+//     const help = document.getElementById("help");
+//     if (help.style.visibility === "hidden" || help.style.visibility === "") {
+//         help.style.visibility = "visible";
+//     } else {
+//         help.style.visibility = "hidden";
+//     }
+// }

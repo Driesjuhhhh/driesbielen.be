@@ -64,8 +64,10 @@ function discAnimation(discPos, game, possibleMoves) {
         { transform: "translate(0px, 0px)" },
     ];
 
+    const animationDuration = localStorage.getItem("animation-duration") ? Number(localStorage.getItem("animation-duration")) : 500;
+
     const fallTiming = {
-        duration: 500,
+        duration: animationDuration,
         iterations: 1,
         easing: "ease-in",
     };
@@ -76,7 +78,7 @@ function discAnimation(discPos, game, possibleMoves) {
     setTimeout(() => {
         updateGameBoard(game, possibleMoves);
         discAnimation.style.visibility = "hidden";
-    }, 550);
+    }, animationDuration + 50);
 }
 
 export { discAnimation, checkNewDiscPosition };

@@ -11,6 +11,7 @@
         <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="style/style.css" />
         <link rel="stylesheet" href="style/settings.css" />
+        <script type="module" src="./js/help.js" defer></script>
         <script type="module" src="./js/settings.js" defer></script>
         <script type="module" src="./js/scripts.js" defer></script>
         <script
@@ -51,7 +52,12 @@
                         class="d-flex justify-content-center align-content-center text-center pb-3"
                     >
                         <div class="color-picker">
-                            <select id="colorSelect">
+                            <span>Your Color:</span>
+                            <select
+                                id="playerColorSelect"
+                                class="btn border-1"
+                                onchange="this.dataset.chosen = this.value;"
+                            >
                                 <option value="#ff0000">Default color</option>
                                 <option value="#00ff00">Green</option>
                                 <option value="#0000ff">Blue</option>
@@ -68,7 +74,12 @@
                             </span>
                         </div>
                         <div class="color-picker">
-                            <select id="colorSelect2">
+                            <span>Opponent Color:</span>
+                            <select
+                                id="opponentColorSelect"
+                                class="btn border-1"
+                                onchange="this.dataset.chosen = this.value;"
+                            >
                                 <option value="#ffff00">Default color</option>
                                 <option value="#ff0000">Red</option>
                                 <option value="#00ff00">Green</option>
@@ -80,16 +91,38 @@
                     </div>
                 </section>
             </div>
-            <div class="w12 card text-center" id="joinQueue">
+
+            <div class="w12 card text-center">
+                <h1>Animation:</h1>
+                <section class="w12 justify-content-center d-flex form-buttons">
+                    <div
+                        class="w8 d-flex justify-content-center align-items-center"
+                    >
+                        <span>Animation duration (ms):</span>
+                        <input
+                            type="number"
+                            id="animationDuration"
+                            class="btn border-1"
+                            min="0"
+                            max="1000"
+                            step="50"
+                            required
+                            value="500"
+                        />
+                    </div>
+                </section>
+            </div>
+
+            <div class="w12 card text-center">
                 <section class="w12 form-buttons">
                     <div
                         class="d-flex justify-content-center align-items-center flex-column"
                     >
                         <span class="d-none error-message" id="errorMessage">
-                            You have selected the same colors
+                            Cannot save: invalid settings selected.
                         </span>
-                        <span class="d-none succes-message" id="succesMessage">
-                            Colors are set up
+                        <span class="d-none succes-message" id="successMessage">
+                            Settings were saved!
                         </span>
                         <button class="btn btn-primary w4" id="setupColor">
                             Submit
@@ -97,34 +130,6 @@
                     </div>
                 </section>
             </div>
-            <div class="w12 card text-center d-none" id="matchmaking">
-                <h1>Matchmaking</h1>
-                <section class="w12 pb-3">
-                    <span id="waiting-status">Searching for opponent...</span>
-                </section>
-                <section class="w12 form-buttons mt-4">
-                    <div
-                        class="d-flex justify-content-center align-items-center flex-column"
-                    >
-                        <button class="btn btn-danger w4" id="cancelMatch">
-                            Cancel Matchmaking
-                        </button>
-                        <audio
-                            id="audioPlayer"
-                            class="d-none"
-                            src="assets/waitingmusic.mp3"
-                        ></audio>
-                    </div>
-                </section>
-            </div>
-
-            <aside class="rules" id="help">
-                <h1>Settings:</h1>
-                <p>- You can't select the same colors</p>
-            </aside>
-            <button id="helpButton">
-                <img alt="help" src="assets/helpButton.png" />
-            </button>
         </main>
     </body>
 </html>

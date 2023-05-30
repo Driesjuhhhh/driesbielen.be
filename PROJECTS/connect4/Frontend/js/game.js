@@ -32,10 +32,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const game = await getGame();
     const user = JSON.parse(localStorage.getItem("user")).user;
-    //helpbutton start
-    const helpButton = document.getElementById("helpButton");
-    helpButton.addEventListener("click", showHelp);
-    //helpbutton end
+    // //helpbutton start
+    // const helpButton = document.getElementById("helpButton");
+    // helpButton.addEventListener("click", showHelp);
+    // //helpbutton end
 
     // hier worden de variabelen van de kleur ingesteld.
     const color1 = localStorage.getItem("player1-color");
@@ -87,12 +87,12 @@ async function gameSync() {
 
 export { gameSync };
 
-//helpbutton start
-async function showHelp() {
-    const help = document.getElementById("help");
-    if (help.style.visibility === "hidden" || help.style.visibility === "") {
-        help.style.visibility = "visible";
-    } else {
-        help.style.visibility = "hidden";
-    }
-}
+// //helpbutton start
+// async function showHelp() {
+//     const help = document.getElementById("help");
+//     if (help.style.visibility === "hidden" || help.style.visibility === "") {
+//         help.style.visibility = "visible";
+//     } else {
+//         help.style.visibility = "hidden";
+//     }
+// }

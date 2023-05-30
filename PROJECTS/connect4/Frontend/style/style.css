@@ -319,3 +319,45 @@ span {
         padding: 0;
     }
 }
+
+#injected-gameHelpBtn {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slowlyScaleUpAndDown 2s infinite;
+}
+
+#injected-gameHelpDialog {
+    border: none;
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+#injected-gameHelpDialog li {
+    margin: 2rem 0rem;
+}
+
+#injected-gameHelpDialog button {
+    margin: auto;
+}
+
+@keyframes slowlyScaleUpAndDown {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

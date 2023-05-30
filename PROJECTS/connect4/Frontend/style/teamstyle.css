@@ -25,6 +25,7 @@ main {
 
 .person {
     transition: 0.5s;
+    height: 320px;
     width: 100%;
     position: relative;
     text-align: center;

@@ -11,13 +11,14 @@
         <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
         <link rel="stylesheet" href="style/style.css" />
         <link rel="stylesheet" href="style/waitingroom.css" />
-        <link rel="stylesheet" href="style/chat.css">
+        <link rel="stylesheet" href="style/chat.css" />
         <script
             src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"
             integrity="sha512-k8WL9L2jG8KyG3pCJA4mHMdg2YSoWrdB5QNqLIhROv69udwp87WvbqzbsiAL65wy7T9jHU7rAoePr1ToPBc0Lw=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         ></script>
+        <script type="module" src="./js/help.js" defer></script>
         <script type="module" src="./js/waitingroom.js" defer></script>
         <script type="module" src="./js/scripts.js" defer></script>
         <script
@@ -50,10 +51,10 @@
         </header>
         <main class="d-flex flex-column">
             <div class="w12 card text-center">
-                <h1>Choose your game field size</h1>
+                <h1>Change your Game settings</h1>
             </div>
             <div class="w12 card text-center">
-                <h1>Field size:</h1>
+                <h1>Field Size:</h1>
                 <section class="w12 form-buttons">
                     <div
                         class="d-flex justify-content-center align-content-center text-center pb-3"
@@ -81,6 +82,24 @@
                             max="8"
                             value="7"
                         />
+                    </div>
+                </section>
+            </div>
+            <div class="w12 card text-center">
+                <h1>Winning Connection Size</h1>
+                <section class="w12 form-buttons">
+                    <div
+                        class="d-flex justify-content-center align-content-center text-center pb-3"
+                    >
+                        <select
+                            class="w2 btn border-1"
+                            id="gameConnectionSize"
+                            autocomplete="off"
+                        >
+                            <option value="3">3</option>
+                            <option value="4" selected>4</option>
+                            <option value="5">5</option>
+                        </select>
                     </div>
                 </section>
             </div>
@@ -120,7 +139,7 @@
                 </section>
             </div>
 
-            <aside class="rules" id="help">
+            <!-- <aside class="rules" id="help">
                 <h1>How to play</h1>
                 <p>
                     - The goal is to get <b>the chosen amount</b> of discs of
@@ -146,7 +165,7 @@
             </aside>
             <button id="helpButton">
                 <img alt="help" src="assets/helpButton.png" />
-            </button>
+            </button> -->
         </main>
 
         <aside class="connected-users">

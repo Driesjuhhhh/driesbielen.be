@@ -88,3 +88,10 @@
     font-weight: 700;
     cursor: not-allowed;
 }
+
+@media screen and (max-width: 800px) {
+    #user-screen ul,
+    .chat-container ul {
+        max-width: 100%;
+    }
+}

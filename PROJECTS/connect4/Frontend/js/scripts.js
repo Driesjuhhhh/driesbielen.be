@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     checkIfUserIsLoggedIn();
+    checkIfUserIsInGame();
 });
 
 document.getElementById("logout").addEventListener("click", logout);
@@ -21,6 +22,16 @@ function checkIfUserIsLoggedIn() {
         login.style.display = "block";
         logout.style.display = "none";
         register.style.display = "block";
+    }
+}
+
+function checkIfUserIsInGame(){
+    const gameId = localStorage.getItem("gameId");
+    const game = document.getElementById("game");
+    if (gameId === null){
+        game.style.display = "none";
+    } else {
+        game.style.display = "block";
     }
 }
 

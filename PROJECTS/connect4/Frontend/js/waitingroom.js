@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // const helpButton = document.getElementById("helpButton");
     // helpButton.addEventListener("click", showHelp);
     // //helpbutton end
-
+    localStorage.removeItem("gameId")
     const chatInput = document.getElementById("chat-input");
     chatInput.onkeyup = async (event) => {
         if (event.key === "Enter") {

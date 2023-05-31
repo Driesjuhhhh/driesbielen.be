@@ -14,14 +14,6 @@ async function showHelp() {
     }
 }
 
-function saveSettings() {
-    const savedColors = saveColors();
-    const savedDuration = saveAnimationDuration();
-
-    if (savedColors && savedDuration) {
-        hideError();
-    }
-}
 
 function saveAnimationDuration() {
     const animationDuration =
@@ -65,6 +57,14 @@ function saveColors() {
     return true;
 }
 
+function saveUrls(){
+    const backendUrl = document.getElementById("backendUrl").value;
+
+    localStorage.setItem("backendUrl", backendUrl);
+
+    return true;
+}
+
 function loadFromStorage() {
     const playerColor = localStorage.getItem("player1-color");
     const opponentColor = localStorage.getItem("player2-color");
@@ -81,7 +81,11 @@ function loadFromStorage() {
         document.getElementById("animationDuration").value =
             Number(animationDuration);
     }
-}
+
+    const backendUrl = localStorage.getItem("backendUrl")
+    document.getElementById("backendUrl").value = backendUrl;
+
+    }
 
 function showError(msg) {
     const errorMessageBox = document.getElementById("errorMessage");
@@ -98,4 +102,15 @@ function hideError() {
 
     const successMessageBox = document.getElementById("successMessage");
     successMessageBox.classList.remove("d-none");
+}
+
+
+function saveSettings() {
+    const savedColors = saveColors();
+    const savedDuration = saveAnimationDuration();
+    const saveBackendUrl = saveUrls();
+
+    if (savedColors && savedDuration) {
+        hideError();
+    }
 }

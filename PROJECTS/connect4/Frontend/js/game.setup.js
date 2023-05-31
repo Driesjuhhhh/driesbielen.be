@@ -25,12 +25,12 @@ async function setUpGame(game, user) {
     const colorSpan = document.getElementById("player-color");
     const playerTurn = document.getElementById("player-turn");
 
+    colorSpan.innerHTML = "Your Color";
+    
     // Set the color of the player
     if (user.id == game.player1.id) {
-        colorSpan.innerHTML = "Your Color";
         colorSpan.classList.add("player1-color");
     } else {
-        colorSpan.innerHTML = "Opponent Color";
         colorSpan.classList.add("player2-color");
     }
 

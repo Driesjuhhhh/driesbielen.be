@@ -27,14 +27,6 @@ async function finishGame(game) {
         (winner == 1 && game.player1.id == user.id) ||
         (winner == 2 && game.player2.id == user.id);
 
-    if (winner == null){
-        gameResult.classList.add("victory");
-        gameHeader.classList.add("victory");
-
-        gameResult.innerText = "Draw!";
-    }
-
-
     if (isWinner) {
         gameResult.classList.add("victory");
         gameHeader.classList.add("victory");
@@ -137,6 +129,13 @@ function drawGame() {
     gameHeader.innerText = "Draw!";
 
     gameHeader.classList.remove("d-none");
+
+    const dialog = document.getElementById("gameDialog");
+
+    setTimeout(() => {
+        dialog.showModal();
+    }, 3500);
+    
 }
 
 async function updateLeaderboardWithGame(gameId) {

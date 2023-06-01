@@ -27,6 +27,14 @@ async function finishGame(game) {
         (winner == 1 && game.player1.id == user.id) ||
         (winner == 2 && game.player2.id == user.id);
 
+    if (winner == null){
+        gameResult.classList.add("victory");
+        gameHeader.classList.add("victory");
+
+        gameResult.innerText = "Draw!";
+    }
+
+
     if (isWinner) {
         gameResult.classList.add("victory");
         gameHeader.classList.add("victory");

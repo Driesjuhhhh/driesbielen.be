@@ -121,6 +121,7 @@ async function userJoinWaitingPool() {
 
         document.querySelector("#gameRowCount").disabled = true;
         document.querySelector("#gameColumnCount").disabled = true;
+        document.querySelector("#gameConnectionSize").disabled = true;
 
         // logo mini-game: logo teleports instead of going to index.html
         const logoLink = document.getElementById("logoLink");
@@ -225,6 +226,7 @@ async function leaveWaitingPool() {
 
             document.querySelector("#gameRowCount").disabled = false;
             document.querySelector("#gameColumnCount").disabled = false;
+            document.querySelector("#gameConnectionSize").disabled = false;
 
             // logo position reset
             const logo = document.getElementById("rotate-on-join");

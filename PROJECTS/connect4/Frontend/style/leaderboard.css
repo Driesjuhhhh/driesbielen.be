@@ -65,3 +65,14 @@ main ol li:nth-child(3) .rank {
 main ol li:nth-child(3) .rank::after {
     content: "🥉";
 }
+
+.win-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.win-rate {
+    font-size: .66em;
+    opacity: .66;
+}

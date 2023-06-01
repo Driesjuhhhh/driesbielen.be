@@ -90,3 +90,8 @@ main article h1 {
         margin-top: 120px;
     }
 }
+
+input[disabled],
+select[disabled] {
+    color: #fff;
+}

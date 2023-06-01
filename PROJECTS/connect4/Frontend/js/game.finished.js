@@ -135,7 +135,6 @@ function drawGame() {
     setTimeout(() => {
         dialog.showModal();
     }, 3500);
-    
 }
 
 async function updateLeaderboardWithGame(gameId) {

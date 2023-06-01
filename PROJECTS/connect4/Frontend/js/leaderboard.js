@@ -28,9 +28,19 @@ function CreateLeaderboardItem(entry, index) {
     wins.classList.add("wins");
     wins.innerText = "Wins: " + entry.wins;
 
+    const winRate = document.createElement("span");
+    winRate.classList.add("win-rate");
+    winRate.innerText = "Win Rate: " + Math.floor(entry.wins / (entry.wins + entry.losses) * 100) + "%";
+
+    const winWrapper = document.createElement("div");
+    winWrapper.classList.add("win-wrapper");
+
+    winWrapper.appendChild(wins);
+    winWrapper.appendChild(winRate);
+
     item.appendChild(rank);
     item.appendChild(name);
-    item.appendChild(wins);
+    item.appendChild(winWrapper);
 
     return item;
 }

@@ -48,14 +48,21 @@ main {
 }
 
 .card {
-    box-shadow: 0px 0px 5.3px rgba(0, 0, 0, 0.04),
-        0px 0px 17.9px rgba(0, 0, 0, 0.06), 0px 0px 80px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff76;
-    border-radius: 1rem;
-    padding: 0.75rem;
-    margin: 1rem;
-    display: flex;
-    align-items: center;
+    box-shadow: inset 0px 100px 100px -50px rgba(0,0,0,0.8);
+    display: inline-block;
+    position: relative;
+    border: black 3px solid;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.margin-text-card{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
@@ -130,12 +137,16 @@ main {
     left: 10px;
 }
 
+.person-picture{
+    width: 356px
+}
+
 @media screen and (max-width: 1150px) {
-    .card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .card{
+        margin-right: auto;
+        margin-left: auto;
     }
+
     .person-picture {
         margin-bottom: 1rem;
         width: calc(100% * 5 / 12);
@@ -145,40 +156,6 @@ main {
     }
 }
 
-.social-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    margin: 0 10px;
-    background-color: #ddd;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    transition: all 0.3s ease;
-    margin-bottom: 15px;
-}
-
-.social-button.house {
-    background-color: #3b5998;
-}
-
-.social-button.house:hover:before {
-    content: "Home";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #3b5998;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    margin-top: 5px;
-}
 
 .centered{
     margin-left: auto;

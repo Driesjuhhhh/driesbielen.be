@@ -16,10 +16,8 @@ function calculateAge() {
     return age;
 }
 
-
 document.addEventListener("DOMContentLoaded", async () => {
     calculateAge();
     const age = document.getElementById("age");
     age.textContent = ` ${calculateAge()} jaar`;
-}
-)
+});

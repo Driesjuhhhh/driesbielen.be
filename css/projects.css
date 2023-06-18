@@ -63,7 +63,6 @@ main{
     margin: 10px;
     text-align: center;
     justify-content: center;
-    
 }
 
 .project-card p{
@@ -78,11 +77,11 @@ main{
 }
 
 
-@media screen and (max-width: 800px) {
-
-
+@media screen and (max-width: 1100px) {
     .projectcard{
         width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 

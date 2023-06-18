@@ -56,13 +56,16 @@ main{
 .projectcard {
     box-shadow: inset 0px 100px 100px -50px rgba(0,0,0,0.8);
     display: inline-block;
-    width: 23vw;
+    height: 450px;
+    width: 450px;
     position: relative;
     border: black 3px solid;
     border-radius: 15px;
     margin: 10px;
     text-align: center;
     justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .project-card p{
@@ -79,9 +82,10 @@ main{
 
 @media screen and (max-width: 1100px) {
     .projectcard{
-        width: 100%;
         margin-right: auto;
         margin-left: auto;
+        height: 400px;
+        width: 400px;
     }
 }
 

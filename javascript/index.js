@@ -16,7 +16,10 @@ function calculateAge() {
     return age;
 }
 
-window.onload = function () {
-    const ageParagraph = document.getElementById("age");
-    ageParagraph.textContent = ` ${calculateAge()} jaar`;
-};
+
+document.addEventListener("DOMContentLoaded", async () => {
+    calculateAge();
+    const age = document.getElementById("age");
+    age.textContent = ` ${calculateAge()} jaar`;
+}
+)

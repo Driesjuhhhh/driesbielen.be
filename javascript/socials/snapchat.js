@@ -1,7 +1,7 @@
-function openYoutubeVideoOnLoad() {
+document.addEventListener("DOMContentLoaded", async () => {
+    openSiteOnLoad();
+})
 
-    // Open the video in a new window
+function openSiteOnLoad() {
     window.location.href = "https://www.snapchat.com/add/driesjuhhhhh?share_id=3gN3t7HkVEM&locale=nl-BE";
 }
-
-window.onload = openYoutubeVideoOnLoad;

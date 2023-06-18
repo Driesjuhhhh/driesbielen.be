@@ -1,7 +1,7 @@
-function openYoutubeVideoOnLoad() {
+document.addEventListener("DOMContentLoaded", async () => {
+    openSiteOnLoad();
+})
 
-    // Open the video in a new window
-    window.location.href = "https://www.instagram.com/driesjuhhhh/";
+function openSiteOnLoad() {
+window.location.href = "https://www.instagram.com/driesjuhhhh/";
 }
-
-window.onload = openYoutubeVideoOnLoad;

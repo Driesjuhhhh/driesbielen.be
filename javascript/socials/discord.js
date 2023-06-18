@@ -1,7 +1,8 @@
-function openYoutubeVideoOnLoad() {
+document.addEventListener("DOMContentLoaded", async () => {
+    openSiteOnLoad();
+})
 
-    // Open the video in a new window
+function openSiteOnLoad() {
     window.location.href = "https://www.discord.gg/jRjsp3xCdN";
 }
 
-window.onload = openYoutubeVideoOnLoad;

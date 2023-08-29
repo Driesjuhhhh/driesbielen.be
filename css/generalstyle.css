@@ -12,6 +12,8 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+
+    height: 900px;
 }
 
 :root {
@@ -67,7 +69,8 @@ main {
 }
 
 .primary-background-color {
-    background-color: #0008ff;
+    background-color: #0008ff
+    ;
 }
 
 .secondary-background-color {

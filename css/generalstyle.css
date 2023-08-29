@@ -1,13 +1,14 @@
 html {
     height: 100%;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         to right top,
         #063b8b,
         #006bb4,
         #0094a8,
         #00b671,
         #9dcd2e
-    );
+    ); */
+    background-color: #28282b;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -48,16 +49,29 @@ main {
 }
 
 .card {
-    box-shadow: inset 0px 100px 100px -50px rgba(0, 0, 0, 0.8);
+    box-shadow: inset 0px 100px 100px -50px rgba(255, 255, 255, 0.4);
     display: inline-block;
     position: relative;
-    border: black 3px solid;
+    border: #83eeff 3px solid;
     border-radius: 15px;
     margin: 10px;
     text-align: center;
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
+    color: #e0fbf5;
+}
+
+.text-color {
+    color: #e0fbf5;
+}
+
+.primary-background-color {
+    background-color: #0008ff;
+}
+
+.secondary-background-color {
+    background-color: #00f2ff;
 }
 
 .margin-text-card {

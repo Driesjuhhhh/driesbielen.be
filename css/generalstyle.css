@@ -50,18 +50,24 @@ main {
     border-radius: 4rem;
 }
 
+
+
 .card {
     box-shadow: inset 0px 100px 100px -50px rgba(255, 255, 255, 0.4);
-    display: inline-block;
-    position: relative;
     border: #83eeff 3px solid;
     border-radius: 15px;
     margin: 10px;
     text-align: center;
-    justify-content: center;
-    margin-right: auto;
-    margin-left: auto;
     color: #e0fbf5;
+    float: left;
+
+}
+
+.big-part {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-background);
 }
 
 .text-color {

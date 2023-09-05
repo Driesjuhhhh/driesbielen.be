@@ -53,6 +53,10 @@ main img {
     max-width: 60%;
 }
 
+.card-width{
+    width: 48%;
+}
+
 .name{
     font-family: "M PLUS Rounded 1c", sans-serif;
     font-size: 50pt;

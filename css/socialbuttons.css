@@ -18,7 +18,7 @@
 }
 
 .social-button.socials {
-    background-color: cornflowerblue;
+    background-color: #007bff;
 }
 
 .social-button.socials:hover:before {
@@ -203,6 +203,26 @@
     margin-top: 5px;
 }
 
+.social-button.calendar {
+    background-color: #007bff;
+}
+
+.social-button.calendar:hover:before {
+    content: "Calendar";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+
 .social-buttons {
     display: flex;
     justify-content: center;
@@ -214,4 +234,3 @@
     justify-content: center;
     align-items: center;
 }
-

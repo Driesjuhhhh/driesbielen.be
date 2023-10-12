@@ -245,9 +245,17 @@ a {
 
 .clickable-top-icon {
     position: fixed;
-    right: 10px;
-    top: 10px;
-    background-color: var(--second-background-color);
+    right: 20px;
+    top: 20px;
+    background-color: var(--color-background);
+    color: var(--color-title);
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 6px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
 
 .clickable-top-icon img {
@@ -257,10 +265,8 @@ a {
 }
 
 .clickable-top-icon:hover {
-    width: 2.5rem;
-    height: 2.5rem;
-    transform: translateX(8%) translateY(8%);
-    transition: 0.3s;
+    border-color: var(--border-color);
+    box-shadow: none;
 }
 
 iframe{

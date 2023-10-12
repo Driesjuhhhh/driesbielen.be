@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
 
 :root {
     font-family: "Roboto", sans-serif;
@@ -6,33 +6,34 @@
     --color-title: white;
     --border-color: white;
     --color-text: #ccc;
-    --color-links: #aaa
+    --color-links: #aaa;
+    --second-background-color: 28282B;
 }
 
-html{
+html {
     scroll-behavior: smooth;
     background-color: var(--color-background);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 }
 
-body{
+body {
     font-size: 14px;
 }
 
-header{
+header {
     width: 100%;
     height: 100vh;
-    
+
     color: var(--color-title);
 }
 
-header #particles{
+header #particles {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -40,7 +41,7 @@ header #particles{
     left: 0;
 }
 
-header .info-text{
+header .info-text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,17 +50,17 @@ header .info-text{
     height: 100vh;
 }
 
-header .info-text h1{
+header .info-text h1 {
     font-size: 5rem;
     font-weight: 500;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu";
 }
 
-header .info-text h3{
+header .info-text h3 {
     font-size: 1.5rem;
 }
 
-header .info-text .scroll{
+header .info-text .scroll {
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -68,16 +69,16 @@ header .info-text .scroll{
     transition: all 0.5s;
 }
 
-header .info-text .scroll:hover{
+header .info-text .scroll:hover {
     opacity: 0.7;
 }
 
-header .info-text .scroll::before{
+header .info-text .scroll::before {
     position: absolute;
     top: -16px;
     left: -16px;
     z-index: -1;
-    content: '';
+    content: "";
     width: 44px;
     height: 44px;
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
@@ -86,37 +87,43 @@ header .info-text .scroll::before{
 }
 
 @keyframes pulse {
-    0%, 100%{
+    0%,
+    100% {
         opacity: 0;
     }
-    15%, 45%{
+    15%,
+    45% {
         opacity: 1;
     }
-    60%{
+    60% {
         box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.1);
         opacity: 0;
     }
 }
 
-#about, #projects{
+#about,
+#projects {
     background-color: var(--color-background);
     padding: 40px;
 }
 
-#about .header, #projects .header{
+#about .header,
+#projects .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
 }
 
-#about .header h1, #projects .header h1{
+#about .header h1,
+#projects .header h1 {
     text-align: center;
     color: var(--color-title);
     text-transform: uppercase;
 }
 
-#about .header a, #projects .header a{
+#about .header a,
+#projects .header a {
     text-decoration: none;
     font-size: 1.3em;
     color: var(--color-title);
@@ -127,12 +134,14 @@ header .info-text .scroll::before{
     transition: all 0.3s ease;
 }
 
-#about .header a:hover, #projects .header a:hover{
+#about .header a:hover,
+#projects .header a:hover {
     border-color: var(--color-title);
     box-shadow: none;
 }
 
-#about .card, #projects .card{
+#about .card,
+#projects .card {
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 20px;
@@ -142,45 +151,48 @@ header .info-text .scroll::before{
     transition: all 0.3s ease;
 }
 
-#about .card:hover, #projects .card:hover{
+#about .card:hover,
+#projects .card:hover {
     border-color: var(--color-title);
     box-shadow: none;
 }
 
-#about .card img{
+#about .card img {
     max-width: 200px;
     max-height: 200px;
 }
 
-#about .card .info{
+#about .card .info {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
-#about .card .info h1, #projects .card .info h1{
+#about .card .info h1,
+#projects .card .info h1 {
     margin-bottom: 20px;
     color: var(--color-title);
     font-size: 1.7rem;
     font-weight: bold;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu";
 }
 
-#about .card .info p, #projects .card .info p{
+#about .card .info p,
+#projects .card .info p {
     color: var(--color-text);
     font-size: 1.1rem;
     line-height: 1.8rem;
 }
 
-#projects .project-cards{
+#projects .project-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
 }
 
-#projects .project-cards .card{
+#projects .project-cards .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,27 +200,27 @@ header .info-text .scroll::before{
     min-width: 350px;
 }
 
-#projects .project-cards .card .info i{
+#projects .project-cards .card .info i {
     color: var(--color-title);
     width: 100%;
     text-align: center;
     margin-bottom: 1.4rem;
 }
 
-#projects .project-cards .card .info h1{
+#projects .project-cards .card .info h1 {
     text-align: center;
 }
 
-#projects .project-cards .card .info p{
+#projects .project-cards .card .info p {
     font-size: 1.1rem;
 }
 
-.scroll-top{
+.scroll-top {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2b2f4b;
+    background-color: var(--color-background);
     color: var(--color-title);
     border: 1px solid transparent;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -219,54 +231,60 @@ header .info-text .scroll::before{
     transition: all 0.3s ease;
 }
 
-.scroll-top:hover{
+.scroll-top:hover {
     border-color: var(--color-title);
     box-shadow: none;
 }
 
 a {
     text-decoration: none;
-    color: var(--color-links)
+    color: var(--color-links);
 }
 
-.github-icon{
+.clickable-bottom-icon {
     position: fixed;
     right: 10px;
     bottom: 10px;
+    background-color: var(--second-background-color);
 }
 
-.github-icon img{
+.clickable-bottom-icon img {
     width: 2rem;
     height: 2rem;
     transition: 0.3s;
 }
 
-.github-icon:hover{
+.clickable-bottom-icon:hover {
     width: 2.5rem;
     height: 2.5rem;
     transform: translateX(8%) translateY(8%);
     transition: 0.3s;
-  }
+}
+
+iframe{
+    border: none
+}
 
 @media screen and (max-width: 450px) {
-    header .info-text h1{
+    header .info-text h1 {
         font-size: 4rem;
     }
 
-    header .info-text h3{
+    header .info-text h3 {
         font-size: 1.1rem;
     }
 
-    #about .card{
+    #about .card {
         flex-direction: column;
         align-items: center;
     }
 
-    #about .card img{
+    #about .card img {
         max-height: 150px;
     }
 
-    #about, #projects{
+    #about,
+    #projects {
         background-color: var(--color-background);
         padding-left: 0px;
     }

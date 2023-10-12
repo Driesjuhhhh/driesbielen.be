@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <title>Dries | Home</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <link href="./assets/LOGO.png?" rel="shortcut icon" />
-        <meta charset="utf-8" />
-        <meta name="theme-color" content="#83eeff" />
-        <meta name="og:url" content="https://driesbielen.be" />
-        <meta name="og:title" content="Dries | Home" />
-        <meta
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fontawesome-buttons.css" />
+    <title>Dries Bielen</title>
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c2e4631732.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./assets/LOGO.png?" rel="shortcut icon" />
+    <meta
             name="description"
             content="Dit is de officiele website van Dries"
         />
@@ -25,14 +29,6 @@
         <meta name="og:img" content="assets/logo.png" />
         <meta name="og:img:width" content="1440" />
         <meta name="og:img:height" content="1440" />
-        <link href="css/index.css" rel="stylesheet" />
-        <script src="javascript/index.js"></script>
-        <script
-            src="https://kit.fontawesome.com/c2e4631732.js"
-            crossorigin="anonymous"
-        ></script>
-        <link href="css/generalstyle.css" rel="stylesheet" />
-        <link href="css/socialbuttons.css" rel="stylesheet" />
         <!-- Google tag (gtag.js) -->
         <script
             async
@@ -47,49 +43,65 @@
 
             gtag("config", "G-9V41FPCF0E");
         </script>
-    </head>
-    <body>
-        <main>
-            <article class="card-container">
-                <div class="name">
-                    <h1 class="name text-color text-align-center">
-                        Dries Bielen
-                    </h1>
-                </div>
-                <article class="card aboutme card-width big-part">
-                    <div class="text-padding">
-                        <p class="big-font text-align-center margin-text-card">
-                            Hey, ik ben Dries Bielen <span id="age"></span>.
-                        </p>
-                        <p class="big-font text-align-center margin-text-card">
-                            Leuk dat je een kijkje neemt op mijn website.
-                        </p>
-                        <p class="big-font text-align-center margin-text-card">
-                            In mijn vrije tijd ben ik graag bezig met programmeren maar ook met <a href="https://soundcloud.com/djtrios" 
-                            >muziek.</a>
-                        </p>
-                    </div>
-                </article>
-                <div class="homepage-buttons">
-                    <a
-                        href="projects.html"
-                        class="homepage-button primary-background-color text-color"
-                    >
-                        PROJECTS
-                    </a>
-                </div>
-                <div class="social-buttons">
-                    <a
-                        href="https://www.driesbielen.be/github"
-                        class="social-button github"
-                        ><i class="fab fa-github"></i
-                    ></a>
-                    <a href="socials.html" class="social-button socials"
-                        ><i class="fa-solid fa-hashtag"></i
-                    ></a>
-                </div>
-            </article>
-            <iframe src="https://widget.nowplaying.site/e7b779240f7401d4" marginwidth="0px" height="100px" width="300px"></iframe>
-        </main>
-    </body>
+  </head>
+
+  <body>
+    <header>
+      <div id="particles"></div>
+      <div class="info-text">
+        <h1>Dries Bielen</h1>
+        <h3>Get to know me</h3>
+        <a href="#about" class="scroll"><i class="bx bxs-down-arrow"></i></a>
+      </div>
+    </header>
+
+    <section id="about">
+      <div class="header">
+        <h1>About Me</h1>
+      </div>
+
+      <div class="card">
+        <div class="info">
+          <h1>Dries Bielen:</h1>
+          <p>
+            Hello, I am Dries Bielen <span id="age"></span> student at
+            <a href="https://www.pxl.be/">PXL University</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="header">
+        <h1>Projects</h1>
+        <a href="projects.html">See More</a>
+      </div>
+      <div class="project-cards">
+        <div class="card">
+          <div class="info">
+            <i class="bx bxs-devices"></i>
+            <h1>MVC-Peer</h1>
+            <p>
+              This project is a website that I made for the volleybal club
+              MVC-Peer.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <i class="bx bx-code-alt"></i>
+            <h1>Connect-4</h1>
+            <p>
+              At school we had a project in a team, we needed to create the game
+              "Conenct-4". We coded the frontend in HTML, CSS & JavaScript. For
+              the backend we used .NET
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="scroll-top" onclick="scrollToTop()">
+      <i class="bx bxs-up-arrow"></i>
+    </button>
+  </body>
 </html>

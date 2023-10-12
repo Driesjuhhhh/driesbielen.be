@@ -1,103 +1,110 @@
 <!DOCTYPE html>
-<html lang="nl">
-    <head>
-        <title>Dries | Projects</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <link href="./assets/LOGO.png?" rel="shortcut icon" />
-        <meta charset="utf-8" />
-        <meta name="theme-color" content="#83eeff" />
-        <meta name="og:url" content="https://driesbielen.be/projects" />
-        <meta name="og:title" content="Dries | Projects" />
-        <meta
-            name="description"
-            content="Op deze pagina kan je alle projecten terugvinden die ik gemaakt heb"
-        />
-        <meta
-            name="og:description"
-            content="Op deze pagina kan je alle projecten terugvinden die ik gemaakt heb"
-        />
-        <link href="css/projects.css" rel="stylesheet" />
-        <script
-            src="https://kit.fontawesome.com/c2e4631732.js"
-            crossorigin="anonymous"
-        ></script>
-        <link href="css/generalstyle.css" rel="stylesheet" />
-        <link href="css/socialbuttons.css" rel="stylesheet" />
-        <!-- Google tag (gtag.js) -->
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-69GRNLKGCL"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/fontawesome-buttons.css" />
+    <title>Dries Bielen | Projects</title>
+    <script src="js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c2e4631732.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./assets/LOGO.png?" rel="shortcut icon" />
+    <meta name="description" content="Dit is de officiele website van Dries" />
+    <meta
+      name="og:description"
+      content="Dit is de officiele website van Dries "
+    />
+    <meta name="robots" content="max-snippet:20" />
+    <meta name="site_name" content="Dries Bielen" />
+    <meta name="img" content="assets/logo.png" />
+    <meta name="img:width" content="1440" />
+    <meta name="img:height" content="1440" />
+    <meta name="og:site_name" content="Dries bielen" />
+    <meta name="og:img" content="assets/logo.png" />
+    <meta name="og:img:width" content="1440" />
+    <meta name="og:img:height" content="1440" />
+    <!-- Google tag (gtag.js) -->
+    <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-69GRNLKGCL"
+></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-            gtag("config", "G-69GRNLKGCL");
-        </script>
-    </head>
-    <body>
-        <main>
-            <article class="card-container">
-                <article class="top-left">
-                    <div class="social-buttons"></div>
-                    <a href="index.html" class="social-button house"
-                        ><i class="fa-solid fa-house"></i>
-                    </a>
-                </article>
-                <article class="big-part">
-                    <article class="card card-width">
-                        <img
-                            src="assets/mvcpeer.png"
-                            alt="connect-4-logo"
-                            class="mvc-picture centered"
-                        />
-                        <p class="big-font text-align-center margin-text-card">
-                            Voor de volleybal club MVC Peer heb ik de website
-                            gemaakt. Deze website bevat enkel frontend met een
-                            js implementatie die de wedstrijden per ploeg
-                            opvraagt.
-                        </p>
-                        <a
-                            href="https://github.com/Driesjuhhhh/MVCPEER"
-                            class="social-button github centered"
-                            ><i class="fab fa-github"></i
-                        ></a>
-                        <a
-                            href="https://mvcpeer.be"
-                            class="social-button code centered"
-                        >
-                            <i class="fa-regular fa-eye"></i>
-                        </a>
-                    </article>
-                    <article class="card card-width">
-                        <img
-                            src="assets/connect-4-logo.png"
-                            alt="connect-4-logo"
-                            class="project-picture centered"
-                        />
-                        <p class="big-font text-align-center margin-text-card">
-                            Voor het vak PROJECT heb ik op school het spel
-                            "Connect 4" gemaakt in groepsvorm. Dit bevat de
-                            frontend en de backend van het project. Dit is dan
-                            ook het eerste grote project dat ik gemaakt heb.
-                        </p>
-                        <a
-                            href="https://github.com/Driesjuhhhh/CONNECT4"
-                            class="social-button github centered"
-                            ><i class="fab fa-github"></i
-                        ></a>
-                        <a
-                            href="PROJECTS/connect4/Frontend/index.html"
-                            class="social-button code centered"
-                        >
-                            <i class="fa-regular fa-eye"></i>
-                        </a>
-                    </article>
-                </article>
-            </article>
-        </main>
-    </body>
+    gtag("config", "G-69GRNLKGCL");
+</script>
+  </head>
+
+  <body>
+    <header>
+      <div id="particles"></div>
+      <div class="info-text">
+        <h1>Projects</h1>
+        <h3>On this page you can find all my projects</h3>
+        <a href="#projects" class="scroll"><i class="bx bxs-down-arrow"></i></a>
+      </div>
+    </header>
+    <section id="projects">
+      <div class="header">
+        <h1>Projects</h1>
+      </div>
+      <div class="project-cards">
+        <div class="card">
+          <div class="info">
+            <i class="bx bxs-devices"></i>
+            <h1>MVC-Peer</h1>
+            <p>
+              This project is a website that I made for the volleybal club
+              MVC-Peer.
+            </p>
+            </br>
+            </br>
+            </br>
+            </br>
+            <a
+              href="https://github.com/Driesjuhhhh/MVCPEER"
+              class="social-button github centered"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://mvcpeer.be" class="social-button code centered">
+              <i class="fa-regular fa-eye"></i>
+            </a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info">
+            <i class="bx bx-code-alt"></i>
+            <h1>Connect-4</h1>
+            <p>
+              At school we had a project in a team, we needed to create the game
+              "Conenct-4". We coded the frontend in HTML, CSS & JavaScript. For
+              the backend we used .NET
+            </p>
+        </br>
+            <a
+              href="https://github.com/Driesjuhhhh/CONNECT4"
+              class="social-button github centered"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="PROJECTS/connect4/Frontend/index.html"
+              class="social-button code centered"
+            >
+              <i class="fa-regular fa-eye"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button class="scroll-top" onclick="scrollToTop()">
+      <i class="bx bxs-up-arrow"></i>
+    </button>
+  </body>
 </html>

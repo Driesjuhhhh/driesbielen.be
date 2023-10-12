@@ -1,5 +1,2 @@
-https://www.driesbielen.be/calendar.html
-https://www.driesbielen.be/github.html
 https://www.driesbielen.be/index.html
 https://www.driesbielen.be/projects.html
-https://www.driesbielen.be/socials.html

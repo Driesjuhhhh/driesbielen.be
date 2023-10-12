@@ -229,6 +229,25 @@ a {
     color: var(--color-links)
 }
 
+.github-icon{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.github-icon img{
+    width: 2rem;
+    height: 2rem;
+    transition: 0.3s;
+}
+
+.github-icon:hover{
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translateX(8%) translateY(8%);
+    transition: 0.3s;
+  }
+
 @media screen and (max-width: 450px) {
     header .info-text h1{
         font-size: 4rem;

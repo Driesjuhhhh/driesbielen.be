@@ -310,8 +310,4 @@ iframe{
         background-color: var(--color-background);
         padding-left: 0px;
     }
-
-    iframe{
-        display: none;
-    }
 }

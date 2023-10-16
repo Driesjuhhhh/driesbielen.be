@@ -233,3 +233,17 @@ header {
 #education .education-cards .card .info p {
     font-size: 1.1rem;
 }
+
+@media screen and (max-width: 450px) {
+    #about,
+    #education {
+        background-color: var(--color-background);
+        padding-left: 0px;
+    }
+
+    #about,
+    #socials {
+        background-color: var(--color-background);
+        padding-left: 0px;
+    }
+}

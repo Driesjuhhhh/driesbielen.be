@@ -19,3 +19,12 @@ window.addEventListener('scroll', function () {
         scrollTopButton.style.display = 'none';
     }
 });
+
+window.addEventListener('scroll', function () {
+    var rightTopIcon = document.querySelector('.right-top-icon');
+    if (this.window.pageYOffset > 700) {
+        rightTopIcon.style.display = 'none';
+    } else {
+        rightTopIcon.style.display = 'block';
+    }
+});

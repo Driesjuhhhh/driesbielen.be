@@ -30,6 +30,7 @@ header {
     width: 100%;
     height: 100vh;
     background-image: url("/assets/wallpaper.png");
+    background-size: cover;
     color: var(--color-title);
 }
 

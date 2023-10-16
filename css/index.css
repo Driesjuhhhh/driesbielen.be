@@ -1,0 +1,115 @@
+#about,
+#socials {
+    background-color: var(--color-background);
+    padding: 40px;
+
+}
+
+#about .header,
+#socials .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1,
+#socials .header h1 {
+    text-align: center;
+    color: var(--color-title);
+    text-transform: uppercase;
+    font-size: 2.8rem;
+}
+
+#about .header a,
+#socials .header a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: var(--color-title);
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+#about .header a:hover,
+#socials .header a:hover {
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+#about .card,
+#socials .card {
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#about .card:hover,
+#socials .card:hover {
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+#about .card img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#about .card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about .card .info h1,
+#socials .card .info h1 {
+    margin-bottom: 20px;
+    color: var(--color-title);
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: "Ubuntu";
+}
+
+#about .card .info p,
+#socials .card .info p {
+    color: var(--color-text);
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#socials .project-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#socials .project-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#socials .project-cards .card .info i {
+    color: var(--color-title);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#socials .project-cards .card .info h1 {
+    text-align: center;
+}
+
+#socials .project-cards .card .info p {
+    font-size: 1.1rem;
+}

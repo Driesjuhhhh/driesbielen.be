@@ -1,10 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const age = document.getElementById("ageSpan");
     age.textContent = `${calculateAge()} years old.`;
-    console.log("Welcome in console land");
-    console.log("This is a custom made website based on code of ASMR Prog");
-    console.log("I added some stuff and removed some stuff");
-    console.log("Have fun in inspector land");
 });
 
 function calculateAge() {

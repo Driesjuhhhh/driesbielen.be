@@ -254,23 +254,20 @@ header {
 }
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
     #about,
-    #education {
+    #education,
+    #skills {
         background-color: var(--color-background);
         padding-left: 0px;
+        padding-right: 0px ;
     }
 
-    #about,
-    #socials {
-        background-color: var(--color-background);
-        padding-left: 0px;
-    }
 }
 
 .container {
   margin: 100px auto;
-  width: 600px;
+  width: 300px;
   text-align: center;
 }
 

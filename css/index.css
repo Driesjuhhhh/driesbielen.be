@@ -118,13 +118,15 @@ header {
 }
 
 #about,
-#education {
+#education,
+#skills {
     background-color: var(--color-background);
     padding: 40px;
 }
 
 #about .header,
-#education .header {
+#education .header,
+#skills .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +134,8 @@ header {
 }
 
 #about .header h1,
-#education .header h1 {
+#education .header h1,
+#skills .header h1 {
     text-align: center;
     color: var(--color-title);
     text-transform: uppercase;
@@ -140,7 +143,8 @@ header {
 }
 
 #about .header a,
-#education .header a {
+#education .header a,
+#skills .header a {
     text-decoration: none;
     font-size: 1.3em;
     color: var(--color-title);
@@ -152,13 +156,15 @@ header {
 }
 
 #about .header a:hover,
-#education .header a:hover {
+#education .header a:hover,
+#skills .header a:hover {
     border-color: var(--border-color);
     box-shadow: none;
 }
 
 #about .card,
-#education .card {
+#education .card,
+#skills .card {
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     border-radius: 20px;
@@ -169,7 +175,8 @@ header {
 }
 
 #about .card:hover,
-#education .card:hover {
+#education .card:hover,
+#skills .card:hover {
     border-color: var(--border-color);
     box-shadow: none;
 }
@@ -187,7 +194,8 @@ header {
 }
 
 #about .card .info h1,
-#education .card .info h1 {
+#education .card .info h1,
+#skills .card .info h1 {
     margin-bottom: 20px;
     color: var(--color-title);
     font-size: 1.7rem;
@@ -196,7 +204,8 @@ header {
 }
 
 #about .card .info p,
-#education .card .info p {
+#education .card .info p,
+#skills .card .info p {
     color: var(--color-text);
     font-size: 1.1rem;
     line-height: 1.8rem;
@@ -210,14 +219,16 @@ header {
     min-width: 320px;
 }
 
-#education .education-cards {
+#education .education-cards,
+#skills .skills-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 2rem;
 }
 
-#education .education-cards .card {
+#education .education-cards .card,
+#skills .skills-cards .card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,13 +243,16 @@ header {
     margin-bottom: 1.4rem;
 }
 
-#education .education-cards .card .info h1 {
+#education .education-cards .card .info h1
+#skills .skills-cards .card .info h1 {
     text-align: center;
 }
 
-#education .education-cards .card .info p {
+#education .education-cards .card .info p
+#skills .skills-cards .card .info p {
     font-size: 1.1rem;
 }
+
 
 @media screen and (max-width: 450px) {
     #about,
@@ -252,4 +266,48 @@ header {
         background-color: var(--color-background);
         padding-left: 0px;
     }
+}
+
+.container {
+  margin: 100px auto;
+  width: 600px;
+  text-align: center;
+}
+
+.progress {
+  padding: 6px;;
+  border-radius: 6px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 18px;
+  background-color: --;
+  border-radius: 4px;
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+}
+
+.progress-striped .progress-bar {
+  background-color: var(--accent-color);
+  background-image: linear-gradient(
+    45deg,
+    #353535 25%,
+    transparent 25%,
+    transparent 50%,
+    #353535 50%,
+    #353535  75%,
+    transparent 75%,
+    transparent
+  );
+  animation: progressAnimationStrike 6s;
+}
+
+.progress-bar-html-css{
+    width: 80%;
+}
+
+.progress-bar-javascript{
+    width: 70%;
 }

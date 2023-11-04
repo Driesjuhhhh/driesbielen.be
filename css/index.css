@@ -38,7 +38,7 @@ header {
 
 #about .header a:hover,
 #socials .header a:hover {
-    border-color: var(--border-color);
+    border-color: var(--accent-color);
     box-shadow: none;
 }
 
@@ -55,7 +55,7 @@ header {
 
 #about .card:hover,
 #socials .card:hover {
-    border-color: var(--border-color);
+    border-color: var(--accent-color);
     box-shadow: none;
 }
 
@@ -158,7 +158,7 @@ header {
 #about .header a:hover,
 #education .header a:hover,
 #skills .header a:hover {
-    border-color: var(--border-color);
+    border-color: var(--accent-color);
     box-shadow: none;
 }
 
@@ -177,7 +177,7 @@ header {
 #about .card:hover,
 #education .card:hover,
 #skills .card:hover {
-    border-color: var(--border-color);
+    border-color: var(--accent-color);
     box-shadow: none;
 }
 

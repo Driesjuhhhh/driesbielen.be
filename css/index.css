@@ -243,7 +243,7 @@ header {
     margin-bottom: 1.4rem;
 }
 
-#education .education-cards .card .info h1
+#education .education-cards .card .info h1,
 #skills .skills-cards .card .info h1 {
     text-align: center;
 }

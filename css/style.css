@@ -467,7 +467,7 @@ iframe {
     box-shadow: none;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 850px) {
     header .info-text h1 {
         font-size: 4rem;
     }
@@ -489,5 +489,6 @@ iframe {
     #projects {
         background-color: var(--color-background);
         padding-left: 0px;
+        padding-right: 0px;
     }
 }

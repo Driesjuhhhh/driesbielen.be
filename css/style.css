@@ -12,19 +12,15 @@
 
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
     background: var(--accent-color);
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+}
 
 html {
     scroll-behavior: smooth;

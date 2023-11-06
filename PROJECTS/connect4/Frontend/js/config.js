@@ -5,7 +5,7 @@ export const GUID_EMPTY = "00000000-0000-0000-0000-000000000000";
 
 let url;
 if (localStorage.getItem("backendUrl") === null || localStorage.getItem("backendUrl").length == 0){
-    url = "https://z1875282-5001.euw.devtunnels.ms/api/"
+    url = "https://connectfour.emirkaan-web.eu/api/"
 } else {
     if (localStorage.getItem("backendUrl").endsWith("/api/")){
         url = localStorage.getItem("backendUrl")

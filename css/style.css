@@ -464,6 +464,10 @@ iframe {
 }
 
 @media screen and (max-width: 850px) {
+    .d-none-mobile{
+        display: none;
+    }
+
     header .info-text h1 {
         font-size: 4rem;
     }
@@ -484,7 +488,7 @@ iframe {
     #about,
     #projects {
         background-color: var(--color-background);
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }

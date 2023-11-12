@@ -163,7 +163,6 @@ header {
     background-color: --;
     border-radius: 4px;
     transition: 0.4s linear;
-    transition-property: width, background-color;
 }
 
 .progress-striped .progress-bar {
@@ -175,10 +174,8 @@ header {
         transparent 50%,
         #353535 50%,
         #353535 75%,
-        transparent 75%,
-        transparent
+        transparent 75%
     );
-    animation: progressAnimationStrike 6s;
 }
 
 .progress-bar-html-css {
@@ -187,4 +184,8 @@ header {
 
 .progress-bar-javascript {
     width: 70%;
+}
+
+.progress-bar-git {
+    width: 90%;
 }

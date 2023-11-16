@@ -4,7 +4,9 @@
   --color-background: black;
   --color-title: white;
   --accent-color: #1f4fff;
+  --accent-color-2: #4998C6;
   --color-text: #ccc;
+  --color-text-2: black;
   --color-links: #aaa;
   --second-background-color: 28282B;
   --nav-color: black;
@@ -19,7 +21,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-color);
+  background: var(--accent-color-2);
 }
 
 /*--------------------------------------------------------------
@@ -38,7 +40,7 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background: #000000;
+  background: var(--color-background);
   overflow: hidden;
   z-index: -1;
 }
@@ -56,7 +58,7 @@
 }
 
 .background span:nth-child(0) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 52%;
   left: 90%;
   animation-duration: 226s;
@@ -65,7 +67,7 @@
   box-shadow: 30vmin 0 4.094499180001305vmin currentColor;
 }
 .background span:nth-child(1) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 77%;
   left: 28%;
   animation-duration: 188s;
@@ -74,7 +76,7 @@
   box-shadow: -30vmin 0 3.9137063992296595vmin currentColor;
 }
 .background span:nth-child(2) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 88%;
   left: 65%;
   animation-duration: 251s;
@@ -83,7 +85,7 @@
   box-shadow: -30vmin 0 4.28272483434022vmin currentColor;
 }
 .background span:nth-child(3) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 70%;
   left: 50%;
   animation-duration: 91s;
@@ -92,7 +94,7 @@
   box-shadow: -30vmin 0 4.023140385034885vmin currentColor;
 }
 .background span:nth-child(4) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 49%;
   left: 55%;
   animation-duration: 267s;
@@ -101,7 +103,7 @@
   box-shadow: 30vmin 0 4.487301232018874vmin currentColor;
 }
 .background span:nth-child(5) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 86%;
   left: 4%;
   animation-duration: 224s;
@@ -110,7 +112,7 @@
   box-shadow: -30vmin 0 3.8518301315346086vmin currentColor;
 }
 .background span:nth-child(6) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 98%;
   left: 86%;
   animation-duration: 256s;
@@ -119,7 +121,7 @@
   box-shadow: 30vmin 0 3.7555380098842805vmin currentColor;
 }
 .background span:nth-child(7) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 74%;
   left: 79%;
   animation-duration: 219s;
@@ -128,7 +130,7 @@
   box-shadow: -30vmin 0 4.631802369377486vmin currentColor;
 }
 .background span:nth-child(8) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 42%;
   left: 57%;
   animation-duration: 238s;
@@ -137,7 +139,7 @@
   box-shadow: 30vmin 0 3.9303733822445484vmin currentColor;
 }
 .background span:nth-child(9) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 61%;
   left: 21%;
   animation-duration: 20s;
@@ -146,7 +148,7 @@
   box-shadow: -30vmin 0 4.596510886614572vmin currentColor;
 }
 .background span:nth-child(10) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 27%;
   left: 19%;
   animation-duration: 231s;
@@ -155,7 +157,7 @@
   box-shadow: 30vmin 0 4.291712846669948vmin currentColor;
 }
 .background span:nth-child(11) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 67%;
   left: 60%;
   animation-duration: 75s;
@@ -164,7 +166,7 @@
   box-shadow: -30vmin 0 4.033198918355345vmin currentColor;
 }
 .background span:nth-child(12) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 52%;
   left: 26%;
   animation-duration: 179s;
@@ -173,7 +175,7 @@
   box-shadow: 30vmin 0 3.8170898995697273vmin currentColor;
 }
 .background span:nth-child(13) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 85%;
   left: 97%;
   animation-duration: 6s;
@@ -182,7 +184,7 @@
   box-shadow: 30vmin 0 4.406476272479709vmin currentColor;
 }
 .background span:nth-child(14) {
-  color: var(--accent-color);
+  color: var(--accent-color-2);
   top: 51%;
   left: 55%;
   animation-duration: 181s;
@@ -199,12 +201,12 @@ body {
 }
 
 a {
-  color: #0563bb;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #067ded;
+  color: var(--accent-color);
   text-decoration: none;
 }
 
@@ -227,7 +229,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #0563bb;
+  background: var(--accent-color);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -241,7 +243,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #0678e3;
+  background: var(--accent-color);
   color: var(--color-text);
 }
 
@@ -269,7 +271,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #0563bb;
+  border: 6px solid var(--accent-color);
   border-top-color: var(--color-text);
   border-bottom-color: var(--color-text);
   border-radius: 50%;
@@ -386,7 +388,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: var(--color-text);
-  background: #0563bb;
+  background: var(--accent-color);
 }
 
 .nav-menu a:hover span,
@@ -448,7 +450,7 @@ h6 {
 }
 
 #person p span {
-  color: #0563bb;
+  color: var(--accent-color);
   letter-spacing: 1px;
 }
 
@@ -550,7 +552,7 @@ section {
 }
 
 .facts .count-box p{
-  color: black;
+  color: var(--color-text-2);
 }
 
 .facts .count-box {
@@ -568,7 +570,7 @@ section {
   left: 50%;
   transform: translateX(-50%);
   font-size: 24px;
-  background: #0563bb;
+  background: var(--accent-color);
   color: var(--color-text);
   border-radius: 50px;
   display: inline-flex;
@@ -582,7 +584,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #011426;
+  color: var(--color-background);
 }
 
 .facts .count-box p {
@@ -694,7 +696,7 @@ section {
   left: -9px;
   top: 0;
   background: var(--color-text);
-  border: 2px solid #0563bb;
+  border: 2px solid var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -722,7 +724,7 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: var(--color-background);
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -879,11 +881,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #0563bb;
+  border: 1px solid var(--accent-color);
 }
 
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #0563bb;
+  background-color: var(--accent-color);
 }
 
 .portfolio-details .portfolio-info {

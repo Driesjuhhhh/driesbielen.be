@@ -1,0 +1,127 @@
+:root {
+    --text: #0e0105;
+    --background: #fdedf1;
+    --primary: #eb4272;
+    --secondary: #fad1dd;
+    --accent: #e71853;
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Kaisei Tokumin:700|Kaisei Tokumin:400');
+
+body {
+  font-family: 'Kaisei Tokumin' !important;
+  font-weight: 400 !important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Kaisei Tokumin' !important;
+  font-weight: 700 !important;
+}
+
+html {font-size: 100% !important;} /* 16px */
+
+h1 {font-size: 4.210rem !important; /* 67.36px */}
+
+h2 {font-size: 3.158rem !important; /* 50.56px */}
+
+h3 {font-size: 2.369rem !important; /* 37.92px */}
+
+h4 {font-size: 1.777rem !important; /* 28.48px */}
+
+h5 {font-size: 1.333rem !important; /* 21.28px */}
+
+small {font-size: 0.750rem !important; /* 12px */}
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+body {
+    background-color: var(--background);
+}
+
+header ul li a{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+#main-header.nav-scroll {
+    opacity: 0.65; /* Set the desired background color with opacity */
+  }
+
+header nav,header .dropdown-menu {
+    background-color: var(--secondary);
+    transition: background-color     0.3s ease;
+}
+
+header nav a{
+    color: var(--text) !important;
+}
+
+header nav a:hover {
+    color: var(--accent) !important;
+}
+
+main {
+    padding-top: 150px;
+    margin-bottom: 500px;
+    height: auto;
+}
+
+.page-header, .text-muted, .card-subtitle{
+    color: var(--text) !important;
+}
+
+
+.navbar-collapse .dropdown-item:hover {
+    background-color: var(--secondary) !important;
+    width: 100px;
+    color: var(--accent);
+}
+
+
+.card {
+    background-color: var(--secondary) !important;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    border-width: 2px;
+}
+
+.card .btn {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--text);
+}
+
+.card h5, .card p {
+    color: black;
+}
+
+.carousel-caption {
+    margin-top: 150px;
+}
+
+.btn {
+    margin-bottom: 20px !important;
+}
+
+.toast, .toast-header {
+    background-color: var(--secondary);
+}
+
+.toast-header, .toast-body {
+    color: var(--text);
+}

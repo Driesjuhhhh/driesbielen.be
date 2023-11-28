@@ -2,15 +2,12 @@
 :root {
   font-family: "Roboto", sans-serif;
   --color-background: #161414;
-  --color-title: white;
   --primary-color: #2A45A8;
   --secondary-color: #245775;
   --accent-color: #0ECBFB;
   --color-text: #ccc;
   --color-text-2: black;
   --hover-color-text: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
-  --color-links: #aaa;
-  --second-background-color: 28282B;
   --nav-color: black;
 }
 

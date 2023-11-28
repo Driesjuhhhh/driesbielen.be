@@ -8,6 +8,7 @@
   --accent-color: #0ECBFB;
   --color-text: #ccc;
   --color-text-2: black;
+  --hover-color-text: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
   --color-links: #aaa;
   --second-background-color: 28282B;
   --nav-color: black;
@@ -323,9 +324,6 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
 .nav-menu {
   padding: 0;
   display: block;
@@ -440,7 +438,10 @@ h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: var(--primary-color);
+  color: transparent !important;
+  background: var(--hover-color-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #person p {
@@ -451,7 +452,10 @@ h6 {
 }
 
 #person p span {
-  color: var(--primary-color);
+  color: transparent !important;
+  background: var(--hover-color-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: 1px;
 }
 

@@ -122,7 +122,7 @@
   }
 
   /**
-   * Hero type effect
+   * Person type effect
    */
   const typed = select('.typed')
   if (typed) {

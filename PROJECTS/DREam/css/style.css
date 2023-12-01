@@ -1,0 +1,78 @@
+:root {
+    font-family: "Roboto", sans-serif;
+    --color-background: #161414;
+    --primary-color: #2A45A8;
+    --secondary-color: #6717cd;
+    --accent-color: #0ECBFB;
+    --color-text: #ccc;
+    --color-text-2: black;
+    --starting-text-color: rgba(0, 0, 0, 0) linear-gradient(90deg, #90f3b3, #90e9f3, #909ff3, #cc90f3, #f390d1, #f39a90, #f3e590, #b8f390) repeat scroll 0% 0%/200% 200%;
+    --nav-color: black;
+  }
+
+body {
+    background-color: var(--color-background);
+}
+
+  /* Starting */
+
+  #starting {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+  }
+  
+  
+  #starting:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #starting h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    color: transparent !important;
+    background: var(--starting-text-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #starting p {
+    color: var(--color-text);
+    margin: 15px 0 0 0;
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #starting p span {
+    color: transparent !important;
+    background: var(--starting-text-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+  }
+  
+  
+  @media (max-width: 992px) {
+    #starting {
+      text-align: center;
+    }
+  
+    #starting h1 {
+      font-size: 32px;
+      line-height: 36px;
+    }
+  
+    #starting p {
+      margin-top: 10px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }

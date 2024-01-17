@@ -1,157 +1,494 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
-    <title>Barbie After The Movie</title>
-    
-    <!-- Favicon -->
-    <link href="assets/logo.png?" rel="shortcut icon" />
-    
-    <!-- Bootstrap Imports -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- FontAwesome Import -->
-    <script src="https://kit.fontawesome.com/c2e4631732.js" crossorigin="anonymous"></script>
-    
-    <!-- JavaScript Imports  -->
-    <script src="js/scripts.js" defer></script>
-    
-    <!-- CSS Imports -->
-    <link href="css/style.css" rel="stylesheet" />
-    
-    <!-- Meta tags -->
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta charset="utf-8" />
-    <meta name="theme-color" content="#49739c" />
-    <meta name="keywords" content="MVC, MVCPeer, MVC Peer, Peer, mvcpeer">
-    <meta name="og:url" content="https://mvcpeer.be" />
-    <meta name="og:title" content="MVC Peer | Home" />
-    <meta name="description" content="Dit is de officiele website van MVC Peer" />
-    <meta name="og:description" content="Dit is de officiele website van MVC Peer" />
-    <meta name="robots" content="max-snippet:40" />
-    <meta name="og:site_name" content="Mvc Peer | Home" />
-    <meta name="og:img" content="assets/logo.png" />
-    <meta name="og:img:width" content="1440" />
-    <meta name="og:img:height" content="1440" />
+  <title>Barbie After The Movie</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Google analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-97151588KK"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
 
-        gtag("config", "G-97151588KK");
-    </script> -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Bootstrap import -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
 </head>
 
 <body>
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg" id="main-header">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/logo.png" alt="Logo" width="40" height="34"
-                        class="d-inline-block align-text-top" />
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse justify-content-center navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="change-me.html">Link 1</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Sponsors
-                            </a>
-                            <ul class="dropdown-menu" id="main-header">
-                                <li>
-                                    <a class="dropdown-item" href="change-me.html">Sponsor 1</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="change-me.html">Sponsor 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="over-ons.html">Over ons</a>
-                        </li>
-                    </ul>
-                </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center ">
+    <div class="container-fluid container-xxl d-flex align-items-center">
+
+      <div id="logo" class="me-auto">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <h1><a href="index.html">Barbie <span>After The Movie</span></a></h1>
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Info</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#schedule">Agenda</a></li> -->
+          <li><a class="nav-link scrollto" href="#locatie">locatie</a></li>
+          <li><a class="nav-link scrollto" href="#sponsors">Sponsors</a></li>
+          <li><a class="nav-link scrollto" href="#team">Over ons</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a class="buy-tickets scrollto" href="#buy-tickets">Tickets</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+      <h1 class="mb-4 pb-0">Barbie <br><span>After the movie</span></h1>
+      <p class="mb-4 pb-0">2 - 13 April, Quartier Bleu, Hasselt</p>
+      <!-- <a href="" class="glightbox play-btn mb-4"></a> -->
+      <a href="#about" class="about-btn scrollto">Over het evenement</a>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about">
+      <div class="container position-relative" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>Over het evenement</h2>
+            <p>Hier komt info over het evenement.</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Waar</h3>
+            <p>Quartier Bleu, Hasselt</p>
+          </div>
+          <div class="col-lg-3">
+            <h3>Wanneer</h3>
+            <p><br>2 - 13 April</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Schedule Section ======= -->
+    
+    <!-- End Schedule Section -->
+
+    <!-- ======= locatie Section ======= -->
+    <section id="locatie">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Waar</h2>
+          <p>Event locatie</p>
+        </div>
+
+        <div class="row g-0">
+          <div class="col-lg-12 locatie-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2514.270202212659!2d5.333144076091247!3d50.937215852197355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c1210ed53eb97d%3A0x8fd12bc4423161a4!2sQuartier%20Bleu!5e0!3m2!1snl!2sbe!4v1705529025390!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
+      </div>
+
+      <div class="container-fluid locatie-gallery-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-0">
+        </div>
+      </div>
+
+    </section><!-- End locatie Section -->
+
+
+    <!-- ======= sponsors Section ======= -->
+    <section id="sponsors" class="section-with-bg">
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Sponsors</h2>
+        </div>
+
+        <div class="row no-gutters sponsors-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/1.png" class="img-fluid" alt="">
             </div>
-        </nav>
-    </header>
-    <main>
-        
-        <div class="container">
-            <!-- Melding -->
-            <div class="toast-container position-fixed bottom-0 end-0 p-3">
-                <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                  <div class="toast-header">
-                    <strong class="me-auto">MELDING</strong>
-                    <small>datum</small>
-                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-                  </div>
-                  <div class="toast-body">
-                    KOM NAAR ONS EVENTT
-                  </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/2.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/3.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/4.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/5.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/6.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/7.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsors-logo">
+              <img src="assets/img/sponsors/8.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- End Sponsors Section -->
+
+    <!-- =======  F.A.Q Section ======= -->
+    <!-- <section id="faq">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>F.A.Q </h2>
+        </div>
+
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-9">
+
+            <ul class="faq-list">
+
+              <li>
+                <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                  </p>
+                </div>
+              </li>
+
+              <li>
+                <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                  <p>
+                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>End  F.A.Q Section -->
+
+    <!-- ======= Buy Ticket Section ======= -->
+    <section id="buy-tickets" class="section-with-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Koop je tickets</h2>
+          <p>Ons evenement is volledig gratis</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">1 DAG</h5>
+                <h6 class="card-price text-center">GRATIS</h6>
+                <hr>
+                <span class="justify-content-center d-flex">Toegang tot het volledige evenement</span> 
+                <hr>
+                <!-- <div class="text-center">
+                  <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card mb-5 mb-lg-0">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">3 DAGEN</h5>
+                <h6 class="card-price text-center">GRATIS</h6>
+                <hr>
+                <span class="justify-content-center d-flex">Toegang tot het volledige evenement</span> 
+                <hr>
+              </div>
+            </div>
+          </div>
+          <!-- Pro Tier -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title text-muted text-uppercase text-center">ALLE DAGEN</h5>
+                <h6 class="card-price text-center">GRATIS</h6>
+                <hr>
+                <span class="justify-content-center d-flex">Toegang tot het volledige evenement</span> 
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Order Form -->
+      <!-- <div id="buy-ticket-modal" class="modal fade">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Buy Tickets</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form method="POST" action="#">
+                <div class="form-group">
+                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
+                </div>
+                <div class="form-group mt-3">
+                  <select id="ticket-type" name="ticket-type" class="form-select">
+                    <option value="">-- Select Your Ticket Type --</option>
+                    <option value="standard-access">Standard Access</option>
+                    <option value="pro-access">Pro Access</option>
+                    <option value="premium-access">Premium Access</option>
+                  </select>
+                </div>
+                <div class="text-center mt-3">
+                  <button type="submit" class="btn">Buy Now</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- /.modal -->
+
+    </section><!-- End Buy Ticket Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>TEAM</h2>
+          <p>Dit is het team achter het evenement</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="team" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/speakers/1.jpg" alt="Amber 1" class="img-fluid">
+              <div class="details">
+                <p>Amber Neyens</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
               </div>
-              <!-- Main Content -->
-            <div class="row">
-                <div class="text-center">
-                    <h1>Ons Evenement</h1>
-                </div>
-                <div class="col-sm-12 mb-12 mb-sm-0">
-                    <div class="card">
-                        <div class="card-body">
-                            <p class="card-text text-center">Dit is een voorbeeld van een card
-                            </p>
-                            <br>
-                            <br>
-                            <div class="position-absolute bottom-0 start-50 translate-middle-x">
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
-                <div class="col-md-4 d-flex align-items-center">
-                    <span class="mb-3 mb-md-0 text-muted" id="year"></span>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="team" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/img/speakers/2.jpg" alt="Kelly 2" class="img-fluid">
+              <div class="details">
+                <p>Kelly Hoebers</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
-                <div class="col-md-4 d-flex align-items-center">
-                    <a class="mb-3 mb-md-0 text-muted" href="https://driesbielen.be">Design by Dries Bielen</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="team" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/img/speakers/3.jpg" alt="Joke" class="img-fluid">
+              <div class="details">
+                <p>Joke Bylemans</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
                 </div>
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="text-muted" href="https://www.instagram.com/"><i
-                                class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="ms-3">
-                        <a class="text-muted" href="https://www.facebook.com/"><i
-                                class="fab fa-facebook"></i></a>
-                    </li>
-                </ul>
-            </footer>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+      </div>
+
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contacteer ons</h2>
+          <p>U kunt ons contacteren via volgende mogelijkheden:</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Amber Neyens</h3>
+              <p><a href="tel:+32477376944">+32 477 37 69 44</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Kelly Hoebers</h3>
+              <p><a href="tel:+32473580290">+32 473 58 02 90</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="bi bi-phone"></i>
+              <h3>Joke Bylemans</h3>
+              <p><a href="tel:+32468345403">+32 468 34 54 03</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Barbie After The Movie</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://driesbielen.be/">Dries Bielen</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>

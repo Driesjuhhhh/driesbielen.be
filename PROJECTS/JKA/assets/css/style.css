@@ -18,9 +18,6 @@
 
 
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   background:white;
   color: black;
@@ -63,7 +60,7 @@ h6 {
   margin-top: 70px;
 }
 
-/* Prelaoder */
+
 #preloader {
   position: fixed;
   left: 0;
@@ -75,9 +72,7 @@ h6 {
   background:white url("../img/preloader.svg") no-repeat center center;
 }
 
-/*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -108,8 +103,7 @@ h6 {
   opacity: 1;
 }
 
-/* Sections Header
---------------------------------*/
+
 .section-header {
   margin-bottom: 60px;
   position: relative;
@@ -148,9 +142,7 @@ h6 {
   background-color: white;
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+
 #header {
   height: 90px;
   position: fixed;
@@ -174,6 +166,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 #header #logo h1 span {
@@ -197,9 +190,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Buy Tickets
---------------------------------------------------------------*/
+
 .buy-tickets {
   color:white;
   background: var(--primary-color);
@@ -229,12 +220,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
+
 .navbar {
   padding: 0;
 }
@@ -369,9 +355,7 @@ h6 {
   }
 }
 
-/**
-* Mobile Navigation 
-*/
+
 .mobile-nav-toggle {
   color:white;
   font-size: 28px;
@@ -382,111 +366,19 @@ h6 {
 }
 
 @media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
+  .buy-tickets {
+    display: none;
   }
 
   .navbar ul {
     display: none;
   }
+
+  #header #logo h1 {
+    font-size: 20px;
+  }
 }
 
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color:white;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-
-.navbar-mobile>ul>li {
-  padding: 0;
-}
-
-.navbar-mobile a:hover:before,
-.navbar-mobile li:hover>a:before,
-.navbar-mobile .active:before {
-  visibility: hidden;
-}
-
-.navbar-mobile a,
-.navbar-mobile a:focus {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #060c22;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: var(--primary-color);
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-  margin: 15px;
-}
-
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background:white;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: var(--primary-color);
-}
-
-.navbar-mobile .dropdown>.dropdown-active {
-  display: block;
-}
-
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
@@ -660,9 +552,7 @@ h6 {
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+
 #about {
   background: url("../img/about-bg.jpg");
   background-size: cover;
@@ -709,9 +599,7 @@ h6 {
   color:white;
 }
 
-/*--------------------------------------------------------------
-# team Section
---------------------------------------------------------------*/
+
 #team {
   padding: 60px 0 30px 0;
 }
@@ -813,9 +701,7 @@ h6 {
   margin-bottom: 10px;
 }
 
-/*--------------------------------------------------------------
-# Schedule Section
---------------------------------------------------------------*/
+
 #schedule {
   padding: 60px 0 60px 0;
 }
@@ -933,9 +819,7 @@ h6 {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# locatie Section
---------------------------------------------------------------*/
+
 #locatie {
   padding: 60px 0;
 }
@@ -950,9 +834,7 @@ h6 {
   min-height: 300px;
 }
 
-/*--------------------------------------------------------------
-# Sponsors Section
---------------------------------------------------------------*/
+
 #sponsors {
   padding: 60px 0;
 }
@@ -982,76 +864,6 @@ h6 {
 #sponsors img {
   transition: all 0.4s ease-in-out;
 }
-
-/*--------------------------------------------------------------
-# F.A.Q Section
---------------------------------------------------------------*/
-#faq {
-  padding: 60px 0;
-}
-
-#faq .faq-list {
-  padding: 0;
-  list-style: none;
-}
-
-#faq .faq-list li {
-  border-bottom: 1px solid white;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
-
-#faq .faq-list .question {
-  display: block;
-  position: relative;
-  font-family: var(--primary-color);
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  padding-left: 25px;
-  cursor: pointer;
-  color: var(--primary-color);
-  transition: 0.3s;
-}
-
-#faq .faq-list i {
-  font-size: 16px;
-  position: absolute;
-  left: 0;
-  top: -2px;
-}
-
-#faq .faq-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 25px;
-}
-
-#faq .faq-list .icon-show {
-  display: none;
-}
-
-#faq .faq-list .collapsed {
-  color: black;
-}
-
-#faq .faq-list .collapsed:hover {
-  color: var(--primary-color);
-}
-
-#faq .faq-list .collapsed .icon-show {
-  display: inline-block;
-  transition: 0.6s;
-}
-
-#faq .faq-list .collapsed .icon-close {
-  display: none;
-  transition: 0.6s;
-}
-
-
-/*--------------------------------------------------------------
-# Buy Tickets Section
---------------------------------------------------------------*/
 #buy-tickets {
   padding: 60px 0;
 }
@@ -1105,28 +917,7 @@ h6 {
   background-color: var(--primary-color);
 }
 
-#buy-tickets #buy-ticket-modal input,
-#buy-tickets #buy-ticket-modal select {
-  border-radius: 0;
-}
 
-#buy-tickets #buy-ticket-modal .btn {
-  font-size: 15px;
-  border-radius: 50px;
-  padding: 10px 40px;
-  transition: all 0.2s;
-  background-color: var(--primary-color);
-  border: 0;
-  color: white;
-}
-
-#buy-tickets #buy-ticket-modal .btn:hover {
-  background-color: var(--primary-color);
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
 #contact {
   padding: 60px 0;
 }
@@ -1188,9 +979,7 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+
 #footer {
   background: black;
   padding: 0 0 25px 0;
@@ -1203,32 +992,7 @@ h6 {
   padding: 60px 0 30px 0;
 }
 
-#footer .footer-top .footer-info {
-  margin-bottom: 30px;
-}
 
-#footer .footer-top .footer-info h3 {
-  font-size: 26px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  color: white;
-}
-
-#footer .footer-top .footer-info img {
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-#footer .footer-top .footer-info p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Raleway", sans-serif;
-  color: white;
-}
 
 #footer .footer-top .social-links a {
   display: inline-block;
@@ -1253,49 +1017,6 @@ h6 {
 #footer .footer-top .social-links a:hover {
   background: var(--primary-color);
   color: white;
-}
-
-#footer .footer-top h4 {
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase;
-  position: relative;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--primary-color);
-}
-
-#footer .footer-top .footer-links {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#footer .footer-top .footer-links ul i {
-  padding-right: 5px;
-  color: var(--primary-color);
-  font-size: 18px;
-}
-
-#footer .footer-top .footer-links ul li {
-  border-bottom: 1px solid black;
-  padding: 10px 0;
-}
-
-#footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-#footer .footer-top .footer-links ul a {
-  color: white;
-}
-
-#footer .footer-top .footer-links ul a:hover {
-  color: var(--primary-color);
 }
 
 

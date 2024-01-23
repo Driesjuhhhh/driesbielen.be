@@ -1,6 +1,6 @@
 // Setting up Spotify API and Endpoints
 const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing';
-const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
+const TOKEN_ENDPOINT = 'https://api.spotify.com';
 const client_id = '67e9cdf59f724bddbf55e1cfe93d752b';
 const client_secret = '263576f1b76449eaac2d205f0c3b8b9b';
 const refresh_token = 'AQDlt5wFKgHFuVk-GU9kUmFMwfFg5zxgpXNTPPg5WrZCTD10Ie7ouGBMA_VCwotwNO__3JnHeDrmaDPJFuF-a7uKPCOX1M0JeMUzTSQ3u-p2DnxhW73Abz-_5TJ8WbqZgAc';
@@ -8,16 +8,16 @@ const refresh_token = 'AQDlt5wFKgHFuVk-GU9kUmFMwfFg5zxgpXNTPPg5WrZCTD10Ie7ouGBMA
 // Function to generate an access token using the refresh token
 async function getAccessToken(client_id, client_secret, refresh_token) {
     try {
-      const basic = btoa(`${client_id}:${client_secret}`);
-  
-      const response = await fetch(TOKEN_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${basic}`,
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: `grant_type=refresh_token&refresh_token=${refresh_token}&scope=user-read-playback-state`,
-      });
+        const basic = btoa(`${client_id}:${client_secret}`);
+    
+        const response = await fetch(TOKEN_ENDPOINT, {
+            method: 'POST',
+            headers: {
+            Authorization: `Basic ${basic}`,
+            'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: `grant_type=refresh_token&refresh_token=${refresh_token}&scope=user-read-playback-state`,
+        });
   
       if (!response.ok) {
         throw new Error(`Failed to fetch access token: ${response.status} ${response.statusText}`);

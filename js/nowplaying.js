@@ -1,5 +1,3 @@
-// nowPlaying.js
-
 // Setting up Spotify API and Endpoints
 const NOW_PLAYING_ENDPOINT = 'https://api.spotify.com/v1/me/player/currently-playing';
 const TOKEN_ENDPOINT = 'https://accounts.spotify.com/api/token';
@@ -9,19 +7,29 @@ const refresh_token = 'AQDlt5wFKgHFuVk-GU9kUmFMwfFg5zxgpXNTPPg5WrZCTD10Ie7ouGBMA
 
 // Function to generate an access token using the refresh token
 async function getAccessToken(client_id, client_secret, refresh_token) {
-    const basic = btoa(`${client_id}:${client_secret}`);
-    
-    const response = await fetch(TOKEN_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Authorization: `Basic ${basic}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: `grant_type=refresh_token&refresh_token=${refresh_token}`,
-    });
+    try {
+      const basic = btoa(`${client_id}:${client_secret}`);
   
-    return response.json();
+      const response = await fetch(TOKEN_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          Authorization: `Basic ${basic}`,
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `grant_type=refresh_token&refresh_token=${refresh_token}&scope=user-read-playback-state`,
+      });
+  
+      if (!response.ok) {
+        throw new Error(`Failed to fetch access token: ${response.status} ${response.statusText}`);
+      }
+  
+      return response.json();
+    } catch (error) {
+      console.error('Error fetching access token: ', error);
+      return { error: 'Failed to fetch access token' };
+    }
   }
+  
   
   // Function to fetch the currently playing song
   async function getNowPlaying() {
@@ -77,11 +85,11 @@ async function getAccessToken(client_id, client_secret, refresh_token) {
       artistElement.innerHTML = nowPlaying.isPlaying ? `<a href="${nowPlaying.artistUrl}">${nowPlaying.artist}</a>` : nowPlaying.artist;
       timeElement.textContent = `${pad(minutesPlayed)}:${pad(secondsPlayed)} / ${pad(minutesTotal)}:${pad(secondsTotal)}`;
     } else if (nowPlaying === 'Currently Not Playing') {
-      stateElement.textContent = 'OFFLINE';
-      titleElement.textContent = 'User is';
-      artistElement.textContent = 'currently Offline';
+      stateElement.textContent = '';
+      titleElement.textContent = '';
+      artistElement.textContent = '';
     } else {
-      titleElement.textContent = 'Failed to';
+      titleElement.textContent = 'failed to';
       artistElement.textContent = 'fetch song';
     }
   }

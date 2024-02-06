@@ -130,13 +130,44 @@
       <div class="container-fluid" data-aos="fade-up">
         <div class="section-header">
           <h2>Cadeaubon</h2>
-          </div>
-          <p>Een cadeaubon van La Belle Bu is een leuk geschenk voor elke gelegenheid. 
+        </div>
+        <p>Een cadeaubon van La Belle Bu is een leuk geschenk voor elke gelegenheid.
 
-            Je bepaalt zelf het bedrag dat je wil schenken of je kiest een specifieke behandeling als geschenk. 
-            
-            Je kan de cadeaubon verkrijgen bij La Belle Bu (op afspraak) maar je kan hem ook telefonisch of via ons contactformulier bestellen. Geraakt u niet tijdig tot in ons instituut, geen nood na ontvangst van betaling kan de cadeaubon ook digitaal worden doorgestuurd.</p>
-        
+          Je bepaalt zelf het bedrag dat je wil schenken of je kiest een specifieke behandeling als geschenk.
+
+          Je kan de cadeaubon verkrijgen bij La Belle Bu (op afspraak) maar je kan hem ook telefonisch of via ons
+          contactformulier bestellen. Geraakt u niet tijdig tot in ons instituut, geen nood na ontvangst van betaling
+          kan de cadeaubon ook digitaal worden doorgestuurd.</p>
+      </div>
+      <br>
+      <div class="container" data-aos="fade-up">
+        <div class="row contact-info">
+          <div class="form">
+            <form role="form" action="mailto:info@labellebu.be" class="email-form" method="post" enctype="text/plain"
+              onsubmit="submitForm(event)">
+              <div class="row">
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Onderwerp" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" id="text" type="text" name="text" rows="5" placeholder="Bericht"
+                  required></textarea>
+              </div>
+              <br>
+              <div class="text-center"><button type="submit">Doe uw aanvraag</button></div>
+            </form>
+          </div>
+          <script>
+            function submitForm(event) {
+              event.preventDefault();
+              var subject = document.getElementById("subject").value;
+              var text = document.getElementById("text").value;
+              var mailtoLink = "mailto:info@labellebu.be?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
+              window.location.href = mailtoLink;
+            }
+          </script>
+        </div>
       </div>
     </section>
     <section id="locatie">
@@ -186,6 +217,31 @@
               <p><a href="mailto:info@labellebu.be">info@labellebu.be</a></p>
             </div>
           </div>
+          <div class="form">
+            <form role="form" action="mailto:info@labellebu.be" class="email-form" method="post" enctype="text/plain"
+              onsubmit="submitForm(event)">
+              <div class="row">
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Onderwerp" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" id="text" type="text" name="text" rows="5" placeholder="Bericht"
+                  required></textarea>
+              </div>
+              <br>
+              <div class="text-center"><button type="submit">Mail ons</button></div>
+            </form>
+          </div>
+          <script>
+            function submitForm(event) {
+              event.preventDefault();
+              var subject = document.getElementById("subject").value;
+              var text = document.getElementById("text").value;
+              var mailtoLink = "mailto:info@labellebu.be?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
+              window.location.href = mailtoLink;
+            }
+          </script>
         </div>
       </div>
     </section>

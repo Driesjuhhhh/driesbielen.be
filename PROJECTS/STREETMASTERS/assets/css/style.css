@@ -414,8 +414,11 @@ h6 {
   }
 }
 
+#spacing {
+  padding-bottom: 100vh
+}
 
-#freelance {
+#services {
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -424,12 +427,12 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-  #freelance {
+  #services {
     background-attachment: fixed;
   }
 }
 
-#freelance:before {
+#services:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -439,14 +442,14 @@ h6 {
   right: 0;
 }
 
-#freelance h2 {
+#services h2 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #fff;
 }
 
-#freelance h3 {
+#services h3 {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
@@ -454,7 +457,7 @@ h6 {
   color: #fff;
 }
 
-#freelance p {
+#services p {
   font-size: 14px;
   margin-bottom: 20px;
   color: #fff;

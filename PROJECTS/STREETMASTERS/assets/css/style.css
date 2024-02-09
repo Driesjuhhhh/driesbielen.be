@@ -9,11 +9,11 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--primary-color);
+  background: black;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: gray;
 }
 
 body {

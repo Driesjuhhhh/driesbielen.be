@@ -1,8 +1,7 @@
 :root {
   --primary-color: white;
-  --secondary-color: gray
+  --secondary-color: gray;
 }
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -90,14 +89,13 @@ h6 {
 
 .back-to-top:hover {
   background: var(--primary-color);
-  color:white;
+  color: white;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
 }
-
 
 .section-header {
   margin-bottom: 60px;
@@ -133,7 +131,6 @@ h6 {
   color: white;
 }
 
-
 #header {
   height: 90px;
   position: fixed;
@@ -142,6 +139,12 @@ h6 {
   right: 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+@media (max-width: 992px) {
+  #header {
+    background-color: transparent;
+  }
 }
 
 #header.header-scrolled,
@@ -166,7 +169,7 @@ h6 {
 
 #header #logo h1 a,
 #header #logo h1 a:hover {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -198,7 +201,7 @@ h6 {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 12px;
 }
@@ -225,7 +228,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar>ul>li>a:before {
+.navbar > ul > li > a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -238,7 +241,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 100%;
@@ -247,8 +250,8 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
-  color:white;
+.navbar li:hover > a {
+  color: white;
 }
 
 .navbar .dropdown ul {
@@ -261,7 +264,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background:white;
+  background: white;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -283,11 +286,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: var(--primary-color);
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -299,7 +302,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -311,14 +314,13 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
-
 .mobile-nav-toggle {
-  color:white;
+  color: white;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -385,7 +387,7 @@ h6 {
 }
 
 #hero h1 {
-  color:white;
+  color: white;
   font-family: "Raleway", sans-serif;
   font-size: 56px;
   font-weight: 600;
@@ -415,54 +417,20 @@ h6 {
 }
 
 #spacing {
-  padding-bottom: 100vh
+  padding-bottom: 100vh;
 }
 
-#services {
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-  color: #fff;
-  padding: 60px 0 40px 0;
+#half-spacing {
+  padding-bottom: 50vh;
 }
 
-@media (min-width: 1024px) {
-  #services {
-    background-attachment: fixed;
-  }
-}
-
-#services:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#services h2 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-#services h3 {
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-#services p {
-  font-size: 14px;
+.row {
   margin-bottom: 20px;
-  color: #fff;
 }
 
+#detailing,
+#wrapping,
+#customizing,
 #overons {
   background-size: cover;
   overflow: hidden;
@@ -472,11 +440,17 @@ h6 {
 }
 
 @media (min-width: 1024px) {
+  #detailing,
+  #wrapping,
+  #customizing,
   #overons {
     background-attachment: fixed;
   }
 }
 
+#detailing:before,
+#wrapping:before,
+#customizing:before,
 #overons:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
@@ -487,21 +461,50 @@ h6 {
   right: 0;
 }
 
+#detailing h2,
+#wrapping h2,
+#customizing h2,
 #overons h2 {
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
   color: #fff;
 }
 
-#overons h3 {
-  font-size: 18px;
+#detailing h3,
+#wrapping h3,
+#customizing h3,
+#overons h3,
+#detailing h4,
+#wrapping h4,
+#customizing h4,
+#overons h4 {
+  font-size: 21px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #fff;
 }
 
+@media (max-width: 992px) {
+  #detailing h4,
+  #wrapping h4,
+  #customizing h4,
+  #overons h4 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.spacing-between-categories {
+  margin-top: 150px
+}
+
+#detailing p,
+#wrapping p,
+#customizing p,
 #overons p {
   font-size: 14px;
   margin-bottom: 20px;
@@ -510,7 +513,7 @@ h6 {
 
 #contact {
   padding: 60px 0;
-  background: rgba(0, 0, 0, 0.8);;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #contact .contact-info {
@@ -555,7 +558,6 @@ h6 {
 }
 
 @media (min-width: 768px) {
-
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
@@ -575,7 +577,6 @@ h6 {
   height: 100%;
   min-height: 300px;
 }
-
 
 .email-form input,
 .email-form textarea {
@@ -597,7 +598,7 @@ h6 {
   padding: 12px 15px;
 }
 
-.email-form button[type=submit] {
+.email-form button[type="submit"] {
   background: var(--primary-color);
   border: 0;
   padding: 10px 40px;
@@ -607,11 +608,9 @@ h6 {
   cursor: pointer;
 }
 
-.email-form button[type=submit]:hover {
+.email-form button[type="submit"]:hover {
   background: var(--primary-color);
 }
-
-
 
 #footer {
   background: rgba(0, 0, 0, 0.8);
@@ -624,8 +623,6 @@ h6 {
   background: rgba(0, 0, 0, 0.8);
   padding: 60px 0 0px 0;
 }
-
-
 
 #footer .footer-top .social-links a {
   display: inline-block;
@@ -652,7 +649,6 @@ h6 {
   background: var(--primary-color);
   color: white;
 }
-
 
 #footer .copyright {
   text-align: center;

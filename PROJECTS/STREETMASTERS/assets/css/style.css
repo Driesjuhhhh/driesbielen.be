@@ -142,8 +142,9 @@ h6 {
 }
 
 @media (max-width: 992px) {
-  #header {
-    background-color: transparent;
+  #header.header-scrolled,
+  #header.header-inner {
+    background-color: transparent !important;
   }
 }
 

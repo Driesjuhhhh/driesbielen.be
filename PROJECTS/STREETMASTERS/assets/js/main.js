@@ -92,9 +92,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     onscroll(document, toggleBacktotop)
   }
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
@@ -134,7 +131,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
   window.addEventListener('load', () => {
     AOS.init({
-      duration: 1000,
+      duration: 1500,
       easing: 'ease-in-out',
       once: true,
       mirror: false

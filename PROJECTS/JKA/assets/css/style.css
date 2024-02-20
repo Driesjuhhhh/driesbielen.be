@@ -188,6 +188,11 @@ h6 {
   }
 }
 
+#grondplan iframe {
+  width: 100%;
+  height: 80vh;
+}
+
 
 .buy-tickets, .sponsorons {
   color:white;

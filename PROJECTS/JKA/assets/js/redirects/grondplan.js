@@ -3,5 +3,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function openSiteOnLoad() {
-    window.location.href = "grondplan link";
+    window.location.href = "";
 }

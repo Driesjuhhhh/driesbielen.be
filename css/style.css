@@ -30,6 +30,10 @@
   }
 }
 
+.cookiealert {
+  background: transparent !important;
+}
+
 .background {
   position: fixed;
   width: 100vw;

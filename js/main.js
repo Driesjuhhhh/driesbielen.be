@@ -1,4 +1,4 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 (function () {
   "use strict";
@@ -61,13 +61,18 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     })
   });
 
+
   let backtotop = select('.back-to-top')
+  let cookiealert = select('.cookiealert')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 80) {
         backtotop.classList.add('active')
+        cookiealert.style.display = 'none'
+        
       } else {
         backtotop.classList.remove('active')
+        cookiealert.style.display = 'block'
       }
     }
     window.addEventListener('load', toggleBacktotop)

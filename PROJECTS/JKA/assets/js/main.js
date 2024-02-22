@@ -1,4 +1,4 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 (function() {
   "use strict";
@@ -68,7 +68,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
   let selectHeader = select('#header')
   if (selectHeader) {
     const headerScrolled = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         selectHeader.classList.add('header-scrolled')
       } else {
         selectHeader.classList.remove('header-scrolled')
@@ -80,12 +80,15 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
   let backtotop = select('.back-to-top')
+  let cookieAlert = select('.cookiealert')
   if (backtotop) {
     const toggleBacktotop = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 50) {
         backtotop.classList.add('active')
+        cookieAlert.style.display = 'none'
       } else {
         backtotop.classList.remove('active')
+        cookieAlert.style.display = 'block'
       }
     }
     window.addEventListener('load', toggleBacktotop)

@@ -17,6 +17,32 @@
 }
 
 
+.cookiealert {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0.75rem 1.25rem;
+  z-index: 995;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 0;
+  transform: translateY(100%);
+  transition: all 5000ms ease-out;
+  color: var(--primary-color) !important;
+  background: rgba(6, 12, 34, 0.5)  !important; 
+}
+
+.cookiealert button {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.text-center {
+  text-align: center!important;
+}
+
 
 body {
   background:white;

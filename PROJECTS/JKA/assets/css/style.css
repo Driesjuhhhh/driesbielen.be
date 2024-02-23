@@ -1,8 +1,7 @@
 :root {
   --primary-color: #9c0f5f;
-  --secondary-color: #87ced0
+  --secondary-color: #87ced0;
 }
-
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -15,7 +14,6 @@
 ::-webkit-scrollbar-thumb {
   background: pink;
 }
-
 
 .cookiealert {
   position: fixed !important;
@@ -31,7 +29,7 @@
   transform: translateY(100%);
   transition: all 5000ms ease-out;
   color: var(--primary-color) !important;
-  background: rgba(6, 12, 34, 0.5)  !important; 
+  background: rgba(6, 12, 34, 0.5) !important;
 }
 
 .cookiealert button {
@@ -40,12 +38,11 @@
 }
 
 .text-center {
-  text-align: center!important;
+  text-align: center !important;
 }
 
-
 body {
-  background:white;
+  background: white;
   color: black;
   font-family: "Open Sans", sans-serif;
 }
@@ -86,7 +83,6 @@ h6 {
   margin-top: 70px;
 }
 
-
 #preloader {
   position: fixed;
   left: 0;
@@ -95,9 +91,8 @@ h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background:white url("../img/preloader.svg") no-repeat center center;
+  background: white url("../img/preloader.svg") no-repeat center center;
 }
-
 
 .back-to-top {
   position: fixed;
@@ -116,20 +111,19 @@ h6 {
 
 .back-to-top i {
   font-size: 28px;
-  color:white;
+  color: white;
   line-height: 0;
 }
 
 .back-to-top:hover {
   background: var(--primary-color);
-  color:white;
+  color: white;
 }
 
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
 }
-
 
 .section-header {
   margin-bottom: 60px;
@@ -165,7 +159,6 @@ h6 {
   color: gray;
 }
 
-
 #header {
   height: 90px;
   position: fixed;
@@ -198,7 +191,7 @@ h6 {
 
 #header #logo h1 a,
 #header #logo h1 a:hover {
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
@@ -219,9 +212,8 @@ h6 {
   height: 80vh;
 }
 
-
-.buy-tickets, .sponsorons {
-  color:white;
+.buy-tickets {
+  color: white;
   background: var(--primary-color);
   padding: 7px 22px;
   margin: 0 0 0 15px;
@@ -234,13 +226,13 @@ h6 {
   white-space: nowrap;
 }
 
-.buy-tickets:hover, .sponsorons:hover {
+.buy-tickets:hover {
   background: none;
-  color:white;
+  color: white;
 }
 
 .buy-tickets:focus {
-  color:white;
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -248,7 +240,6 @@ h6 {
     margin: 0 15px 0 0;
   }
 }
-
 
 .navbar {
   padding: 0;
@@ -266,7 +257,7 @@ h6 {
   position: relative;
 }
 
-.navbar>ul>li {
+.navbar > ul > li {
   white-space: nowrap;
   padding: 10px 0 10px 12px;
 }
@@ -293,7 +284,7 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar>ul>li>a:before {
+.navbar > ul > li > a:before {
   content: "";
   position: absolute;
   width: 0;
@@ -306,7 +297,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 100%;
@@ -315,8 +306,8 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
-  color:white;
+.navbar li:hover > a {
+  color: white;
 }
 
 .navbar .dropdown ul {
@@ -329,7 +320,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background:white;
+  background: white;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -351,11 +342,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: var(--primary-color);
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -367,7 +358,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -379,14 +370,13 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
 
-
 .mobile-nav-toggle {
-  color:white;
+  color: white;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -395,7 +385,7 @@ h6 {
 }
 
 @media (max-width: 991px) {
-  .buy-tickets, .sponsorons {
+  .buy-tickets {
     display: none;
   }
 
@@ -454,7 +444,7 @@ h6 {
 }
 
 #hero h1 {
-  color:white;
+  color: white;
   font-family: "Raleway", sans-serif;
   font-size: 56px;
   font-weight: 600;
@@ -494,7 +484,7 @@ h6 {
   transition: 0.5s;
   line-height: 1;
   margin: 10px;
-  color:white;
+  color: white;
   animation-delay: 0.8s;
   border: 2px solid var(--primary-color);
   text-decoration: none;
@@ -502,7 +492,7 @@ h6 {
 
 #hero .about-btn:hover {
   background: var(--primary-color);
-  color:white;
+  color: white;
 }
 
 #about {
@@ -510,7 +500,7 @@ h6 {
   background-size: cover;
   overflow: hidden;
   position: relative;
-  color:white;
+  color: white;
   padding: 60px 0 40px 0;
 }
 
@@ -534,7 +524,7 @@ h6 {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 10px;
-  color:white;
+  color: white;
 }
 
 #about h3 {
@@ -542,15 +532,14 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10px;
-  color:white;
+  color: white;
 }
 
 #about p {
   font-size: 14px;
   margin-bottom: 20px;
-  color:white;
+  color: white;
 }
-
 
 #team {
   padding: 60px 0 30px 0;
@@ -652,7 +641,6 @@ h6 {
   font-size: 15px;
   margin-bottom: 10px;
 }
-
 
 #schedule {
   padding: 60px 0 60px 0;
@@ -771,7 +759,6 @@ h6 {
   margin-bottom: 0;
 }
 
-
 #locatie {
   padding: 60px 0;
 }
@@ -786,13 +773,18 @@ h6 {
   min-height: 300px;
 }
 
-
 #sponsors {
   padding: 60px 0;
 }
 
 .img-dries {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .img-dries {
+    width: 30%;
+  }
 }
 
 #sponsors .sponsors-wrap {
@@ -820,43 +812,39 @@ h6 {
 #sponsors img {
   transition: all 0.4s ease-in-out;
 }
-#buy-tickets, #sponsorons {
+
+#buy-tickets {
   padding: 60px 0;
 }
 
-#buy-tickets .card,
-#sponsorons .card {
+#buy-tickets .card {
   border: none;
   border-radius: 5px;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 10px 25px 0 rgba(6, 12, 34, 0.1);
 }
 
-#buy-tickets .card:hover,
-#sponsorons .card:hover {
+#buy-tickets .card:hover {
   box-shadow: 0 10px 35px 0 rgba(6, 12, 34, 0.2);
 }
 
-#buy-tickets .card hr,
-#sponsorons .card hr {
+#buy-tickets .card hr {
   margin: 25px 0;
 }
 
-#buy-tickets .card .card-title,
-#sponsorons .card .card-title {
+#buy-tickets .card .card-title {
   margin: 10px 0;
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
 }
 
-#buy-tickets .card .card-price,
-#sponsorons .card .card-price {
+#buy-tickets .card .card-price {
   font-size: 40px;
   margin: 0;
 }
 
-.email-form button[type=submit] {
+.email-form button[type="submit"] {
   background: var(--primary-color);
   border: 0;
   padding: 10px 40px;
@@ -866,7 +854,7 @@ h6 {
   cursor: pointer;
 }
 
-.email-form button[type=submit]:hover {
+.email-form button[type="submit"]:hover {
   background: var(--primary-color);
 }
 
@@ -891,7 +879,6 @@ h6 {
 #buy-tickets .card .btn:hover {
   background-color: var(--primary-color);
 }
-
 
 #contact {
   padding: 60px 0;
@@ -939,7 +926,6 @@ h6 {
 }
 
 @media (min-width: 768px) {
-
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
@@ -954,8 +940,6 @@ h6 {
   }
 }
 
-
-
 #footer {
   background: black;
   padding: 0 0 25px 0;
@@ -967,8 +951,6 @@ h6 {
   background: black;
   padding: 60px 0 30px 0;
 }
-
-
 
 #footer .footer-top .social-links a {
   display: inline-block;
@@ -995,7 +977,6 @@ h6 {
   background: var(--primary-color);
   color: white;
 }
-
 
 #footer .copyright {
   text-align: center;

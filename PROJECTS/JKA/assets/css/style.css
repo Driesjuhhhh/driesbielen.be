@@ -776,13 +776,12 @@ h6 {
 #sponsors {
   padding: 60px 0;
 }
-
-.img-dries {
+#sponsors img {
   width: 50%;
 }
 
 @media (max-width: 768px) {
-  .img-dries {
+  #sponsors img {
     width: 30%;
   }
 }

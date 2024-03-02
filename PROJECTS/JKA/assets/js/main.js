@@ -48,7 +48,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
-
   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight

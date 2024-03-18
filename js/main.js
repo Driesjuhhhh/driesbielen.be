@@ -1,4 +1,4 @@
-document.addEventListener('contextmenu', event => event.preventDefault());
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 (function () {
   "use strict";
@@ -63,21 +63,38 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
   let backtotop = select('.back-to-top')
+  let contact = select('.footer')
   let cookiealert = select('.cookiealert')
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 80) {
         backtotop.classList.add('active')
         cookiealert.style.display = 'none'
+        // contact.style.display = 'none'
         
       } else {
         backtotop.classList.remove('active')
         cookiealert.style.display = 'block'
+        // contact.style.display = 'block'
       }
     }
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+  if (contact){
+    const toggleContact = () => {
+      if (window.scrollY > 500) {
+        contact.style.display = 'none'
+        
+      } else {
+        contact.style.display = 'block'
+      }
+    }
+    window.addEventListener('load', toggleContact)
+    onscroll(document, toggleContact)
+  }
+  
+  
 
 
   on('click', '.scrollto', function (e) {

@@ -63,7 +63,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
   let backtotop = select('.back-to-top')
-  let contact = select('.footer')
   let cookiealert = select('.cookiealert')
   if (backtotop) {
     const toggleBacktotop = () => {
@@ -81,18 +80,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-  if (contact){
-    const toggleContact = () => {
-      if (window.scrollY > 500) {
-        contact.style.display = 'none'
-        
-      } else {
-        contact.style.display = 'block'
-      }
-    }
-    window.addEventListener('load', toggleContact)
-    onscroll(document, toggleContact)
-  }
+  
   
   
 

@@ -80,6 +80,23 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+
+
+  let contactMe = select('.footer')
+  if (contactMe) {
+    const toggleContactMe = () => {
+      if (window.innerWidth <= 600) {
+      if (window.scrollY > 100) {
+        contactMe.style.display = 'none'
+        
+      } else {
+        contactMe.style.display = 'block'
+      }
+    }
+  }
+    window.addEventListener('load', toggleContactMe)
+    onscroll(document, toggleContactMe)
+  }
   
   
   

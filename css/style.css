@@ -296,13 +296,6 @@ h6 {
   overflow-y: auto;
 }
 
-@media (max-width: 600px) {
-  .footer .soc-box {
-    display: none;
-  }
-}
-
-
 
 
 .footer .soc-box {

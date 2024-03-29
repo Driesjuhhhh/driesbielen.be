@@ -62,23 +62,20 @@ document.addEventListener('contextmenu', event => event.preventDefault());
   });
 
 
-  let backtotop = select('.back-to-top')
   let cookiealert = select('.cookiealert')
-  if (backtotop) {
-    const toggleBacktotop = () => {
+  if (cookiealert) {
+    const toggleCookieAlert = () => {
       if (window.scrollY > 80) {
-        backtotop.classList.add('active')
         cookiealert.style.display = 'none'
         // contact.style.display = 'none'
         
       } else {
-        backtotop.classList.remove('active')
         cookiealert.style.display = 'block'
         // contact.style.display = 'block'
       }
     }
-    window.addEventListener('load', toggleBacktotop)
-    onscroll(document, toggleBacktotop)
+    window.addEventListener('load', toggleCookieAlert)
+    onscroll(document, toggleCookieAlert)
   }
 
 

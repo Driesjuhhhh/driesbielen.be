@@ -848,14 +848,3 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
-
-.btn {
-  background-color: var(--primary-color) !important;
-  border: var(--accent-color) !important;
-  transition: 0.5s;
-}
-
-.btn:hover {
-  background-color: var(--accent-color) !important;
-  transition: 0.5s ;
-}

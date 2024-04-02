@@ -843,7 +843,7 @@ h6 {
   margin: 0;
 }
 
-.email-form button[type="submit"] {
+.taferelen-button button {
   background: var(--primary-color);
   border: 0;
   padding: 10px 40px;
@@ -853,7 +853,7 @@ h6 {
   cursor: pointer;
 }
 
-.email-form button[type="submit"]:hover {
+.taferelen-button button:hover {
   background: var(--primary-color);
 }
 

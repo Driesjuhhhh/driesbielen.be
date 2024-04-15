@@ -1,107 +1,86 @@
 <html>
-    <head lang="en">
-        <title>Connect 4 | Register</title>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
-        <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
-        <link rel="stylesheet" href="style/style.css" />
-        <link rel="stylesheet" href="style/register.css" />
-        <script type="module" src="./js/register.js" defer></script>
-        <script type="module" src="./js/scripts.js" defer></script>
-        <script
-            src="https://kit.fontawesome.com/c2e4631732.js"
-            crossorigin="anonymous"
-        ></script>
-    </head>
-    <body>
-        <button class="" id="headerButton">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <header id="header">
-            <a href="index.html">
-                <img
-                    class="rotate-element-hover"
-                    src="assets/Logo.png"
-                    alt="logo"
-                />
-            </a>
-            <nav id="responsive-nav">
-                <a class="d-none" id="login" href="index.html">Login</a>
-                <a class="d-none" id="logout" href="index.html">Logout</a>
-                <a href="register.html">Register</a>
-                <a href="waitingroom.html">Waitingroom</a>
-                <a href="team.html">Team</a>
-                <a class="d-none" id="game" href="game.html">Game</a>
-                <a href="leaderboard.html">Leaderboard</a>
-                <a href="settings.html">Settings</a>
-            </nav>
-        </header>
 
-        <main>
-            <article class="input-form card">
-                <section>
-                    <h1 class="form-header">Register</h1>
-                </section>
+<head lang="en">
+    <title>Connect 4 | Register</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon" />
+    <link rel="icon" href="assets/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/register.css" />
+    <script type="module" src="./js/register.js" defer></script>
+    <script type="module" src="./js/scripts.js" defer></script>
+    <script src="https://kit.fontawesome.com/c2e4631732.js" crossorigin="anonymous"></script>
+    <!-- Google Tag Manager -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2HB6WW5W1N');
+    </script>
+</head>
 
-                <section class="w7">
-                    <label for="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        pattern=".+@.+\..+"
-                        required
-                        placeholder="Firstname.lastname@gmail.com"
-                    />
-                </section>
+<body>
+    <button class="" id="headerButton">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <header id="header">
+        <a href="index.html">
+            <img class="rotate-element-hover" src="assets/Logo.png" alt="logo" />
+        </a>
+        <nav id="responsive-nav">
+            <a class="d-none" id="login" href="index.html">Login</a>
+            <a class="d-none" id="logout" href="index.html">Logout</a>
+            <a href="register.html">Register</a>
+            <a href="waitingroom.html">Waitingroom</a>
+            <a href="team.html">Team</a>
+            <a class="d-none" id="game" href="game.html">Game</a>
+            <a href="leaderboard.html">Leaderboard</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+    </header>
 
-                <section class="w7">
-                    <label for="username">Username</label>
-                    <input
-                        type="text"
-                        id="username"
-                        required
-                        placeholder="Username"
-                    />
-                </section>
+    <main>
+        <article class="input-form card">
+            <section>
+                <h1 class="form-header">Register</h1>
+            </section>
 
-                <section class="w7">
-                    <label for="password">Password</label>
-                    <input
-                        type="password"
-                        id="password"
-                        minlength="6"
-                        required
-                        placeholder="Password"
-                    />
-                </section>
+            <section class="w7">
+                <label for="email">Email</label>
+                <input type="email" id="email" pattern=".+@.+\..+" required
+                    placeholder="Firstname.lastname@gmail.com" />
+            </section>
 
-                <section class="w7">
-                    <label for="check-pass">Verify Password</label>
-                    <input
-                        type="password"
-                        id="check-pass"
-                        required
-                        placeholder="Password"
-                    />
-                </section>
+            <section class="w7">
+                <label for="username">Username</label>
+                <input type="text" id="username" required placeholder="Username" />
+            </section>
 
-                <section class="w8 form-buttons">
-                    <span class="d-none error-message" id="errorMessage"></span>
-                    <button
-                        class="btn btn-primary"
-                        id="sendRequest"
-                        disabled=""
-                    >
-                        Register
-                    </button>
-                    <span>
-                        Already have an account?
-                        <a href="index.html">Login</a>
-                    </span>
-                </section>
-            </article>
-        </main>
-    </body>
+            <section class="w7">
+                <label for="password">Password</label>
+                <input type="password" id="password" minlength="6" required placeholder="Password" />
+            </section>
+
+            <section class="w7">
+                <label for="check-pass">Verify Password</label>
+                <input type="password" id="check-pass" required placeholder="Password" />
+            </section>
+
+            <section class="w8 form-buttons">
+                <span class="d-none error-message" id="errorMessage"></span>
+                <button class="btn btn-primary" id="sendRequest" disabled="">
+                    Register
+                </button>
+                <span>
+                    Already have an account?
+                    <a href="index.html">Login</a>
+                </span>
+            </section>
+        </article>
+    </main>
+</body>
+
 </html>

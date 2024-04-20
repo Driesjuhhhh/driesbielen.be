@@ -276,7 +276,6 @@ h6 {
   z-index: 999;
   position: fixed;
   left: 0;
-  left: auto;
   top: auto;
   bottom: 0;
   float: right;

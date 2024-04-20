@@ -1,3 +1,6 @@
 https://www.driesbielen.be/index.html
 https://www.driesbielen.be/Connect-4.html
+https://www.driesbielen.be/Streetmasters.html
 https://www.driesbielen.be/MVC-Peer.html
+https://www.driesbielen.be/api-status.html
+https://www.driesbielen.be/EVENT-JOKE-KELLY-AMER.html

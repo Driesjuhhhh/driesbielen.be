@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Jira Issue</title>
 </head>
+
 <body>
   <form id="addItemForm">
     <input type="text" id="summary" name="summary" placeholder="Summary" required><br>
@@ -21,7 +23,7 @@
 
   <!-- Your JavaScript code -->
   <script>
-    document.getElementById('addItemForm').addEventListener('submit', async function(event) {
+    document.getElementById('addItemForm').addEventListener('submit', async function (event) {
       event.preventDefault();
 
       const summary = document.getElementById('summary').value;
@@ -53,4 +55,5 @@
     });
   </script>
 </body>
+
 </html>

@@ -1,0 +1,165 @@
+.status-icon {
+    width: 2.5rem;
+    border: 3px solid white;
+  }
+
+
+  
+  * {
+    font-family: "M PLUS Rounded 1c", sans-serif;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+  
+  .text-justify {
+    text-align: justify;
+  }
+  
+  .fs-7 {
+    font-size: 0.9rem;
+  }
+  
+  .tall-lines {
+    line-height: 2rem;
+  }
+  
+  .special-link {
+    color: #f6f9ff;
+  }
+  
+  .justify-self-center {
+    justify-self: center;
+  }
+  
+  .offsite-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .offsite-link {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.5s;
+  }
+  
+  .offsite-link:hover {
+    scale: 1.1;
+    transition: 0.5s;
+  }
+  
+  @keyframes move {
+    100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+    }
+  }
+  @keyframes GradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  body > h1,
+  header,
+  main,
+  aside,
+  div#cards-mobile {
+    animation: fadeIn 0.333s ease-in-out;
+  }
+  
+  article {
+    width: 45ch;
+    background-color: rgba(43, 48, 53, 0.333);
+    border: 3px solid rgba(50, 55, 60, 0.75);
+    transition: 0.5s;
+  }
+  article:hover {
+    opacity: 0.75;
+    filter: brightness(1.5);
+    transition: 0.5s;
+  }
+  
+  @media only screen and (min-width: 1744px) {
+    .h-100 {
+      height: fit-content !important;
+    }
+  }
+  dialog {
+    border: none;
+    background-color: rgb(23, 28, 33);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  dialog *:focus-visible {
+    outline: none;
+  }
+  dialog:focus-visible {
+    outline: none;
+  }
+  
+  ::backdrop {
+    background-color: rgba(43, 48, 53, 0.75);
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  dt {
+    margin-top: 1.5rem;
+  }
+  
+  .flex-direction-dialog {
+    flex-direction: row;
+  }
+  
+  .width-dialog {
+    width: 75%;
+  }
+  
+  .width-extra {
+    width: 25%;
+  }
+  
+  .width-mobile {
+    width: 25%;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .flex-direction-dialog {
+      flex-direction: column;
+    }
+    .width-dialog {
+      width: 100%;
+    }
+    .width-extra {
+      width: 100%;
+    }
+    .margin-dialog {
+      margin-top: 2.5rem;
+    }
+    .width-mobile {
+      width: 100%;
+    }
+  }
+  
+  /*# sourceMappingURL=projects.css.map */

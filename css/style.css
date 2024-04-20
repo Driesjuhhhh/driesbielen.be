@@ -1,7 +1,7 @@
 
 :root {
   font-family: "Roboto", sans-serif;
-  --color-background: #161414;
+  --color-background: #15171a;
   --primary-color: #2A45A8;
   --secondary-color: #245775;
   --accent-color: #0ECBFB;
@@ -267,7 +267,10 @@ h6 {
   overflow-y: auto;
 }
 
-
+.follow-label a {
+  text-decoration: none;
+  color: #bbb;
+}
 
 .footer .soc-box {
   z-index: 999;
@@ -298,6 +301,8 @@ h6 {
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
 }
+
+
 
 .footer .soc a {
   display: block;

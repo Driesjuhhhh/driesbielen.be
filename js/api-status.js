@@ -1,7 +1,6 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
     const urls = {
-        "connectfour-api": "https://connectfour.emirkaan-web.eu/status",
         "raspberrypi-api": "https://api.emirkaan-web.eu/status",
     };
     for (const [key, url] of Object.entries(urls)) {

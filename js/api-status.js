@@ -1,7 +1,7 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
     const urls = {
-        "connectfour-api": "https://connectfour.emirkaan-web.eu/status",
+        "connectfour-api": "https://connectfour.driesbielen.online/status",
     };
     for (const [key, url] of Object.entries(urls)) {
         const wrapper = document.querySelector(`[data-service='${key}']`);

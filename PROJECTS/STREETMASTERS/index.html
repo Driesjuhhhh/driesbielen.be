@@ -4,17 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>STREETMASTERS</title>
+  <title>Streetmasters</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <meta name="og:site_name" content="STREETMASTERS">
+  <meta name="og:site_name" content="Streetmasters">
   <meta name="og:img" content="assets/img/favicon.png">
   <meta name="og:img:width" content="1440">
   <meta name="og:img:height" content="1440">
-  <meta name="og:title" content="STREETMASTERS">
-  <meta name="description" content="">
-  <meta name="og:description" content="">
-  <meta name="robots" content="max-snippet:500">
+  <meta name="og:title" content="Streetmasters">
+  <meta name="description" content="Welkom bij Streetmasters! Een jong bedrijf opgericht voor en door auto liefhebbers. Het bedrijf is dan ook ontstaan door pure passie voor auto's en dat is te merken bij onze service en kwaliteit! Bij ons kun je niet alleen terecht voor detailing, wrapping en customization van je auto maar ook voor autogeurtjes, car care producten en veel meer! Heb je vragen over een van onze producten of services kan u altijd terecht bij onze klantenservice!">
+  <meta name="og:description" content="Welkom bij Streetmasters! Een jong bedrijf opgericht voor en door auto liefhebbers. Het bedrijf is dan ook ontstaan door pure passie voor auto's en dat is te merken bij onze service en kwaliteit! Bij ons kun je niet alleen terecht voor detailing, wrapping en customization van je auto maar ook voor autogeurtjes, car care producten en veel meer! Heb je vragen over een van onze producten of services kan u altijd terecht bij onze klantenservice!">
+  <meta name="robots" content="max-snippet:490">
   <meta content="Streetmasters, seppe snoks, seppe snoks streetmasters, seppe streetmasters, snoks streetmasters, Houthalen-Helchteren, Houthalen-Helchteren streetmasters, Houthalen-Helchteren car cleaning, seppe snoks car cleaning
   name=" keywords">
   <meta name="og:url" content="https://www.streetmasters.be">
@@ -36,7 +36,7 @@
 
 
 
-  <!-- Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -44,230 +44,80 @@
     gtag('js', new Date());
     gtag('config', 'G-2HB6WW5W1N');
   </script>
-
 </head>
+<header id="header" class="d-flex align-items-center ">
+  <div class="navigation mobile-navbar">
+    <button class="btn btn-primary navigation-button" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+        class="fa-solid fa-bars"></i></button>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Streetmasters</h5>
+        <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="navigation-options-card">
+          <ul>
+            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Diensten
+              </a>
+            </li>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="detailing.html">Detailing
+              <li>
+                <a class="dropdown-item" href="wrapping.html">Wrapping</a>
+              </li>
+            </ul>
+            </li>
+            <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
+            <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid container-xxl d-flex align-items-center">
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link scrollto dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Diensten
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="detailing.html">Detailing
+            <li>
+              <a class="dropdown-item" href="wrapping.html">Wrapping</a>
+            </li>
+          </ul>
+        </li>
+        <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
+        <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
+      </ul>
+
+    </nav>
+  </div>
+</header>
 
 <body>
   <video src="assets/img/background-1.mp4" autoplay playsinline muted loop id="video-background">
   </video>
-  <header id="header" class="d-flex align-items-center ">
-    <div class="container-fluid container-xxl d-flex align-items-center">
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#">Home</a></li>
-          <li><a class="nav-link scrollto" href="#detailing">Detailing</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#wrapping">Wrapping</a></li>
-          <li><a class="nav-link scrollto" href="#customizing">Customizing</a></li>  -->
-          <li><a class="nav-link scrollto" href="#overons">Over ons</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <img src="assets/img/logo.png">
     </div>
   </section>
   <main id="main">
-    <section id="detailing">
-      <div class="container position-relative" data-aos="fade-up">
-        <h2 class="d-flex justify-content-center align-items-center">Detailing</h2>
-        <h2 class="border-bottom">Interieur & Exterieur</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>TOUCH UP</h4>
-            <p>Is uw auto licht vervuild en/of wilt u een snelle reiniging? Dan is onze Touch up behandeling perfect
-              voor u! Bij deze behandeling zit het volgende inbegrepen: Ontstoffen van het interieur - Professionele
-              handwas - Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p><span class="fw-bold">€50⠀</span><span class="text-decoration-line-through">€55</span></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>WASH & PROTECT</h4>
-            <p> Is uw auto toe aan een grondige dieptereiniging? Dan kiest u best voor de Wash & Protect! Bij deze
-              behandeling zit het volgende inbegrepen: Ontstoffen & behandelen van het interieur - Professionele handwas
-              - Lak behandeling met Ceramic Seal - Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p><span class="fw-bold">€70⠀</span><span class="text-decoration-line-through">€85</span></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>DEEP CLEAN</h4>
-            <p> De ideale dieptereiniging voor zwaar vervuilde auto's! Bij deze behandeling zit het volgende inbegrepen:
-              Ontstoffen & behandelen van het interieur - Dieptereiniging van stoelen - Professionele handwas - Lak
-              bescherming met Ceramic Seal - Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p><span class="fw-bold">€100⠀</span><span class="text-decoration-line-through">€110</span></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>SHOWROOM READY</h4>
-            <p> Is uw auto extreem zwaar vervuild en/of wilt u uw auto terug naar showroom staat brengen? Dan is dit de
-              behandeling die u nodig heeft! Bij deze behandeling zit het volgende inbegrepen: Ontstoffen & behandelen
-              van het interieur - Stoomreiniging Interieur - Dieptereiniging van de stoelen - Professionele handwas -
-              Lak bescherming met Ceramic Seal - Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€150</p>
-          </div>
-        </div>
-        <div class="spacing-between-categories"></div>
-        <h2 class="border-bottom">Interieur</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>TOUCH UP</h4>
-            <p> Is uw interieur toe aan een kleine reiniging? Dan is deze behandeling perfect! Bij deze behandeling zit
-              het volgende inbegrepen: Ontstoffen & Behandelen Interieur</p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€35</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>DEEP CLEAN</h4>
-            <p> Is uw interieur erg vervuild? Neem dan onze interieur DEEP CLEAN behandeling! Bij deze behandeling zit
-              het volgende inbegrepen: Ontstoffen & Behandelen Interieur, Dieptereiniging van de stoelen</p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€60</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>NEW INTERIOR</h4>
-            <p> Wilt u het gevoel van een nieuwe auto herbeleven? Kies dan voor ons NEW INTERIOR behandeling! Bij deze
-              behandeling zit het volgende inbegrepen: Ontstoffen & behandelen Interieur, Dieptereiniging van de
-              stoelen, Stoomreiniging Interieur
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€100</p>
-          </div>
-        </div>
-        <div class="spacing-between-categories"></div>
-        <h2 class="border-bottom">Exterieur</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>TOUCH UP</h4>
-            <p> Nood aan een snelle reiniging voor uw exterieur? Zoek dan niet langer, en kies onze TOUCH UP
-              behandeling! Bij deze behandeling zit het volgende inbegrepen: Professionele handwas - Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€20</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <h4>WASH & PROTECT</h4>
-            <p> Is uw voertuig toe aan een grondige reiniging en/of Ceramic Seal? Kies dan voor deze behandeling! Bij
-              deze behandeling zit het volgende inbegrepen: Professionele handwas - Lak bescherming met Ceramic Seal -
-              Velgen
-            </p>
-          </div>
-          <div class="col-lg-4"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p class="fw-bold">€50</p>
-          </div>
-        </div>
-        <div class="spacing-between-categories"></div>
-      </div>
-    </section>
-    <section id="half-spacing">
-    </section>
-    <!-- <section id="wrapping">
-      <div class="container position-relative" data-aos="fade-up">
-        <h2 class="d-flex justify-content-center align-items-center">Wrapping</h2>
-        <div class="row">
-          <div class="col-lg-5">
-            <h2>DEEPCLEAN</h2>
-            <p>De service deepclean bevat de volledige reiniging van zowel binnen als buitenkant van uw voertuig
-            </p>
-          </div>
-          <div class="col-lg-5"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p>69€</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5">
-            <h2>SERVICE</h2>
-            <p>ANDERE SERVICE
-            </p>
-          </div>
-          <div class="col-lg-5"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p>69€</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="half-spacing">
-    </section>
-    <section id="customizing">
-      <div class="container position-relative" data-aos="fade-up">
-        <h2 class="d-flex justify-content-center align-items-center">Customizing</h2>
-        <div class="row">
-          <div class="col-lg-5">
-            <h2>DEEPCLEAN</h2>
-            <p>De service deepclean bevat de volledige reiniging van zowel binnen als buitenkant van uw voertuig
-            </p>
-          </div>
-          <div class="col-lg-5"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p>69€</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5">
-            <h2>SERVICE</h2>
-            <p>ANDERE SERVICE
-            </p>
-          </div>
-          <div class="col-lg-5"></div>
-          <div class="col-lg-2">
-            <h3>Prijs</h3>
-            <p>69€</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="spacing">
-    </section> -->
+
     <section id="half-spacing">
     </section>
     <section id="overons">
@@ -312,6 +162,7 @@
     </section>
     <section id="half-spacing">
     </section>
+
     <section id="half-spacing">
     </section>
     <section id="contact" class="section-bg">
@@ -334,7 +185,7 @@
             <div class="contact-phone">
               <i class="fa-solid fa-phone"></i>
               <h3>Telefoon</h3>
-              <p><a href="tel:+32468177147">+32 468 17 71 47 </a></p>
+              <p><a href="tel:+32469438702">+32 469438702 </a></p>
               <br>
               <br>
             </div>

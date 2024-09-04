@@ -132,6 +132,7 @@ h6 {
   color: white;
 }
 
+
 #header {
   height: 90px;
   position: fixed;
@@ -151,7 +152,7 @@ h6 {
 
 #header.header-scrolled,
 #header.header-inner {
-  background: rgba(0, 0, 0, 0.98);
+  background: rgba(6, 12, 34, 0.6);
   height: 70px;
 }
 
@@ -189,6 +190,7 @@ h6 {
 
 .navbar {
   padding: 0;
+
 }
 
 .navbar ul {
@@ -213,7 +215,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: var(--text-color);
+  color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -253,7 +255,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-  color: white;
+  color: gray;
 }
 
 .navbar .dropdown ul {
@@ -279,7 +281,7 @@ h6 {
   padding: 10px 20px;
   font-size: 14px;
   text-transform: none;
-  color: #060c22;
+  color: black;
 }
 
 .navbar .dropdown ul a i {
@@ -289,7 +291,7 @@ h6 {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
-  color: var(--primary-color);
+  color: black;
 }
 
 .navbar .dropdown:hover > ul {
@@ -330,14 +332,118 @@ h6 {
   transition: 0.5s;
 }
 
+
+.offcanvas-title{
+  color: black;
+}
+
+@media (max-width: 992px) {
+  .offcanvas {
+    max-width: 100vh;
+  }
+
+  .offcanvas-header {
+    margin-bottom: 40%;
+  }
+
+  .offcanvas-body li {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+  }
+
+}
+
+
+.navigation-button {
+  background-color: transparent !important;
+  border-color: transparent !important;
+}
+
+.navigation-button i {
+  position: fixed;
+  margin: 15px;
+}
+
+.navigation-button i:hover {
+  color: var(--primary-color);
+}
+
+.offcanvas-body li {
+  list-style-type: none;
+  padding-bottom: 15px;
+}
+
+.offcanvas-body li a {
+  color: black;
+}
+
+.offcanvas-body li a:hover {
+  transition: 0.5s ease-in-out;
+  color: gray;
+}
+
+.offcanvas {
+  background: rgba(255, 255, 255, 0.8) !important;
+  color: var(--text-color) !important;
+}
+
+.close-btn {
+  color: black !important;
+  background-color: transparent !important;
+  border: none;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar > ul > li {
+  white-space: nowrap;
+  padding: 10px 0 10px 12px;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-color);
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+  padding: 6px 4px;
+}
+
+.mobile-navbar {
+  visibility: hidden;
+}
+
 @media (max-width: 991px) {
   .navbar ul {
     display: none;
   }
 
-  #header #logo h1 {
-    font-size: 20px;
+  .mobile-navbar {
+    visibility: visible;
   }
+
 }
 
 #hero {
@@ -422,8 +528,16 @@ h6 {
   padding-bottom: 100vh;
 }
 
+#meer-spacing {
+  padding-bottom: 45vh;
+}
+
 #half-spacing {
   padding-bottom: 30vh;
+}
+
+#kwart-spacing {
+  padding-bottom: 10vh;
 }
 
 .row {
@@ -433,7 +547,9 @@ h6 {
 #detailing,
 #wrapping,
 #customizing,
-#overons {
+#overons,
+#diensten,
+#wrapping {
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -445,7 +561,9 @@ h6 {
   #detailing,
   #wrapping,
   #customizing,
-  #overons {
+  #overons,
+  #diensten,
+  #wrapping {
     background-attachment: fixed;
   }
 }
@@ -453,7 +571,9 @@ h6 {
 #detailing:before,
 #wrapping:before,
 #customizing:before,
-#overons:before {
+#overons:before,
+#diensten:before,
+#wrapping:before {
   content: "";
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -466,7 +586,9 @@ h6 {
 #detailing h2,
 #wrapping h2,
 #customizing h2,
-#overons h2 {
+#overons h2,
+#diensten h2,
+#wrapping h2 {
   font-size: 39px;
   font-weight: bold;
   margin-bottom: 25px;
@@ -477,10 +599,14 @@ h6 {
 #wrapping h3,
 #customizing h3,
 #overons h3,
+#diensten h3,
+#wrapping h3,
 #detailing h4,
 #wrapping h4,
 #customizing h4,
-#overons h4 {
+#overons h4,
+#diensten h4,
+#wrapping h4 {
   font-size: 23px;
   font-weight: bold;
   text-transform: uppercase;
@@ -492,7 +618,9 @@ h6 {
   #detailing h4,
   #wrapping h4,
   #customizing h4,
-  #overons h4 {
+  #overons h4,
+  #diensten h4,
+  #wrapping h4 {
     display: flex;
     align-content: center;
     align-items: center;
@@ -507,7 +635,9 @@ h6 {
 #detailing p,
 #wrapping p,
 #customizing p,
-#overons p {
+#overons p,
+#diensten p,
+#wrapping p {
   font-size: 16px;
   margin-bottom: 20px;
   color: #fff;
@@ -661,4 +791,26 @@ h6 {
   text-align: center;
   font-size: 13px;
   color: white;
+}
+
+
+.sponsor-feature {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+#id-sponsors .carousel {
+  margin-bottom: 20px;
+}
+#id-sponsors .item {
+  padding-bottom: 20px;
+}
+#id-sponsors .carousel-indicators {
+  bottom: -25px;
 }

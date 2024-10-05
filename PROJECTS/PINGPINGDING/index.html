@@ -16,7 +16,6 @@
     the `--base-href` argument provided to `flutter build`.
   -->
 
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="PingPing Application">
@@ -41,10 +40,18 @@
 
     gtag('config', 'G-EEN96ZNZW9');
   </script>
+
 </head>
 
 <body>
   <script src="flutter_bootstrap.js" async></script>
+  <script src="flutter.js" defer></script>
+  <script>
+    window.addEventListener('load', function (ev) {
+      window.flutterWeb = window.flutterWeb || {};
+      window.flutterWeb.registerPlugins = function () { };
+    });
+  </script>
 </body>
 
 </html>

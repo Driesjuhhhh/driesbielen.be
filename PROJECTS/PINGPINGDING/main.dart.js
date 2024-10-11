@@ -44268,7 +44268,8 @@ ah(){return new A.CW()},
 k7(a){return A.wi().$1(a)}}
 A.a_k.prototype={
 $0(){switch(this.b.w.a){case 0:case 1:case 3:case 5:return!1
-case 2:case 4:return!0}},
+case 2:case 4:var s=this.a.f
+return s==null||s.length<2}},
 $S:57}
 A.CW.prototype={
 bo(){var s,r=this
@@ -44364,8 +44365,8 @@ if(B.a8===a4||B.bo===a4||B.bz===a4||B.bA===a4){r=!0
 break $label0$0}if(B.Q===a4||B.b7===a4)break $label0$0}a3=A.c8(b2,a3,!1,b2,b2,!1,b2,b2,!0,b2,b2,b2,b2,r,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2,b2)
 a.toString
 a3=A.azO(A.jG(a3,b2,b2,B.aB,!1,a,b2,b2,B.aC),1.34)}s=s.f
-if(s!=null)a5=A.qc(s,B.as,B.X,B.bM)
-else if(b7===!0){b7=e.a
+if(s!=null&&s.length!==0){s.toString
+a5=A.qc(s,B.as,B.X,B.bM)}else if(b7===!0){b7=e.a
 a5=new A.JP(B.Ht,b2,b2,A.yz(b2,b2,b2,b2,b2,b2,b2,b2,b2,b7==null?24:b7,b2,b2,b2,b2),b2)}else a5=b2
 if(a5!=null){if(c.j(0,b6.gp0()))a6=b4
 else{a7=A.yz(b2,b2,b2,b2,b2,b2,c.f,b2,b2,c.a,b2,b2,b2,b2)
@@ -81752,8 +81753,13 @@ case 2:return B.RG
 case 3:return B.OR
 default:return s.K7()}},
 K7(){return new A.c6(B.Hg,A.dM(A.b([A.t4(this.a7R(),1)],t.p),B.af,B.X,B.a7),null)},
-J(a){var s=this,r=null,q=A.HH(A.b([A.pb(r,B.I9,r,new A.alT(s,a),r,r)],t.p),r,r,r,r),p=A.U(a),o=s.a4N(),n=s.w
-return A.n6(q,p.ax.k2,o,new A.wW(B.Ky,s.ga9o(),n,B.Bb,B.ME,B.MG,r))},
+J(a){var s,r,q,p=this,o=null,n=A.b([],t.p)
+if(p.w===0)n.push(A.pb(o,B.I9,o,new A.alT(p,a),o,o))
+n=A.HH(n,o,o,o,o)
+s=A.U(a)
+r=p.a4N()
+q=p.w
+return A.n6(n,s.ax.k2,r,new A.wW(B.Ky,p.ga9o(),q,B.Bb,B.ME,B.MG,o))},
 a1s(a){var s=null,r=A.cU("Hallo, "+this.e+"!",s,s,s,s,A.f3(s,s,A.U(a).ax.k3,s,s,s,s,s,s,s,s,18,s,s,B.aP,s,s,!0,s,s,s,s,s,s,s,s),s,s),q=A.U(a),p=A.eM(16),o=t.p
 return A.dM(A.b([B.cN,r,B.cM,A.eP(s,A.dM(A.b([B.Xb,B.cM,A.aBt(new A.alJ(),B.cq,new A.aw(0,this.f,t.Y),t.i)],o),B.af,B.X,B.a7),B.t,s,new A.d4(q.ax.b,s,s,p,s,s,B.an),s,B.fw,B.Hc,1/0),B.cN,A.cU("Recente transacties:",s,s,s,s,A.f3(s,s,A.U(a).ax.k3,s,s,s,s,s,s,s,s,16,s,s,B.aP,s,s,!0,s,s,s,s,s,s,s,s),s,s)],o),B.af,B.X,B.a7)},
 a7R(){return A.auS(A.azB(new A.alK(this),J.cq(this.r)+1,B.ic),this.ga7S())},

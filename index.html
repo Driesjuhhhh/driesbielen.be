@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dries Bielen - Portfolio</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/8ba13e94b9.js" crossorigin="anonymous"></script>
@@ -70,7 +70,8 @@
 
     <main class="pt-20">
         <section id="home" class="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]">
+            <h1
+                class="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29] text-left sm:text-center">
                 Dries Bielen
             </h1>
             <h4
@@ -149,30 +150,33 @@
         <section id="projects" class="min-h-screen flex flex-col items-center justify-center" data-aos="fade-up">
             <h1 class="mb-10 text-6xl font-bold">Projects</h1>
 
+            <!-- PingPingDing Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image" class="w-1/4 h-auto">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image"
+                        class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">PingPingDing - School Project
                         </h2>
-
                         <p class="text-xl text-white mb-6">This is a mobile app I made for the course mobile development
-                            @ PXL. I use it to view my balance of the school payment system.
-                        </p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform"
-                            data-service="pingping-api">Checking API</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.Net</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                            @ PXL. I use it to view my balance of the school payment system.</p>
+
+
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform"
+                                data-service="pingping-api">Checking API</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.Net</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                        </div>
+
                     </div>
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/Driesjuhhhh/PingPingDing" target="_blank"
                         class="text-white hover:text-blue-500" title="View Github">
@@ -180,33 +184,35 @@
                     </a>
                     <a href="https://driesbielen.be/PROJECTS/PINGPINGDING/" target="_blank"
                         class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
                     </a>
                 </div>
             </div>
 
+
+
+            <!-- Streetmasters Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/streetmasters.png" alt="Project Image" class="w-1/2 h-auto ">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/streetmasters.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">Streetmasters</h2>
-
                         <p class="text-xl text-white mb-6">Created a website for a car cleaning business in
                             Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.
                         </p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
                     </div>
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/seppesnoks/Streetmasters" target="_blank"
                         class="text-white hover:text-blue-500" title="View Github">
@@ -219,27 +225,27 @@
                 </div>
             </div>
 
+            <!-- JH Sungarden Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/jh-sungarden.png" alt="Project Image" class="w-1/2 h-auto ">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/jh-sungarden.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">JH Sungarden</h2>
-
-                        <p class="text-xl text-white mb-6">This is a simple website I build for the youth center in
-                            Zonhoven Belgium.</p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        <p class="text-xl text-white mb-6">This is a simple website I built for the youth center in
+                            Zonhoven, Belgium.</p>
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
                     </div>
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/DRE-am-development/SUNGARDEN-ZONHOVEN" target="_blank"
                         class="text-white hover:text-blue-500" title="View Github">
@@ -252,29 +258,29 @@
                 </div>
             </div>
 
+            <!-- Barbiepoppen Expo Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image" class="w-1/2 h-auto ">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image"
+                        class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">Barbiepoppen Expo</h2>
-
-                        <p class="text-xl text-white mb-6">Barbiepoppen expo is a website for a Barbie doll exhibition
+                        <p class="text-xl text-white mb-6">Barbiepoppen Expo is a website for a Barbie doll exhibition
                             organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University
                             College. The exhibition explores the history and cultural impact of Barbie dolls.</p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
                     </div>
-
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/Driesjuhhhh/JKA" target="_blank" class="text-white hover:text-blue-500"
                         title="View Github">
@@ -287,33 +293,32 @@
                 </div>
             </div>
 
+            <!-- Connect 4 Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/connect4.png" alt="Project Image" class="w-1/2 h-auto ">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/connect4.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">Connect 4 - School Project</h2>
-
                         <p class="text-xl text-white mb-6">This was a school project made in a group, where we used .NET
-                            as the backend. <br><br> This was made at the end of the first year</p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform"
-                            data-service="connectfour-api">Checking API</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.NET</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                            as the backend. This was made at the end of the first year.</p>
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform mb-2"
+                                data-service="connectfour-api">Checking API</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">.NET</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">Docker</span>
+                        </div>
                     </div>
-
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/Driesjuhhhh/CONNECT4" target="_blank"
                         class="text-white hover:text-blue-500" title="View Github">
@@ -326,29 +331,28 @@
                 </div>
             </div>
 
+            <!-- MVC Peer Project -->
             <div
                 class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
-                <div class="flex gap-8 items-center">
-                    <img src="assets/img/projects/mvcpeer.png" alt="Project Image" class="w-1/2 h-auto ">
-
-                    <div class="w-1/2">
+                <div class="flex gap-8 items-center flex-col md:flex-row">
+                    <img src="assets/img/projects/mvcpeer.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
+                    <div class="w-full md:w-1/2">
                         <h2 class="text-4xl font-bold text-transparent text-white mb-6">MVC Peer</h2>
-
-                        <p class="text-xl text-white mb-6">This project is a website that I made for the volleybal club
-                            MVC-Peer. The project contains frontend code and an api connection to the VolleyScores
-                            database. <br><br> This is also the first website I ever made</p>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                        <span
-                            class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        <p class="text-xl text-white mb-6">This project is a website that I made for the volleyball club
+                            MVC-Peer. The project contains frontend code and an API connection to the VolleyScores
+                            database. This is also the first website I ever made.</p>
+                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
                     </div>
-
                 </div>
-
                 <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
                     <a href="https://github.com/Driesjuhhhh/MVCPEER" target="_blank"
                         class="text-white hover:text-blue-500" title="View Github">
@@ -360,6 +364,7 @@
                     </a>
                 </div>
             </div>
+
 
 
         </section>

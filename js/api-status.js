@@ -6,30 +6,39 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     for (const [key, url] of Object.entries(urls)) {
         const wrapper = document.querySelector(`[data-service='${key}']`);
-        CheckProject(wrapper, url);
+        if (wrapper) {
+            CheckProject(wrapper, url);
+        }
     }
 });
+
 async function CheckProject(wrapper, url) {
     let failed = false;
+    const statusText = wrapper; // directly target the <span>
+
     try {
         const response = await fetch(url);
-        await response.json();
-    }
-    catch {
+        if (response.ok) {
+            // Check if the response is valid and JSON parse it
+            await response.json();
+            failed = false;
+        } else {
+            failed = true;
+        }
+    } catch (error) {
         failed = true;
     }
-    const icon = wrapper.querySelector(".status-icon");
-    const status = wrapper.querySelector("span");
-    icon.classList.remove("bg-primary");
+
+    // Update the span content and background color based on the API status
     if (!failed) {
-        icon.classList.add("bg-success");
-        icon.src = "/assets/api/check-mark.svg";
-        status.innerHTML = "Online";
-    }
-    else {
-        icon.classList.add("bg-danger");
-        icon.src = "/assets/api/exclamation-mark.svg";
-        status.innerHTML = "Offline";
+        // API is online, update the span accordingly
+        statusText.classList.remove("bg-red-600", "bg-orange-600");
+        statusText.classList.add("bg-green-600");
+        statusText.innerHTML = "API Online";
+    } else {
+        // API is offline, update the span accordingly
+        statusText.classList.remove("bg-green-600", "bg-orange-600");
+        statusText.classList.add("bg-red-600");
+        statusText.innerHTML = "API Offline";
     }
 }
-//# sourceMappingURL=statusChecker.js.map

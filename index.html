@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/8ba13e94b9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/background.css">
     <link rel="stylesheet" href="styles/scrollbar.css">
+    <link rel="stylesheet" href="styles/fonts.css">
     <script src="js/calculateAge.js" defer></script>
     <script src="js/nav link.js" defer></script>
     <script src="js/api-status.js" defer></script>
@@ -29,6 +30,9 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 </head>
 
 
@@ -46,7 +50,7 @@
     </div>
     <header>
         <nav
-            class="fixed top-0 left-1/2 transform -translate-x-1/2 max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
+            class="audiowide-regular fixed top-0 left-1/2 transform -translate-x-1/2 max-w-[90%] xl:max-w-[1223px] w-full z-10 select-none">
             <div
                 class="flex justify-between items-center px-6 py-4 rounded-2xl bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-4 sm:mt-8 backdrop-blur-md">
                 <a href="api-status.html">
@@ -71,25 +75,27 @@
     <main class="pt-20">
         <section id="home" class="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
             <h1
-                class="text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29] text-left sm:text-center">
+                class="text-6xl audiowide-regular sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29] text-left sm:text-center">
                 Dries Bielen
             </h1>
             <h4
-                class="mt-2 text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]">
+                class="audiowide-regular mt-2 text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]">
                 Fullstack Developer
             </h4>
         </section>
 
         <section id="about" class="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="mb-6 text-6xl font-bold">About me</h1>
+            <h1 class="audiowide-regular mb-6 text-6xl font-bold">About me</h1>
             <p class="mt-5 text-lg">My name is Dries Bielen, I am <span id="age" class="font-semibold"></span> years
                 old.</p>
             <p class="text-lg">Currently studying IT at <a href="https://www.pxl.be" target="_blank"
                     class="text-blue-400 hover:underline">PXL University</a> in Hasselt, Belgium.</p>
+
+
         </section>
 
         <section id="skills" class="h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="text-6xl font-bold mb-6">Skills</h1>
+            <h1 class="audiowide-regular text-6xl font-bold mb-6">Skills</h1>
             <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
                 <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.NET</span>
@@ -147,17 +153,19 @@
             </div>
         </section>
 
-        <section id="projects" class="min-h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="mb-10 text-6xl font-bold">Projects</h1>
+        <section id="projects" class="min-h-screen flex flex-col items-center justify-center">
+            <h1 class="audiowide-regular mb-10 text-6xl font-bold">Projects</h1>
+
 
             <!-- PingPingDing Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image"
                         class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">PingPingDing - School Project
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">PingPingDing -
+                            School Project
                         </h2>
                         <p class="text-xl text-white mb-6">This is a mobile app I made for the course mobile development
                             @ PXL. It allows me to check my balance on the school's payment system.</p>
@@ -192,12 +200,13 @@
 
 
             <!-- Streetmasters Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/streetmasters.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">Streetmasters</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Streetmasters
+                        </h2>
                         <p class="text-xl text-white mb-6">Created a website for a car cleaning business in
                             Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.
                         </p>
@@ -226,12 +235,13 @@
             </div>
 
             <!-- JH Sungarden Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/jh-sungarden.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">JH Sungarden</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">JH Sungarden
+                        </h2>
                         <p class="text-xl text-white mb-6">This is a simple website I built for the youth center in
                             Zonhoven, Belgium.</p>
                         <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
@@ -259,13 +269,14 @@
             </div>
 
             <!-- Barbiepoppen Expo Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image"
                         class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">Barbiepoppen Expo</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Barbiepoppen
+                            Expo</h2>
                         <p class="text-xl text-white mb-6">Barbiepoppen Expo is a website for a Barbie doll exhibition
                             organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University
                             College. The exhibition explores the history and cultural impact of Barbie dolls.</p>
@@ -294,12 +305,13 @@
             </div>
 
             <!-- Connect 4 Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/connect4.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">Connect 4 - School Project</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Connect 4 -
+                            School Project</h2>
                         <p class="text-xl text-white mb-6">This was a school project made in a group, where we used .NET
                             as the backend. This was made at the end of the first year.</p>
                         <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
@@ -332,12 +344,12 @@
             </div>
 
             <!-- MVC Peer Project -->
-            <div
-                class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md">
+            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+                data-aos="fade-left">
                 <div class="flex gap-8 items-center flex-col md:flex-row">
                     <img src="assets/img/projects/mvcpeer.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
                     <div class="w-full md:w-1/2">
-                        <h2 class="text-4xl font-bold text-transparent text-white mb-6">MVC Peer</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">MVC Peer</h2>
                         <p class="text-xl text-white mb-6">This project is a website that I made for the volleyball club
                             MVC-Peer. The project contains frontend code and an API connection to the VolleyScores
                             database. This is also the first website I ever made.</p>
@@ -396,7 +408,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1200,
+            duration: 1500,
             easing: 'ease-in-out',
             once: true,
         });

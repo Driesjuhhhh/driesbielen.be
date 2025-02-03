@@ -1,10 +1,5 @@
 https://www.driesbielen.be/index.html
 https://www.driesbielen.be/api-status.html
-https://www.driesbielen.be/Connect-4.html
-https://www.driesbielen.be/Streetmasters.html
-https://www.driesbielen.be/MVC-Peer.html
-https://www.driesbielen.be/JH-Sungarden.html
-https://www.driesbielen.be/Barbiepoppenexpo.html
 https://www.driesbielen.be/PROJECTS/STREETMASTERS/index.html
 https://www.driesbielen.be/PROJECTS/JKA/V1/barbieafterthemovie.html
 https://www.driesbielen.be/PROJECTS/JKA/V1/barbiealsmodeicoon.html
@@ -41,3 +36,4 @@ https://www.driesbielen.be/PROJECTS/connect4/Frontend/register.html
 https://www.driesbielen.be/PROJECTS/connect4/Frontend/settings.html
 https://www.driesbielen.be/PROJECTS/connect4/Frontend/team.html
 https://www.driesbielen.be/PROJECTS/connect4/Frontend/waitingroom.html
+https://www.driesbielen.be/PROJECTS/PINGPINGDING/

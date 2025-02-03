@@ -1,26 +1,29 @@
-
 body {
     --sb-track-color: #314057;
     --sb-thumb-color: #245773;
-  }
-  
-  body::-webkit-scrollbar {
-    width: var(--sb-size);
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: var(--sb-track-color);
+    overflow-x: hidden; /* Disable horizontal overflow */
+}
 
-  }
-  
-  body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar {
+    width: 0; /* Hide vertical scrollbar for WebKit browsers */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
     border-radius: 30px;
-  }
-  
-  @supports not selector(::-webkit-scrollbar) {
-    body {
-      scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+}
 
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-width: none; /* Hide vertical scrollbar for Firefox */
     }
-  }
+}
+
+html, body {
+    max-width: 100%; /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Disable horizontal overflow */
+}

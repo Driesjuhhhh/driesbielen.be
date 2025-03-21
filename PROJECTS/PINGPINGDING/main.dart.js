@@ -27136,7 +27136,7 @@ var $async$lT=A.N(function(a,b){if(a===1)return A.J(b,r)
 while(true)switch(s){case 0:s=3
 return A.C(B.aY.qJ(0,"api_url"),$async$lT)
 case 3:p=b
-q=p==null?"https://pingping.driesbielen.online":p
+q=p==null?"https://pingping.driesbielen.be":p
 s=1
 break
 case 1:return A.K(q,r)}})

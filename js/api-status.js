@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "appwrite-api": "standard_a84e680e899c4495dfb882ed2217b72aa3a53fdcb100bbe186f01099e67ac8beb3340831eb3ee349094f269c1c3f67f09c5f504adbcc1f2ce981bf0dd8db811422951ef278872cf45fcdf63a1a63941a7934c502118db77b0512a503e83f360e0dd0283d131d434b092da6a58e1c9a3a245edd5257b9400cac8e05a9509fa782"
     };
 
-    const appwriteProjectId = "<YOUR_PROJECT_ID>"; // Replace with your Appwrite project ID
+    const appwriteProjectId = "67f93f7a0018d0ad8446"; // Replace with your Appwrite project ID
 
     for (const [key, url] of Object.entries(urls)) {
         const wrapper = document.querySelector(`[data-service='${key}']`);

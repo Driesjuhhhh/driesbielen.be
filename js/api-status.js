@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urls = {
         "connectfour-api": "https://connectfour.driesbielen.be/status", 
         "pingping-api": "https://pingping.driesbielen.be/status",
-        "appwrite-api": "http://appwrite.driesbielen.be/health",
+        "appwrite-api": "https://appwrite.driesbielen.be/health",
     };
 
     const apiKeys = {

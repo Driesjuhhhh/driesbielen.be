@@ -40,12 +40,13 @@
 
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLPS7FHGM8"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-2HB6WW5W1N');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-RLPS7FHGM8');
     </script>
 </head>
 <header id="header" class="d-flex align-items-center ">
@@ -65,20 +66,13 @@
                 <div class="navigation-options-card">
                     <ul>
                         <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Diensten
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="detailing.html">Detailing
-                                <li>
-                                    <a class="dropdown-item" href="wrapping.html">Wrapping</a>
-                                </li>
-                            </ul>
+                        <li>
+                            <a class="nav-link scrollto active" href="detailing.html">Detailing
+                        <li>
+                            <a class="nav-link scrollto active" href="wrapping.html">Wrapping</a>
                         </li>
-                        <li><a class="nav-link scrollto active" href="index.html">Over ons</a></li>
+                        </li>
+                        <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
                         <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -90,8 +84,8 @@
             <ul>
                 <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link scrollto dropdown-toggle" href="#diensten" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Diensten
                     </a>
                     <ul class="dropdown-menu">
@@ -102,7 +96,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="index.html#overons">Over ons</a></li>
+                <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
                 <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
             </ul>
 
@@ -116,6 +110,9 @@
     <section id="hero">
         <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
             <img src="assets/img/logo.png">
+            <a href="#main" class="scroll-down">
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
         </div>
     </section>
     <main id="main">
@@ -139,7 +136,7 @@
                     <div class="col-lg-4"></div>
                     <div class="col-lg-2">
                         <h3>Prijs</h3>
-                        <p class="fw-bold">v.a. €100</p>
+                        <p class="fw-bold">v.a. €50</p>
                     </div>
                 </div>
                 <div class="row">
@@ -186,7 +183,7 @@
                     <div class="col-lg-4"></div>
                     <div class="col-lg-2">
                         <h3>Prijs</h3>
-                        <p class="fw-bold">v.a. €250</p>
+                        <p class="fw-bold">v.a. €300</p>
                     </div>
                 </div>
                 <div class="spacing-between-categories"></div>
@@ -221,7 +218,7 @@
                     <div class="col-lg-4"></div>
                     <div class="col-lg-2">
                         <h3>Prijs</h3>
-                        <p class="fw-bold">v.a. €25</p>
+                        <p class="fw-bold">v.a. €75</p>
                     </div>
                 </div>
                 <div class="row">
@@ -270,7 +267,7 @@
                         <p class="fw-bold">Op Aanvraag</p>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row" style="margin-top: 5px !important;">
                     <div class="col-lg-6">
                         <h4>DEEPCLEAN SEATS</h4>
                         <p>Last van vlekken of ander viezigheid in je stoel? Geen probleem! Met dit reinigingspakket

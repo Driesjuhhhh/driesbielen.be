@@ -37,74 +37,67 @@
 
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLPS7FHGM8"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-    gtag('config', 'G-2HB6WW5W1N');
+
+    gtag('config', 'G-RLPS7FHGM8');
   </script>
 </head>
 <header id="header" class="d-flex align-items-center ">
   <div class="navigation mobile-navbar">
-    <button class="btn btn-primary navigation-button" type="button" data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
-        class="fa-solid fa-bars"></i></button>
+      <button class="btn btn-primary navigation-button" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+              class="fa-solid fa-bars"></i></button>
 
-    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
-      aria-labelledby="offcanvasWithBothOptionsLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Streetmasters</h5>
-        <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i class="fa-solid fa-xmark"></i></button>
+      <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Streetmasters</h5>
+              <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i
+                      class="fa-solid fa-xmark"></i></button>
+          </div>
+          <div class="offcanvas-body">
+              <div class="navigation-options-card">
+                  <ul>
+                      <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                      <li>
+                          <a class="nav-link scrollto active" href="detailing.html">Detailing
+                      <li>
+                          <a class="nav-link scrollto active" href="wrapping.html">Wrapping</a>
+                      </li>
+                      </li>
+                      <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
+                      <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
+                  </ul>
+              </div>
+          </div>
       </div>
-      <div class="offcanvas-body">
-        <div class="navigation-options-card">
-          <ul>
-            <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Diensten
-              </a>
-            </li>
-
-            <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="detailing.html">Detailing
-              <li>
-                <a class="dropdown-item" href="wrapping.html">Wrapping</a>
-              </li>
-            </ul>
-            </li>
-            <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
-            <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="container-fluid container-xxl d-flex align-items-center">
-    <nav id="navbar" class="navbar order-last order-lg-0">
-      <ul>
-        <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link scrollto dropdown-toggle" href="#diensten" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Diensten
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="detailing.html">Detailing
-            <li>
-              <a class="dropdown-item" href="wrapping.html">Wrapping</a>
-            </li>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+              <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link scrollto dropdown-toggle" href="#diensten" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Diensten
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li>
+                          <a class="dropdown-item" href="detailing.html">Detailing
+                      <li>
+                          <a class="dropdown-item" href="wrapping.html">Wrapping</a>
+                      </li>
+                  </ul>
+              </li>
+              <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
+              <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
           </ul>
-        </li>
-        <li><a class="nav-link scrollto active" href="#overons">Over ons</a></li>
-        <li><a class="nav-link scrollto active" href="#contact">Contact</a></li>
-      </ul>
 
-    </nav>
+      </nav>
   </div>
 </header>
 
@@ -114,8 +107,16 @@
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <img src="assets/img/logo.png">
+      <!-- Add the pulsing arrow -->
+      <a href="#main" class="scroll-down">
+        <i class="fa-solid fa-arrow-down"></i>
+      </a>
     </div>
   </section>
+  <style>
+    /* Add styles for the pulsing arrow */
+    
+  </style>
   <main id="main">
 
     <section id="half-spacing">

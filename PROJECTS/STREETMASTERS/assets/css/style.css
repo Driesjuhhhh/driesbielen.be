@@ -40,6 +40,26 @@ p {
   margin: 0 0 30px 0;
 }
 
+.scroll-down {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #fff;
+  animation: pulse 1.5s infinite;
+  text-decoration: none;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.7;
+  }
+}
+
 #video-background {
   height: 100vh;
   left: 0;

@@ -4,26 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
         "connectfour-api": "https://connectfour.driesbielen.be/status", 
         "pingping-api": "https://pingping.driesbielen.be/status"
     };
-
     for (const [key, url] of Object.entries(urls)) {
         const wrapper = document.querySelector(`[data-service='${key}']`);
         if (wrapper) {
-            CheckProject(wrapper, url, apiKeys[key]);
+            CheckProject(wrapper, url);
         }
     }
 });
 
-async function CheckProject(wrapper, url, apiKey) {
+async function CheckProject(wrapper, url) {
     let failed = false;
     const statusText = wrapper; // directly target the <span>
 
     try {
-        const headers = {};
-        if (apiKey) {
-            headers.Authorization = `Bearer ${apiKey}`;
-        }
-
-        const response = await fetch(url, { headers });
+        const response = await fetch(url);
         if (response.ok) {
             // Check if the response is valid and JSON parse it
             await response.json();

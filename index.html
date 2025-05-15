@@ -166,288 +166,532 @@
         <section id="projects" class="min-h-screen flex flex-col items-center justify-center">
             <h1 class="audiowide-regular mb-10 text-6xl font-bold">Projects</h1>
 
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
-                data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/DRS Transparent.png" alt="Project Image"
-                        class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">DRS-Voting 
-                        </h2>
-                        <p class="text-xl text-white mb-6">This is a mobile app I made for talent shows, featuring a voting system for audience participation.</p>
-
-
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Appwrite</span>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/driesjuhhhh/DRS-VOTING" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://driesbielen.be/PROJECTS/DRS-VOTING" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
-                    </a>
-                </div>
+            <!-- Project Filter -->
+            <div class="mb-8 flex justify-center gap-2 mx-auto w-fit bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] rounded-xl p-4 backdrop-blur-md">
+                <button id="filter-private" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">Private</button>
+                <button id="filter-school" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">School</button>
+                <button id="filter-all" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">All</button>
             </div>
 
-            <!-- <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
-                data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/RedBullGamingHub_Logo.png" alt="Project Image"
-                        class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Boelguard 
-                        </h2>
-                        <p class="text-xl text-white mb-6">This is a mobile app I made with <a href="https://github.com/RonanStiersPXL" target="_blank" class="text-blue-400 hover:underline">Ronan Stiers</a> and <a href="https://github.com/MichaelBielenPXL" target="_blank" class="text-blue-400 hover:underline">Michael Bielen</a> for the Red Bull Gaming Hub. The app features an integrated backend for seamless interactions, a Discord bot for community engagement, Google Sheets and Firestore for data management, and a security system for the PCs of the hub. Volunteers can log in, choose their shift, and check in or out with or without friends.</p>
-
-
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Firebase</span>
+            <!-- RBGH Project -->
+            <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
+                data-aos="fade-left" id="rbgh">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/mosselsystem.png" alt="Project Image"
+                            class="w-full h-full object-contain rounded-full bg-transparent p-2">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Mosselsystem</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Vue</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Java</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
                         </div>
-
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This is an application originally built for Chiro Wilduraantjes (chirowilduraantjes.be). It features an order form, login system, kitchen management, cash register, and hall management system.
+                        </p>
+                        <!-- <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/driesjuhhhh/mosselsystem" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://mosselsystem.driesbielen.be" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
+                            </a>
+                        </div> -->
+                        <!-- Expandable extra info -->
+                        <div id="mossel-extra" class="hidden w-full pt-4">
+                            <!-- <div>
+                                <span class="font-bold">Info:</span>
+                                <span class="text-base text-white">Click on the logo on the left top to go to the order form, click on it to go back to the login</span>
+                            </div> -->
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">January - May 2025</span>
+                            </div>
+                            <div class="flex items-center text-base text-white">
+                                <span class="font-bold mr-1">With:</span>
+                                <span class="flex items-center">
+                                    Richelle Lippens
+                                    <a href="https://www.linkedin.com/in/richelle-lippens/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Richelle Lippens">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                                <span class="mx-1">,</span>
+                                <span class="flex items-center">
+                                    Michaël Bielen (Not my brother)
+                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                                <span class="mx-1">,</span>
+                                <span class="flex items-center">
+                                    Kevin Jespers 
+                                    <a href="https://www.linkedin.com/in/kevin-jespers-a2ba5727b/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Kevin Jespers">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/driesjuhhhh/rbgh" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://Boelguard.me" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
-                    </a>
+                <!-- Expand card icon -->
+                <button id="mossel-rbgh" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="mossel-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
+            </div>
+
+                        <!-- RBGH Project -->
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
+                data-aos="fade-left" id="rbgh">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/RedBullGamingHub_Logo.png" alt="Project Image"
+                            class="w-full h-full object-contain rounded-full bg-transparent p-2">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">RBGH (Red Bull Gaming Hub)</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Firebase</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Java</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Github Actions</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This is a mobile app for the Red Bull Gaming Hub. The app features an integrated Java backend for seamless interactions, a Discord bot for community engagement, Google Sheets and Firestore for data management, and a security system for the PCs of the hub. Volunteers can log in, choose their shift, and check in (with) friends.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/driesjuhhhh/rbgh" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://Boelguard.me" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="rbgh-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">Reference:</span>
+                                <span class="inline-flex items-center gap-2 text-base text-white">
+                                    Mike Vandebriel
+                                    <a href="mailto:Mike.Vandebriel@pxl.be" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail Mike Vandebriel">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/mike-vandebriel-2375a954/" target="_blank" class="text-blue-400 hover:underline flex items-center gap-1" title="LinkedIn Mike Vandebriel">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">Januari 2025 - now</span>
+                            </div>
+                            <div class="flex items-center text-base text-white">
+                                <span class="font-bold mr-1">With:</span>
+                                <span class="flex items-center">
+                                    Ronan Stiers
+                                    <a href="https://www.linkedin.com/in/ronan-stiers-609058292/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Ronan Stiers">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                                <span class="mx-1">,</span>
+                                <span class="flex items-center">
+                                    Michaël Bielen (Not my brother)
+                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+                <!-- Expand card icon -->
+                <button id="expand-rbgh" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
+            </div>
+
+            <!-- DRS-Voting Project -->
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
+                data-aos="fade-left">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/DRS Transparent.png" alt="Project Image"
+                            class="w-full h-full object-contain rounded-full bg-transparent">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">DRS-Voting</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Appwrite</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            The app allows audience members to vote for their favorite acts in real-time using their smartphones. It features secure vote counting, live result updates, and an admin dashboard for event organizers. Built with Flutter for cross-platform support and Appwrite for backend services.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/driesjuhhhh/DRS-VOTING" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://driesbielen.be/PROJECTS/DRS-VOTING" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="drsvoting-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">April 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Expand card icon -->
+                <button id="expand-drsvoting" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-drsvoting" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
+            </div>
 
             <!-- PingPingDing Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image"
-                        class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">PingPingDing -
-                            School Project
-                        </h2>
-                        <p class="text-xl text-white mb-6">This is a mobile app I made for the course mobile development
-                            @ PXL. It allows me to check my balance on the school's payment system.</p>
-
-
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform"
-                                data-service="pingping-api">Checking API</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.Net</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">PingPingDing - School Project</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform" data-service="pingping-api">Checking API</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.Net</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
                         </div>
-
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This is a mobile app I made for the course mobile development @ PXL. It allows me to check my balance on the school's payment system.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/Driesjuhhhh/PingPingDing" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://driesbielen.be/PROJECTS/PINGPINGDING/" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="pingpingding-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">September - December 2024</span>
+                            </div>
+                            <div class="flex items-center text-base text-white">
+                                <span class="font-bold mr-1">With:</span>
+                                Emir Kaan
+                                <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/Driesjuhhhh/PingPingDing" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://driesbielen.be/PROJECTS/PINGPINGDING/" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-pingpingding" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-pingpingding" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
-
-
             <!-- Streetmasters Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/streetmasters.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Streetmasters
-                        </h2>
-                        <p class="text-xl text-white mb-6">Created a website for a car cleaning business in
-                            Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/streetmasters.png" alt="Project Image"
+                            class="w-full h-full object-contain rounded-full bg-transparent p-2">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Streetmasters</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            Created a website for a car cleaning business in Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.
                         </p>
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/seppesnoks/Streetmasters" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://streetmasters.be" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="streetmasters-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">Reference:</span>
+                                <span class="inline-flex items-center gap-2 text-base text-white">
+                                    Seppe Snoks
+                                    <a href="tel:+32469438702" class="text-blue-400 hover:underline flex items-center gap-1" title="Call Seppe Snoks">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">2023 - now</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/seppesnoks/Streetmasters" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://streetmasters.be" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-streetmasters" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-streetmasters" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
             <!-- JH Sungarden Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/jh-sungarden.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">JH Sungarden
-                        </h2>
-                        <p class="text-xl text-white mb-6">This is a simple website I built for the youth center in
-                            Zonhoven, Belgium.</p>
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/jh-sungarden.png" alt="Project Image"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">JH Sungarden</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This is a simple website I built for the youth center in Zonhoven, Belgium.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/DRE-am-development/SUNGARDEN-ZONHOVEN" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://jhsungarden.be" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="jhsungarden-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">Reference:</span>
+                                <span class="inline-flex items-center gap-2 text-base text-white">
+                                    JH Sungarden
+                                    <a href="mailto:jh.sungarden@gmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail JH Sungarden">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">2024 - now</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/DRE-am-development/SUNGARDEN-ZONHOVEN" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://jhsungarden.be" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-jhsungarden" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-jhsungarden" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
             <!-- Barbiepoppen Expo Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image"
-                        class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Barbiepoppen
-                            Expo</h2>
-                        <p class="text-xl text-white mb-6">Barbiepoppen Expo is a website for a Barbie doll exhibition
-                            organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University
-                            College. The exhibition explores the history and cultural impact of Barbie dolls.</p>
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Barbiepoppen Expo</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            Barbiepoppen Expo is a website for a Barbie doll exhibition organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University College. The exhibition explores the history and cultural impact of Barbie dolls.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/Driesjuhhhh/JKA" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://driesbielen.be/PROJECTS/JKA/V1/index.html" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="barbiepoppenexpo-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">Reference:</span>
+                                <span class="inline-flex items-center gap-2 text-base text-white">
+                                    Joke Bylemans
+                                    <a href="mailto:jokebylemans@gmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail Joke Bylemans">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>,
+                                    Amber Neyens
+                                    <a href="mailto:amberneyens31@gmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail Amber Neyens">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>,
+                                    Kelly Hoebers
+                                    <a href="mailto:KellyHoebers@gmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail Kelly Hoebers">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">2023</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/Driesjuhhhh/JKA" target="_blank" class="text-white hover:text-blue-500"
-                        title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://driesbielen.be/PROJECTS/JKA/V1/index.html" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-barbiepoppenexpo" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-barbiepoppenexpo" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
             <!-- Connect 4 Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/connect4.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">Connect 4 -
-                            School Project</h2>
-                        <p class="text-xl text-white mb-6">This was a school project made in a group, where we used .NET
-                            as the backend. This was made at the end of the first year.</p>
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform mb-2"
-                                data-service="connectfour-api">Checking API</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">HTML</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">CSS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">JS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">.NET</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">Docker</span>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/connect4.png" alt="Project Image"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Connect 4 - School Project</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-orange-600 text-white text-sm font-semibold transition transform mb-2" data-service="connectfour-api">Checking API</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">HTML</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">CSS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">JS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">.NET</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110 mb-2">Docker</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This was a school project made in a group, where we used .NET as the backend. This was made at the end of the first year.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/Driesjuhhhh/CONNECT4" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://driesbielen.be/PROJECTS/connect4/Frontend/index.html" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="connect4-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">April - June 2023</span>
+                            </div>
+                            <div>
+
+                                <span class="text-base text-white flex flex-col sm:flex-row items-center gap-2">
+                                    <span class="font-bold">With:</span>
+                                    <span class="flex items-center">
+                                        Emir Kaan
+                                        <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </span>
+                                    <span class="flex items-center">
+                                        , Rob Lunskens
+                                        <a href="https://www.linkedin.com/in/rob-lunskens/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Rob Lunskens">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </span>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/Driesjuhhhh/CONNECT4" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://driesbielen.be/PROJECTS/connect4/Frontend/index.html" target="_blank"
-                        class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-connect4" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-connect4" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
             <!-- MVC Peer Project -->
-            <div class="max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md"
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
-                <div class="flex gap-8 items-center flex-col md:flex-row">
-                    <img src="assets/img/projects/mvcpeer.png" alt="Project Image" class="w-full md:w-1/4 h-auto">
-                    <div class="w-full md:w-1/2">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-6">MVC Peer</h2>
-                        <p class="text-xl text-white mb-6">This project is a website that I made for the volleyball club
-                            MVC-Peer. The project contains frontend code and an API connection to the VolleyScores
-                            database. This is also the first website I ever made.</p>
-                        <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span
-                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/mvcpeer.png" alt="Project Image"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">MVC Peer</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4">
+                            This project is a website that I made for the volleyball club MVC-Peer. The project contains frontend code and an API connection to the VolleyScores database. This is also the first website I ever made.
+                        </p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="https://github.com/Driesjuhhhh/MVCPEER" target="_blank"
+                                class="text-white hover:text-blue-500" title="View Github">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="https://mvcpeer.be" target="_blank"
+                                class="text-white hover:text-gray-200 hover:scale-110" title="View Project">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
+                            </a>
+                        </div>
+                        <!-- Expandable extra info -->
+                        <div id="mvcpeer-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="font-bold">Reference:</span>
+                                <span class="inline-flex items-center gap-2 text-base text-white">
+                                    MVC Peer
+                                    <a href="mailto:volley_peer@hotmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail MVC Peer">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="font-bold">When:</span>
+                                <span class="text-base text-white">2022 - now</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="absolute top-0 right-0 flex gap-6 mt-6 mr-6">
-                    <a href="https://github.com/Driesjuhhhh/MVCPEER" target="_blank"
-                        class="text-white hover:text-blue-500" title="View Github">
-                        <i class="fab fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://mvcpeer.be" target="_blank" class="text-white hover:text-gray-200 hover:scale-110"
-                        title="View Project">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-2x1"></i>
-                    </a>
-                </div>
+                <!-- Expand card icon -->
+                <button id="expand-mvcpeer" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-mvcpeer" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
             </div>
 
 
@@ -496,6 +740,160 @@
 
 
 
+    </script>
+    <script>
+        // Toggle expand/collapse for DRS-Voting project
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.getElementById('toggle-drs-voting');
+            const moreInfo = document.getElementById('drs-voting-more');
+            const chevron = document.getElementById('chevron-drs-voting');
+            if (toggleBtn && moreInfo && chevron) {
+                toggleBtn.addEventListener('click', function () {
+                    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+                    toggleBtn.setAttribute('aria-expanded', !expanded);
+                    moreInfo.classList.toggle('hidden');
+                    chevron.classList.toggle('rotate-180');
+                });
+            }
+        });
+    </script>
+    <script>
+        // Project filter logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterPrivate = document.getElementById('filter-private');
+            const filterSchool = document.getElementById('filter-school');
+            const filterAll = document.getElementById('filter-all');
+            const cards = document.querySelectorAll('.project-card');
+
+            function showProjects(type) {
+                cards.forEach(card => {
+                    if (type === 'all') {
+                        card.style.display = '';
+                    } else if (card.classList.contains('project-' + type)) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterPrivate.addEventListener('click', () => showProjects('private'));
+            filterSchool.addEventListener('click', () => showProjects('school'));
+            filterAll.addEventListener('click', () => showProjects('all'));
+        });
+    </script>
+    <script>
+        // Expand card logic for MosselSystem
+        document.addEventListener('DOMContentLoaded', function () {
+            const expandBtnMossel = document.getElementById('mossel-rbgh');
+            const extraInfoMossel = document.getElementById('mossel-extra');
+            const iconMossel = document.getElementById('mossel-icon-rbgh');
+            if (expandBtnMossel && extraInfoMossel && iconMossel) {
+                expandBtnMossel.addEventListener('click', function () {
+                    const expanded = !extraInfoMossel.classList.contains('hidden');
+                    extraInfoMossel.classList.toggle('hidden');
+                    iconMossel.classList.toggle('rotate-180', !expanded);
+                });
+            }
+        });
+
+        // Expand card logic for Streetmasters
+        document.addEventListener('DOMContentLoaded', function () {
+            const expandBtn = document.getElementById('expand-streetmasters');
+            const extraInfo = document.getElementById('streetmasters-extra');
+            const icon = document.getElementById('expand-icon-streetmasters');
+            if (expandBtn && extraInfo && icon) {
+                expandBtn.addEventListener('click', function () {
+                    const expanded = !extraInfo.classList.contains('hidden');
+                    extraInfo.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for JH Sungarden
+            const expandBtnJH = document.getElementById('expand-jhsungarden');
+            const extraInfoJH = document.getElementById('jhsungarden-extra');
+            const iconJH = document.getElementById('expand-icon-jhsungarden');
+            if (expandBtnJH && extraInfoJH && iconJH) {
+                expandBtnJH.addEventListener('click', function () {
+                    const expanded = !extraInfoJH.classList.contains('hidden');
+                    extraInfoJH.classList.toggle('hidden');
+                    iconJH.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for Barbiepoppen Expo
+            const expandBtnBarbie = document.getElementById('expand-barbiepoppenexpo');
+            const extraInfoBarbie = document.getElementById('barbiepoppenexpo-extra');
+            const iconBarbie = document.getElementById('expand-icon-barbiepoppenexpo');
+            if (expandBtnBarbie && extraInfoBarbie && iconBarbie) {
+                expandBtnBarbie.addEventListener('click', function () {
+                    const expanded = !extraInfoBarbie.classList.contains('hidden');
+                    extraInfoBarbie.classList.toggle('hidden');
+                    iconBarbie.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for MVC Peer
+            const expandBtnMvc = document.getElementById('expand-mvcpeer');
+            const extraInfoMvc = document.getElementById('mvcpeer-extra');
+            const iconMvc = document.getElementById('expand-icon-mvcpeer');
+            if (expandBtnMvc && extraInfoMvc && iconMvc) {
+                expandBtnMvc.addEventListener('click', function () {
+                    const expanded = !extraInfoMvc.classList.contains('hidden');
+                    extraInfoMvc.classList.toggle('hidden');
+                    iconMvc.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for Connect 4
+            const expandBtnConnect4 = document.getElementById('expand-connect4');
+            const extraInfoConnect4 = document.getElementById('connect4-extra');
+            const iconConnect4 = document.getElementById('expand-icon-connect4');
+            if (expandBtnConnect4 && extraInfoConnect4 && iconConnect4) {
+                expandBtnConnect4.addEventListener('click', function () {
+                    const expanded = !extraInfoConnect4.classList.contains('hidden');
+                    extraInfoConnect4.classList.toggle('hidden');
+                    iconConnect4.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for PingPingDing
+            const expandBtnPing = document.getElementById('expand-pingpingding');
+            const extraInfoPing = document.getElementById('pingpingding-extra');
+            const iconPing = document.getElementById('expand-icon-pingpingding');
+            if (expandBtnPing && extraInfoPing && iconPing) {
+                expandBtnPing.addEventListener('click', function () {
+                    const expanded = !extraInfoPing.classList.contains('hidden');
+                    extraInfoPing.classList.toggle('hidden');
+                    iconPing.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for DRS-Voting
+            const expandBtnDrs = document.getElementById('expand-drsvoting');
+            const extraInfoDrs = document.getElementById('drsvoting-extra');
+            const iconDrs = document.getElementById('expand-icon-drsvoting');
+            if (expandBtnDrs && extraInfoDrs && iconDrs) {
+                expandBtnDrs.addEventListener('click', function () {
+                    const expanded = !extraInfoDrs.classList.contains('hidden');
+                    extraInfoDrs.classList.toggle('hidden');
+                    iconDrs.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            // Expand card logic for RBGH
+            const expandBtnRbgh = document.getElementById('expand-rbgh');
+            const extraInfoRbgh = document.getElementById('rbgh-extra');
+            const iconRbgh = document.getElementById('expand-icon-rbgh');
+            if (expandBtnRbgh && extraInfoRbgh && iconRbgh) {
+                expandBtnRbgh.addEventListener('click', function () {
+                    const expanded = !extraInfoRbgh.classList.contains('hidden');
+                    extraInfoRbgh.classList.toggle('hidden');
+                    iconRbgh.classList.toggle('rotate-180', !expanded);
+                });
+            }
+        });
     </script>
 </body>
 

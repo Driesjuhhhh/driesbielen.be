@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dries Bielen – Fullstack Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Dries Bielen, Fullstack Developer from Belgium. Explore web, mobile, and backend projects, skills, and contact information.">
-    <meta name="keywords" content="Dries Bielen, Fullstack Developer, Portfolio, .NET, Java, Flutter, Docker, Web Development, Mobile Development, Belgium, PXL, IT, Software Engineer, Projects, Skills, API, GitHub, Open Source, UI/UX, SQL, Azure, NodeJS, TypeScript, PHP, Python, Linux, MongoDB, Firebase, Appwrite, Tailwind CSS, Bootstrap, Teamwork, Project Management, Hasselt, Limburg">
+    <meta name="description"
+        content="Portfolio of Dries Bielen, Fullstack Developer from Belgium. Explore web, mobile, and backend projects, skills, and contact information.">
+    <meta name="keywords"
+        content="Dries Bielen, Fullstack Developer, Portfolio, .NET, Java, Flutter, Docker, Web Development, Mobile Development, Belgium, PXL, IT, Software Engineer, Projects, Skills, API, GitHub, Open Source, UI/UX, SQL, Azure, NodeJS, TypeScript, PHP, Python, Linux, MongoDB, Firebase, Appwrite, Tailwind CSS, Bootstrap, Teamwork, Project Management, Hasselt, Limburg">
     <meta name="author" content="Dries Bielen">
     <meta name="robots" content="index, follow, max-snippet:160, max-image-preview:large, max-video-preview:10">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +18,8 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://driesbielen.be/">
     <meta property="og:title" content="Dries Bielen – Fullstack Developer Portfolio">
-    <meta property="og:description" content="Portfolio of Dries Bielen, Fullstack Developer. Explore web, mobile, and backend projects, skills, and contact details.">
+    <meta property="og:description"
+        content="Portfolio of Dries Bielen, Fullstack Developer. Explore web, mobile, and backend projects, skills, and contact details.">
     <meta property="og:image" content="https://driesbielen.be/assets/img/DRS%20Transparent.png">
     <meta property="og:image:width" content="1440">
     <meta property="og:image:height" content="1440">
@@ -24,7 +27,8 @@
     <meta property="og:site_name" content="Dries Bielen Portfolio">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dries Bielen – Fullstack Developer Portfolio">
-    <meta name="twitter:description" content="Portfolio of Dries Bielen, Fullstack Developer. Explore web, mobile, and backend projects, skills, and contact details.">
+    <meta name="twitter:description"
+        content="Portfolio of Dries Bielen, Fullstack Developer. Explore web, mobile, and backend projects, skills, and contact details.">
     <meta name="twitter:image" content="https://driesbielen.be/assets/img/DRS%20Transparent.png">
     <meta name="twitter:site" content="@driesbielen">
     <meta name="twitter:creator" content="@driesbielen">
@@ -58,6 +62,7 @@
     <script src="js/calculateAge.js" defer></script>
     <script src="js/nav link.js" defer></script>
     <script src="js/api-status.js" defer></script>
+    <script src="js/language-switcher.js"></script>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <!-- <script src="script.js" defer></script> -->
     <link rel="icon" href="assets/img/DRS Transparent.png">
@@ -82,7 +87,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
 
-      <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HB6WW5W1N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -115,16 +120,44 @@
                         src="/assets/img/DRS Transparent.png">
                 </a>
                 <ul class="hidden sm:flex gap-8 lg:gap-12 text-white/50 mx-auto">
-                    <a id="nav-home" class="nav-link transition duration-300" href="#home">Home</a>
-                    <a id="nav-about" class="nav-link transition duration-300" href="#about">About</a>
-                    <a id="nav-skills" class="nav-link transition duration-300" href="#skills">Skills</a>
-                    <a id="nav-projects" class="nav-link transition duration-300" href="#projects">Projects</a>
+                    <a id="nav-home" class="nav-link transition duration-300" href="#home" data-i18n="nav_home">Home</a>
+                    <a id="nav-about" class="nav-link transition duration-300" href="#about"
+                        data-i18n="nav_about">About</a>
+                    <a id="nav-skills" class="nav-link transition duration-300" href="#skills"
+                        data-i18n="nav_skills">Skills</a>
+                    <a id="nav-projects" class="nav-link transition duration-300" href="#projects"
+                        data-i18n="nav_projects">Projects</a>
                 </ul>
-                <div>
-                    <div class="gap-5 text-xl hidden sm:flex"></div>
+                <div class="flex items-center gap-2">
                     <a target="_blank" href="https://github.com/driesjuhhh" style="color: white">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
+                    <!-- Custom Language Switcher -->
+                    <div id="custom-lang-switcher" class="relative ml-2">
+                        <button id="lang-btn" aria-label="Select language"
+                            class="flex items-center justify-center bg-[#22223b] hover:bg-[#2f2f4e] text-white rounded-full px-2 py-1 shadow transition focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <span class="hidden sm:inline mr-2 font-semibold text-base"></span>
+                            <span class="inline-flex items-center gap-1">
+                                <img src="https://flagcdn.com/24x18/gb.png" alt="EN" id="flag-en"
+                                    class="w-6 h-4 rounded shadow border border-gray-700" style="display:inline;">
+                                <img src="https://flagcdn.com/24x18/be.png" alt="NL" id="flag-nl"
+                                    class="w-6 h-4 rounded shadow border border-gray-700" style="display:none;">
+                            </span>
+                            <svg class="ml-1 w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="lang-dropdown"
+                            class="absolute right-0 mt-2 w-40 bg-[#22223b] border border-[#393963] rounded-lg shadow-lg py-1 z-50 hidden">
+                            <button class="w-full flex items-center px-3 py-2 pr-7 hover:bg-[#393963] text-white transition" data-lang="en">
+                                <img src="https://flagcdn.com/24x18/gb.png" alt="EN" class="w-6 h-4 rounded mr-2"> <span class="hidden sm:inline">English</span>
+                            </button>
+                            <button class="w-full flex items-center px-3 py-2 pr-7 hover:bg-[#393963] text-white transition" data-lang="nl">
+                                <img src="https://flagcdn.com/24x18/be.png" alt="NL" class="w-6 h-4 rounded mr-2"> <span class="hidden sm:inline">Nederlands</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -136,23 +169,27 @@
                 class="audiowide-regular text-6xl sm:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]">
                 Dries Bielen
             </h1>
-            <h4
-                class="audiowide-regular mt-2 text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]">
+            <h4 class="audiowide-regular mt-2 text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#2f27ce] to-[#77ec29]"
+                data-i18n="home_title">
                 Fullstack Developer
             </h4>
         </section>
 
         <section id="about" class="h-screen flex flex-col items-center justify-center text-center" data-aos="fade-up">
-            <h1 class="audiowide-regular mb-6 text-6xl font-bold">About me</h1>
-            <p class="mt-5 text-lg">My name is Dries Bielen, I am <span id="age" class="font-semibold"></span> years
-                old.</p>
-            <p class="text-lg">Currently studying IT at <a href="https://www.pxl.be" target="_blank"
-                    class="text-blue-400 hover:underline">PXL University</a> in Hasselt, Belgium.</p>
+            <h1 class="audiowide-regular mb-6 text-6xl font-bold" data-i18n="about_title">About me</h1>
+            <p class="mt-5 text-lg" data-i18n="about_intro">
+                My name is Dries Bielen, I am <span id="age" class="font-semibold"></span> years old.
+            </p>
+            <p class="text-lg" data-i18n="about_study">
+                Currently studying IT at <a href="https://www.pxl.be" target="_blank"
+                    class="text-blue-400 hover:underline" data-i18n="about_pxl">PXL University</a> in Hasselt, Belgium.
+            </p>
         </section>
 
         <section id="skills" class="min-h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="audiowide-regular text-6xl font-bold mb-6">Skills</h1>
+            <h1 class="audiowide-regular text-6xl font-bold mb-6" data-i18n="skills_title">Skills</h1>
             <div class="flex flex-wrap justify-center gap-4 max-w-4xl">
+                <!-- Remove data-i18n from skills, keep English -->
                 <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">.NET</span>
                 <span
@@ -195,11 +232,11 @@
                 <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">SQL
                     (MySQL, SQL Server, SQLite)</span>
-                    <span
+                <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Firebase</span>
-                    <span
+                <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Appwrite</span>
-                    <span
+                <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">UI/UX
                     Design</span>
                 <span
@@ -214,53 +251,78 @@
         </section>
 
         <section id="projects" class="min-h-screen flex flex-col items-center justify-center" data-aos="fade-up">
-            <h1 class="audiowide-regular mb-10 text-6xl font-bold">Projects</h1>
+            <h1 class="audiowide-regular mb-10 text-6xl font-bold" data-i18n="projects_title">Projecten</h1>
 
             <!-- Project Filter -->
-            <div class="mb-8 flex justify-center gap-2 mx-auto w-fit bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] rounded-xl p-4 backdrop-blur-md">
-                <button id="filter-private" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">Private</button>
-                <button id="filter-school" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">School</button>
-                <button id="filter-all" class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none">All</button>
+            <div
+                class="mb-8 flex justify-center gap-2 mx-auto w-fit bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] rounded-xl p-4 backdrop-blur-md">
+                <button id="filter-private"
+                    class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none"
+                    data-i18n="filter_private">Private</button>
+                <button id="filter-school"
+                    class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none"
+                    data-i18n="filter_school">School</button>
+                <button id="filter-all"
+                    class="px-4 py-2 rounded-full  text-white font-semibold transition hover:bg-blue-500 focus:outline-none"
+                    data-i18n="filter_all">All</button>
             </div>
 
             <!-- RBGH Project -->
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left" id="rbgh">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/mosselsystem.png" alt="Project Image"
                             class="w-full h-full object-contain rounded-full bg-transparent p-2">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Mosselsystem</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_mosselsystem_title">Mosselsystem</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition" data-service="mossel-api">Checking API</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">Vue</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">Java</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition"
+                                data-service="mossel-api">Checking API</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_mosselsystem_tech_vue">Vue</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_mosselsystem_tech_java">Java</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_mosselsystem_tech_docker">Docker</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            This is an application originally built for Chiro Wilduraantjes (chirowilduraantjes.be). It features an order form, login system, kitchen management, cash register, and hall management system.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_mosselsystem_desc">
+                            This is an application originally built for Chiro Wilduraantjes (chirowilduraantjes.be). It
+                            features an order form, login system, kitchen management, cash register, and hall management
+                            system.
                         </p>
                         <!-- Expandable extra info -->
                         <div id="mossel-extra" class="hidden w-full pt-4">
-                            <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">With:</span>
+                            <div
+                                class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="with_label">With:</span>
                                 <span class="flex items-center">
                                     Richelle Lippens
-                                    <a href="https://www.linkedin.com/in/richelle-lippens/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Richelle Lippens">
+                                    <a href="https://www.linkedin.com/in/richelle-lippens/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Richelle Lippens">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
                                 <span class="flex items-center">
                                     Michaël Bielen (Not my brother)
-                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
+                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
                                 <span class="flex items-center">
-                                    Kevin Jespers 
-                                    <a href="https://www.linkedin.com/in/kevin-jespers-a2ba5727b/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Kevin Jespers">
+                                    Kevin Jespers
+                                    <a href="https://www.linkedin.com/in/kevin-jespers-a2ba5727b/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Kevin Jespers">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
@@ -269,30 +331,47 @@
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="mossel-rbgh" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                <button id="mossel-rbgh"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="mossel-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
-                        <!-- RBGH Project -->
+            <!-- RBGH Project -->
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left" id="rbgh">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/RedBullGamingHub_Logo.png" alt="Project Image"
                             class="w-full h-full object-contain rounded-full bg-transparent p-2">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">RBGH (Red Bull Gaming Hub)</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_rbgh_title">RBGH (Red Bull Gaming Hub)</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Firebase</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Java</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Github Actions</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_rbgh_tech_flutter">Flutter</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_rbgh_tech_firebase">Firebase</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_rbgh_tech_java">Java</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_rbgh_tech_docker">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_rbgh_tech_githubactions">Github Actions</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            This is a mobile app for the Red Bull Gaming Hub. The app features an integrated Java backend for seamless interactions, a Discord bot for community engagement, Google Sheets and Firestore for data management, and a security system for the PCs of the hub. Volunteers can log in, choose their shift, and check in (with) friends.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4" data-i18n="project_rbgh_desc">
+                            This is a mobile app for the Red Bull Gaming Hub. The app features an integrated Java
+                            backend for seamless interactions, a Discord bot for community engagement, Google Sheets and
+                            Firestore for data management, and a security system for the PCs of the hub. Volunteers can
+                            log in, choose their shift, and check in (with) friends.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/driesjuhhhh/rbgh" target="_blank"
@@ -307,32 +386,39 @@
                         <!-- Expandable extra info -->
                         <div id="rbgh-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">Reference:</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="reference_label">Reference:</span>
                                 <span class="inline-flex items-center gap-2 text-base text-white">
                                     Mike Vandebriel
-                                    <a href="mailto:Mike.Vandebriel@pxl.be" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail Mike Vandebriel">
+                                    <a href="mailto:Mike.Vandebriel@pxl.be"
+                                        class="text-blue-400 hover:underline flex items-center gap-1"
+                                        title="Mail Mike Vandebriel">
                                         <i class="fas fa-envelope"></i>
                                     </a>
-                                    <a href="https://www.linkedin.com/in/mike-vandebriel-2375a954/" target="_blank" class="text-blue-400 hover:underline flex items-center gap-1" title="LinkedIn Mike Vandebriel">
+                                    <a href="https://www.linkedin.com/in/mike-vandebriel-2375a954/" target="_blank"
+                                        class="text-blue-400 hover:underline flex items-center gap-1"
+                                        title="LinkedIn Mike Vandebriel">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
                             </div>
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">Januari 2025 - now</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value">Januari 2025 - now</span>
                             </div>
-                            <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">With:</span>
+                            <div
+                                class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="with_label">With:</span>
                                 <span class="flex items-center">
                                     Ronan Stiers
-                                    <a href="https://www.linkedin.com/in/ronan-stiers-609058292/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Ronan Stiers">
+                                    <a href="https://www.linkedin.com/in/ronan-stiers-609058292/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Ronan Stiers">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
                                 <span class="flex items-center">
                                     Michaël Bielen (Not my brother)
-                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
+                                    <a href="https://www.linkedin.com/in/mbielen/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Michaël Bielen">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
@@ -341,7 +427,8 @@
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-rbgh" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                <button id="expand-rbgh"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
@@ -350,19 +437,32 @@
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/DRS Transparent.png" alt="Project Image"
                             class="w-full h-full object-contain rounded-full bg-transparent">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">DRS-Voting</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_drsvoting_title">DRS-Voting</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Flutter</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Appwrite</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_drsvoting_tech_flutter">Flutter</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_drsvoting_tech_appwrite">Appwrite</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_drsvoting_tech_docker">Docker</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            The app allows audience members to vote for their favorite acts in real-time using their smartphones. It features secure vote counting, live result updates, and an admin dashboard for event organizers. Built with Flutter for cross-platform support and Appwrite for backend services.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_drsvoting_desc">
+                            The app allows audience members to vote for their favorite acts in real-time using their
+                            smartphones. It features secure vote counting, live result updates, and an admin dashboard
+                            for event organizers. Built with Flutter for cross-platform support and Appwrite for backend
+                            services.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/driesjuhhhh/DRS-VOTING" target="_blank"
@@ -377,15 +477,17 @@
                         <!-- Expandable extra info -->
                         <div id="drsvoting-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">April 2025</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_drsvoting">April 2025</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-drsvoting" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-drsvoting" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-drsvoting"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-drsvoting"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -393,20 +495,33 @@
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/pingpingding_splash.svg" alt="Project Image"
                             class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">PingPingDing</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_pingpingding_title">PingPingDing</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition" data-service="pingping-api">Checking API</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">Flutter</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">.Net</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition"
+                                data-service="pingping-api">Checking API</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_pingpingding_tech_flutter">Flutter</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_pingpingding_tech_dotnet">.Net</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105"
+                                data-i18n="project_pingpingding_tech_docker">Docker</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            This is a mobile app I made for the course mobile development @ PXL. It allows me to check my balance on the school's payment system.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_pingpingding_desc">
+                            This is a mobile app I made for the course mobile development @ PXL. It allows me to check
+                            my balance on the school's payment system.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/Driesjuhhhh/PingPingDing" target="_blank"
@@ -421,14 +536,16 @@
                         <!-- Expandable extra info -->
                         <div id="pingpingding-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">September - December 2024</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_pingpingding">September - December 2024</span>
                             </div>
-                            <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">With:</span>
+                            <div
+                                class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="with_label">With:</span>
                                 <span class="flex items-center">
                                     Emir Kaan
-                                    <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
+                                    <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
@@ -437,8 +554,10 @@
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-pingpingding" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-pingpingding" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-pingpingding"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-pingpingding"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -446,20 +565,33 @@
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/streetmasters.png" alt="Project Image"
                             class="w-full h-full object-contain rounded-full bg-transparent p-2">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Streetmasters</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_streetmasters_title">Streetmasters</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_streetmasters_tech_html">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_streetmasters_tech_css">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_streetmasters_tech_js">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_streetmasters_tech_bootstrap">Bootstrap</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            Created a website for a car cleaning business in Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_streetmasters_desc">
+                            Created a website for a car cleaning business in Houthalen-Helchteren, Belgium. The site
+                            showcases their services, pricing, and contact info.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/seppesnoks/Streetmasters" target="_blank"
@@ -474,28 +606,30 @@
                         <!-- Expandable extra info -->
                         <div id="streetmasters-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">Reference:</span>
-                                <span class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="reference_label">Reference:</span>
+                                <span
+                                    class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
                                     <span class="flex items-center">
                                         Seppe Snoks
-                                        <a href="tel:+32469438702" class="text-blue-400 hover:underline ml-1" title="Call Seppe Snoks">
+                                        <a href="tel:+32469438702" class="text-blue-400 hover:underline ml-1"
+                                            title="Call Seppe Snoks">
                                             <i class="fas fa-phone-alt"></i>
                                         </a>
                                     </span>
                                 </span>
                             </div>
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
-                                    <span>2023</span>
-                                </span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_streetmasters">2023</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-streetmasters" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-streetmasters" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-streetmasters"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-streetmasters"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -503,19 +637,30 @@
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/jh-sungarden.png" alt="Project Image"
                             class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">JH Sungarden</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_jhsungarden_title">JH Sungarden</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_jhsungarden_tech_html">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_jhsungarden_tech_css">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_jhsungarden_tech_js">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_jhsungarden_tech_bootstrap">Bootstrap</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4" data-i18n="project_jhsungarden_desc">
                             This is a simple website I built for the youth center in Zonhoven, Belgium.
                         </p>
                         <div class="flex gap-6 mt-2">
@@ -531,24 +676,28 @@
                         <!-- Expandable extra info -->
                         <div id="jhsungarden-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">Reference:</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="reference_label">Reference:</span>
                                 <span class="inline-flex items-center gap-2 text-base text-white">
                                     JH Sungarden
-                                    <a href="mailto:jh.sungarden@gmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail JH Sungarden">
+                                    <a href="mailto:jh.sungarden@gmail.com"
+                                        class="text-blue-400 hover:underline flex items-center gap-1"
+                                        title="Mail JH Sungarden">
                                         <i class="fas fa-envelope"></i>
                                     </a>
                                 </span>
                             </div>
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">2024 - now</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_jhsungarden">2024 - now</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-jhsungarden" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-jhsungarden" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-jhsungarden"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-jhsungarden"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -556,20 +705,34 @@
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/barbiepoppenexpo.png" alt="Project Image"
                             class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Barbiepoppen Expo</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_barbiepoppenexpo_title">Barbiepoppen Expo</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_barbiepoppenexpo_tech_html">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_barbiepoppenexpo_tech_css">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_barbiepoppenexpo_tech_js">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_barbiepoppenexpo_tech_bootstrap">Bootstrap</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            Barbiepoppen Expo is a website for a Barbie doll exhibition organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University College. The exhibition explores the history and cultural impact of Barbie dolls.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_barbiepoppenexpo_desc">
+                            Barbiepoppen Expo is a website for a Barbie doll exhibition organized by Joke Bylemans,
+                            Amber Neyens, and Kelly Hoebers, commissioned by PXL University College. The exhibition
+                            explores the history and cultural impact of Barbie dolls.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/Driesjuhhhh/JKA" target="_blank"
@@ -584,40 +747,44 @@
                         <!-- Expandable extra info -->
                         <div id="barbiepoppenexpo-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">Reference:</span>
-                                <span class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="reference_label">Reference:</span>
+                                <span
+                                    class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
                                     <span class="flex items-center">
                                         Joke Bylemans
-                                        <a href="mailto:jokebylemans@gmail.com" class="text-blue-400 hover:underline ml-1" title="Mail Joke Bylemans">
+                                        <a href="mailto:jokebylemans@gmail.com"
+                                            class="text-blue-400 hover:underline ml-1" title="Mail Joke Bylemans">
                                             <i class="fas fa-envelope"></i>
                                         </a>
                                     </span>
                                     <span class="flex items-center">
                                         Amber Neyens
-                                        <a href="mailto:amberneyens31@gmail.com" class="text-blue-400 hover:underline ml-1" title="Mail Amber Neyens">
+                                        <a href="mailto:amberneyens31@gmail.com"
+                                            class="text-blue-400 hover:underline ml-1" title="Mail Amber Neyens">
                                             <i class="fas fa-envelope"></i>
                                         </a>
                                     </span>
                                     <span class="flex items-center">
                                         Kelly Hoebers
-                                        <a href="mailto:KellyHoebers@gmail.com" class="text-blue-400 hover:underline ml-1" title="Mail Kelly Hoebers">
+                                        <a href="mailto:KellyHoebers@gmail.com"
+                                            class="text-blue-400 hover:underline ml-1" title="Mail Kelly Hoebers">
                                             <i class="fas fa-envelope"></i>
                                         </a>
                                     </span>
                                 </span>
                             </div>
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="flex flex-col sm:inline-flex sm:flex-row items-start sm:items-center gap-2 sm:gap-2 text-base text-white">
-                                    <span>2023</span>
-                                </span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_barbiepoppenexpo">2023</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-barbiepoppenexpo" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-barbiepoppenexpo" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-barbiepoppenexpo"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-barbiepoppenexpo"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -625,22 +792,38 @@
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/connect4.png" alt="Project Image"
                             class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">Connect 4</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_connect4_title">Connect 4</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition mb-2" data-service="connectfour-api">Checking API</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2">HTML</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2">CSS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2">JS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2">.NET</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-orange-500/90 text-white text-xs font-semibold transition mb-2"
+                                data-service="connectfour-api">Checking API</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2"
+                                data-i18n="project_connect4_tech_html">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2"
+                                data-i18n="project_connect4_tech_css">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2"
+                                data-i18n="project_connect4_tech_js">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2"
+                                data-i18n="project_connect4_tech_dotnet">.NET</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold transition hover:bg-blue-500 hover:scale-105 mb-2"
+                                data-i18n="project_connect4_tech_docker">Docker</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            This was a school project made in a group, where we used .NET as the backend. This was made at the end of the first year.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4" data-i18n="project_connect4_desc">
+                            This was a school project made in a group, where we used .NET as the backend. This was made
+                            at the end of the first year.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/Driesjuhhhh/CONNECT4" target="_blank"
@@ -655,20 +838,23 @@
                         <!-- Expandable extra info -->
                         <div id="connect4-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">April - June 2023</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_connect4">April - June 2023</span>
                             </div>
-                            <div class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">With:</span>
+                            <div
+                                class="flex flex-col sm:flex-row flex-wrap items-start sm:items-center text-base text-white gap-2 sm:gap-4 mt-2">
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="with_label">With:</span>
                                 <span class="flex items-center">
                                     Emir Kaan
-                                    <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
+                                    <a href="https://www.linkedin.com/in/emir-kaan-ozver/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Emir Kaan">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
                                 <span class="flex items-center">
                                     Rob Lunskens
-                                    <a href="https://www.linkedin.com/in/rob-lunskens/" target="_blank" class="text-blue-400 hover:underline ml-1" title="LinkedIn Rob Lunskens">
+                                    <a href="https://www.linkedin.com/in/rob-lunskens/" target="_blank"
+                                        class="text-blue-400 hover:underline ml-1" title="LinkedIn Rob Lunskens">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </span>
@@ -677,8 +863,10 @@
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-connect4" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-connect4" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-connect4"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-connect4"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -686,20 +874,33 @@
             <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
-                    <div class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
                         <img src="assets/img/projects/mvcpeer.png" alt="Project Image"
                             class="w-full h-full object-cover rounded-full">
                     </div>
                     <div class="flex-1 flex flex-col items-center md:items-start">
-                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left">MVC Peer</h2>
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_mvcpeer_title">MVC Peer</h2>
                         <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">HTML</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">CSS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">JS</span>
-                            <span class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Bootstrap</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_mvcpeer_tech_html">HTML</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_mvcpeer_tech_css">CSS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_mvcpeer_tech_js">JS</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110"
+                                data-i18n="project_mvcpeer_tech_bootstrap">Bootstrap</span>
                         </div>
-                        <p class="text-base text-white text-center md:text-left mb-4">
-                            This project is a website that I made for the volleyball club MVC-Peer. The project contains frontend code and an API connection to the VolleyScores database. This is also the first website I ever made.
+                        <!-- Project descriptions: add data-i18n for translation -->
+                        <p class="text-base text-white text-center md:text-left mb-4" data-i18n="project_mvcpeer_desc">
+                            This project is a website that I made for the volleyball club MVC-Peer. The project contains
+                            frontend code and an API connection to the VolleyScores database. This is also the first
+                            website I ever made.
                         </p>
                         <div class="flex gap-6 mt-2">
                             <a href="https://github.com/Driesjuhhhh/MVCPEER" target="_blank"
@@ -714,24 +915,28 @@
                         <!-- Expandable extra info -->
                         <div id="mvcpeer-extra" class="hidden w-full pt-4">
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">Reference:</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="reference_label">Reference:</span>
                                 <span class="inline-flex items-center gap-2 text-base text-white">
                                     MVC Peer
-                                    <a href="mailto:volley_peer@hotmail.com" class="text-blue-400 hover:underline flex items-center gap-1" title="Mail MVC Peer">
+                                    <a href="mailto:volley_peer@hotmail.com"
+                                        class="text-blue-400 hover:underline flex items-center gap-1"
+                                        title="Mail MVC Peer">
                                         <i class="fas fa-envelope"></i>
                                     </a>
                                 </span>
                             </div>
                             <div>
-                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0">When:</span>
-                                <span class="text-base text-white">2022 - now</span>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_mvcpeer">2022 - now</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Expand card icon -->
-                <button id="expand-mvcpeer" class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-mvcpeer" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                <button id="expand-mvcpeer"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-mvcpeer"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -745,24 +950,30 @@
     <footer class="bg-gray-900 py-6 text-center mt-20">
         <div class="container mx-auto">
             <nav aria-label="Footer Navigation" class="mb-4">
-                <a href="api-status.html" class="text-white hover:underline text-lg">API Status</a>
+                <a href="api-status.html" class="text-white hover:underline text-lg" data-i18n="footer_api_status">API
+                    Status</a>
             </nav>
             <div class="flex justify-center space-x-6 text-gray-400">
-                <a href="https://www.linkedin.com/in/dries-bielen-50b74b22a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Dries Bielen" class="hover:text-blue-500 text-xl">
+                <a href="https://www.linkedin.com/in/dries-bielen-50b74b22a/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn Dries Bielen" class="hover:text-blue-500 text-xl">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/Driesjuhhhh" target="_blank" rel="noopener noreferrer" aria-label="GitHub Dries Bielen" class="hover:text-gray-200 text-xl">
+                <a href="https://github.com/Driesjuhhhh" target="_blank" rel="noopener noreferrer"
+                    aria-label="GitHub Dries Bielen" class="hover:text-gray-200 text-xl">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://discord.gg/jRjsp3xCdN" target="_blank" rel="noopener noreferrer" aria-label="Discord Dries Bielen" class="hover:text-blue-400 text-xl">
+                <a href="https://discord.gg/jRjsp3xCdN" target="_blank" rel="noopener noreferrer"
+                    aria-label="Discord Dries Bielen" class="hover:text-blue-400 text-xl">
                     <i class="fab fa-discord"></i>
                 </a>
-                <a href="mailto:hello@driesbielen.be" target="_blank" rel="noopener noreferrer" aria-label="Email Dries Bielen" class="hover:text-blue-400 text-xl">
+                <a href="mailto:hello@driesbielen.be" target="_blank" rel="noopener noreferrer"
+                    aria-label="Email Dries Bielen" class="hover:text-blue-400 text-xl">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
             <div class="mt-4 text-xs text-gray-500">
-                &copy; <span id="copyright-year"></span> Dries Bielen. All rights reserved.
+                &copy; <span id="copyright-year"></span> Dries Bielen. <span data-i18n="footer_rights">All rights
+                    reserved.</span>
             </div>
         </div>
     </footer>
@@ -939,6 +1150,100 @@
                 });
             }
         });
+    </script>
+    <!-- Translation Script -->
+    <script>
+        // Translation dictionaries
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_skills: "Skills",
+                nav_projects: "Projects",
+                skills_title: "Skills",
+                about_title: "About me",
+                about_intro: "My name is Dries Bielen, I am {age} years old.",
+                about_study: "Currently studying IT at <a href='https://www.pxl.be' target='_blank' class='text-blue-400 hover:underline'>PXL University</a> in Hasselt, Belgium.",
+                about_pxl: "PXL University",
+                footer_api_status: "API Status",
+                footer_rights: "All rights reserved.",
+                project_mosselsystem_desc: "This is an application originally built for Chiro Wilduraantjes (chirowilduraantjes.be). It features an order form, login system, kitchen management, cash register, and hall management system.",
+                project_rbgh_desc: "This is a mobile app for the Red Bull Gaming Hub. The app features an integrated Java backend for seamless interactions, a Discord bot for community engagement, Google Sheets and Firestore for data management, and a security system for the PCs of the hub. Volunteers can log in, choose their shift, and check in (with) friends.",
+                project_drsvoting_desc: "The app allows audience members to vote for their favorite acts in real-time using their smartphones. It features secure vote counting, live result updates, and an admin dashboard for event organizers. Built with Flutter for cross-platform support and Appwrite for backend services.",
+                project_pingpingding_desc: "This is a mobile app I made for the course mobile development @ PXL. It allows me to check my balance on the school's payment system.",
+                project_streetmasters_desc: "Created a website for a car cleaning business in Houthalen-Helchteren, Belgium. The site showcases their services, pricing, and contact info.",
+                project_jhsungarden_desc: "This is a simple website I built for the youth center in Zonhoven, Belgium.",
+                project_barbiepoppenexpo_desc: "Barbiepoppen Expo is a website for a Barbie doll exhibition organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University College. The exhibition explores the history and cultural impact of Barbie dolls.",
+                project_connect4_desc: "This was a school project made in a group, where we used .NET as the backend. This was made at the end of the first year.",
+                project_mvcpeer_desc: "This project is a website that I made for the volleyball club MVC-Peer. The project contains frontend code and an API connection to the VolleyScores database. This is also the first website I ever made.",
+                projects_title: "Projects",
+                projects_section: "Projects",
+                with_label: "With:",
+                reference_label: "Reference:",
+                when_label: "When:",
+                when_value: "January 2025 - now",
+                when_value_drsvoting: "April 2025",
+                when_value_pingpingding: "September - December 2024",
+                when_value_streetmasters: "2023",
+                when_value_jhsungarden: "2024 - now",
+                when_value_barbiepoppenexpo: "2023",
+                when_value_connect4: "April - June 2023",
+                when_value_mvcpeer: "2022 - now",
+            },
+            nl: {
+                nav_home: "Home",
+                nav_about: "Over mij",
+                nav_skills: "Skills",
+                nav_projects: "Projecten",
+                skills_title: "Skills",
+                about_title: "Over mij",
+                about_intro: "Mijn naam is Dries Bielen, ik ben {age} jaar oud.",
+                about_study: "Momenteel studeer ik IT aan de <a href='https://www.pxl.be' target='_blank' class='text-blue-400 hover:underline'>PXL Hogeschool</a> in Hasselt, België.",
+                about_pxl: "Hogeschool PXL",
+                footer_api_status: "API Status",
+                footer_rights: "Alle rechten voorbehouden.",
+                project_mosselsystem_desc: "Dit is een applicatie oorspronkelijk gebouwd voor Chiro Wilduraantjes (chirowilduraantjes.be). Het bevat een bestelformulier, loginsysteem, keukenbeheer, kassa en zaalbeheer.",
+                project_rbgh_desc: "Dit is een app voor de Red Bull Gaming Hub. De app heeft een geïntegreerde Java-backend, een Discord-bot voor community, Google Sheets en Firestore voor data, en een beveiligingssysteem voor de pc's van de hub. Vrijwilligers kunnen inloggen, hun shift kiezen en samen met vrienden inchecken.",
+                project_drsvoting_desc: "Met deze app kunnen toeschouwers in realtime stemmen op hun favoriete acts via hun smartphone. De app biedt secure voting, live resultaten en een admin dashboard voor organisatoren. Gebouwd met Flutter en Appwrite.",
+                project_pingpingding_desc: "Dit is een app die ik maakte voor het vak mobile development @ PXL. Hiermee kan ik mijn saldo op het betaalsysteem van de school checken.",
+                project_streetmasters_desc: "Website gemaakt voor een car cleaning bedrijf in Houthalen-Helchteren. De site toont hun diensten, prijzen en contactinformatie.",
+                project_jhsungarden_desc: "Dit is een website die ik maakte voor het jeugdhuis in Zonhoven.",
+                project_barbiepoppenexpo_desc: "Barbiepoppen Expo is een website voor een tentoonstelling georganiseerd door Joke Bylemans, Amber Neyens en Kelly Hoebers in opdracht van Hogeschool PXL. De expo verkent de geschiedenis en culturele impact van Barbiepoppen.",
+                project_connect4_desc: "Dit was een schoolproject in groep, waarbij we .NET als backend gebruikten. Dit werd gemaakt aan het einde van het eerste jaar.",
+                project_mvcpeer_desc: "Dit project is een website die ik maakte voor volleybalclub MVC-Peer. Het bevat frontend code en een API-koppeling met de VolleyScores database. Dit was ook de eerste website die ik ooit maakte.",
+                projects_title: "Projecten",
+                projects_section: "Projecten",
+                with_label: "Met:",
+                reference_label: "Referentie:",
+                when_label: "Wanneer:",
+                when_value: "Januari 2025 - heden",
+                when_value_drsvoting: "April 2025",
+                when_value_pingpingding: "September - December 2024",
+                when_value_streetmasters: "2023",
+                when_value_jhsungarden: "2024 - heden",
+                when_value_barbiepoppenexpo: "2023",
+                when_value_connect4: "April - Juni 2023",
+                when_value_mvcpeer: "2022 - heden",
+            }
+        };
+
+        // Set language and update UI
+        function setLanguage(lang) {
+            localStorage.setItem('lang', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                let html = translations[lang][key];
+                if (html) {
+                    // Special handling for age in about_intro
+                    if (key === "about_intro") {
+                        const age = document.getElementById('age')?.textContent || '';
+                        html = html.replace('{age}', `<span id="age" class="font-semibold">${age}</span>`);
+                    }
+                    el.innerHTML = html;
+                }
+            });
+        }
     </script>
 </body>
 

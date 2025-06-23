@@ -249,6 +249,10 @@
                 <span
                     class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Teamwork
                     / Project Management</span>
+                <span
+                    class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Vue</span>
+                <span
+                    class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">React</span>
             </div>
         </section>
 
@@ -269,7 +273,48 @@
                     data-i18n="filter_all">All</button>
             </div>
 
-            <!-- RBGH Project -->
+            <!-- ShiftManager Project (private, on top, expandable) -->
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
+                data-aos="fade-left">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/DRS Transparent.png" alt="Project Image"
+                            class="w-full h-full object-contain rounded-full bg-transparent p-2">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left"
+                            data-i18n="project_shiftmanager_title">ShiftManager</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">React</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-semibold transition transform hover:bg-blue-500 hover:scale-110">Firebase</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4"
+                            data-i18n="project_shiftmanager_desc">
+                            ShiftManager is used to create and plan shifts for organisations like youth houses or sport clubs. A user will get a point for each hour he or she has worked.
+                        </p>
+                        <!-- Expandable extra info -->
+                        <div id="shiftmanager-extra" class="hidden w-full pt-4">
+                            <div>
+                                <span class="block font-bold mb-1 sm:inline-block sm:mb-0" data-i18n="when_label">When:</span>
+                                <span class="text-base text-white" data-i18n="when_value_shiftmanager">Summer 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Expand card icon -->
+                <button id="expand-shiftmanager"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-shiftmanager"
+                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                </button>
+            </div>
+
+            <!-- Mosselsystem Project -->
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left" id="rbgh">
                 <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
@@ -942,8 +987,6 @@
                 </button>
             </div>
 
-
-
         </section>
 
     </main>
@@ -1092,6 +1135,8 @@
                 });
             }
 
+
+
             // Expand card logic for MVC Peer
             const expandBtnMvc = document.getElementById('expand-mvcpeer');
             const extraInfoMvc = document.getElementById('mvcpeer-extra');
@@ -1145,10 +1190,23 @@
             const extraInfoRbgh = document.getElementById('rbgh-extra');
             const iconRbgh = document.getElementById('expand-icon-rbgh');
             if (expandBtnRbgh && extraInfoRbgh && iconRbgh) {
+               
                 expandBtnRbgh.addEventListener('click', function () {
                     const expanded = !extraInfoRbgh.classList.contains('hidden');
                     extraInfoRbgh.classList.toggle('hidden');
                     iconRbgh.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
+            const expandBtnShiftManager = document.getElementById('expand-shiftmanager');
+            const extraInfoShiftManager = document.getElementById('shiftmanager-extra');
+            const iconShiftManager = document.getElementById('expand-icon-shiftmanager');
+            if (expandBtnShiftManager && extraInfoShiftManager && iconShiftManager) {
+               
+                expandBtnShiftManager.addEventListener('click', function () {
+                    const expanded = !extraInfoShiftManager.classList.contains('hidden');
+                    extraInfoShiftManager.classList.toggle('hidden');
+                    iconShiftManager.classList.toggle('rotate-180', !expanded);
                 });
             }
         });
@@ -1178,6 +1236,9 @@
                 project_barbiepoppenexpo_desc: "Barbiepoppen Expo is a website for a Barbie doll exhibition organized by Joke Bylemans, Amber Neyens, and Kelly Hoebers, commissioned by PXL University College. The exhibition explores the history and cultural impact of Barbie dolls.",
                 project_connect4_desc: "This was a school project made in a group, where we used .NET as the backend. This was made at the end of the first year.",
                 project_mvcpeer_desc: "This project is a website that I made for the volleyball club MVC-Peer. The project contains frontend code and an API connection to the VolleyScores database. This is also the first website I ever made.",
+                project_shiftmanager_title: "ShiftManager",
+                project_shiftmanager_desc: "ShiftManager is used to create and plan shifts for organisations like youth houses or sport clubs. A user will get a point for each hour he or she has worked.",
+                when_value_shiftmanager: "Summer 2025",
                 projects_title: "Projects",
                 projects_section: "Projects",
                 with_label: "With:",
@@ -1213,6 +1274,9 @@
                 project_barbiepoppenexpo_desc: "Barbiepoppen Expo is een website voor een tentoonstelling georganiseerd door Joke Bylemans, Amber Neyens en Kelly Hoebers in opdracht van Hogeschool PXL. De expo verkent de geschiedenis en culturele impact van Barbiepoppen.",
                 project_connect4_desc: "Dit was een schoolproject in groep, waarbij we .NET als backend gebruikten. Dit werd gemaakt aan het einde van het eerste jaar.",
                 project_mvcpeer_desc: "Dit project is een website die ik maakte voor volleybalclub MVC-Peer. Het bevat frontend code en een API-koppeling met de VolleyScores database. Dit was ook de eerste website die ik ooit maakte.",
+                project_shiftmanager_title: "ShiftManager",
+                project_shiftmanager_desc: "ShiftManager wordt gebruikt om shiften aan te maken en te plannen voor organisaties zoals jeugdhuizen of sportclubs. Een gebruiker krijgt een punt voor elk uur dat hij of zij gewerkt heeft.",
+                when_value_shiftmanager: "Zomer 2025",
                 projects_title: "Projecten",
                 projects_section: "Projecten",
                 with_label: "Met:",

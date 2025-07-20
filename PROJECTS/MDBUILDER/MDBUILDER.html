@@ -53,6 +53,7 @@
       loadSidebar: true,
       subMaxLevel: 3,
       search: 'auto',
+      basePath: './', // Ensures Docsify looks for _sidebar.md in the same folder as MDBUILDER.html
       pagination: {
         previousText: 'Previous',
         nextText: 'Next',
@@ -72,7 +73,6 @@
             }
             next(html);
           });
-
 
           // Custom hook to replace images for dark mode
           hook.afterEach(function (html, next) {

@@ -1,9 +1,9 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", () => {
     const urls = {
-        "connectfour-api": "https://connectfour.driesbielen.be/status", 
-        "pingping-api": "https://pingping.driesbielen.be/status",
-        "mossel-api": "https://mossel-api.driesbielen.be/status",
+        "connectfour-api": "https://connect4.drslab.driesbielen.be/status", 
+        "pingping-api": "https://pingping.drslab.driesbielen.be/status",
+        "mossel-api": "https://mossel-api.drslab.driesbielen.be/status",
     };
     for (const [key, url] of Object.entries(urls)) {
         const wrapper = document.querySelector(`[data-service='${key}']`);

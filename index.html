@@ -283,6 +283,66 @@
                     data-i18n="filter_all">All</button>
             </div>
 
+            <!-- DRS Stream Project -->
+            <div class="project-card project-private max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
+                data-aos="fade-left">
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+                    <div
+                        class="flex-shrink-0 flex items-center justify-center w-32 h-32 md:w-40 md:h-40 rounded-full bg-transparent overflow-hidden mb-4 md:mb-0">
+                        <img src="assets/img/projects/drs-stream.png" alt="DRS Stream"
+                            class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <div class="flex-1 flex flex-col items-center md:items-start">
+                        <h2 class="audiowide-regular text-3xl font-bold text-transparent text-white mb-2 text-center md:text-left" data-i18n="project_drsstream_title">DRS Stream</h2>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">Docker</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">Tailscale</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">MediaMTX</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">Raspberry
+                                Pi</span>
+                            <span class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">Docker
+                                Compose</span>
+                            <span
+                                class="px-4 py-2 rounded-full bg-blue-600/80 text-white text-xs font-semibold">Node.js</span>
+                        </div>
+                        <p class="text-base text-white text-center md:text-left mb-4" data-i18n="project_drsstream_desc">Self-created remote live-stream stack (Raspberry Pi → homelab). Setup details and guidance available on request.</p>
+                        <div class="flex gap-6 mt-2">
+                            <a href="mailto:hello@driesbielen.be?subject=DRS%20Stream%20setup%20info" class="inline-flex items-center gap-2 rounded-full bg-blue-600/90 px-4 py-2 text-sm text-white hover:bg-blue-500" title="Request setup info" data-i18n="project_drsstream_button">
+                                <i class="fas fa-envelope"></i>
+                                Request setup info
+                            </a>
+                        </div>
+                        <div id="drs-stream-extra" class="hidden w-full pt-4">
+                            <div class="project-extra grid gap-2 text-base text-white">
+                                <div class="flex items-start gap-3">
+                                    <span class="font-bold w-24" data-i18n="when_label">When:</span>
+                                    <span class="flex-1" data-i18n="when_value_drsstream">2025 — Present</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="font-bold w-24" data-i18n="project_drsstream_setup_label">Setup:</span>
+                                    <span class="flex-1" data-i18n="project_drsstream_setup_value">Setup details and guidance available on request</span>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="font-bold w-24">Reference:</span>
+                                    <span class="flex-1 text-white/70">—</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Expand card icon -->
+                <button id="expand-drs-stream"
+                    class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
+                    <i id="expand-icon-drs-stream"
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
+                </button>
+            </div>
+
+
             <!-- OpenInzichten Project -->
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
                 data-aos="fade-left">
@@ -312,7 +372,9 @@
                         <!-- Project descriptions: add data-i18n for translation -->
                         <p class="text-base text-white text-center md:text-left mb-4"
                             data-i18n="project_openinzichten_desc">
-                            OpenInzicht.be is an online community for people with invisible illnesses in Flanders. A platform for sharing experiences, finding support, and discovering you're not alone through an interactive map. Built by PXL Digital students in collaboration with Code for Belgium.
+                            OpenInzicht.be is an online community for people with invisible illnesses in Flanders. A
+                            platform for sharing experiences, finding support, and discovering you're not alone through
+                            an interactive map. Built by PXL Digital students in collaboration with Code for Belgium.
                         </p>
 
                         <!-- Expandable extra info -->
@@ -355,8 +417,14 @@
                                 <div class="flex items-start gap-3">
                                     <span class="font-bold w-24" data-i18n="reference_label">Reference:</span>
                                     <div class="flex-1 flex flex-col sm:flex-row flex-wrap gap-2">
-                                        <span class="flex items-center">Wim Maet <a href="https://www.linkedin.com/in/wim-maet-24383913/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline ml-2" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
-                                        <span class="flex items-center">Kurt Sponik <a href="https://www.linkedin.com/in/kurt-sponik-8544395/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline ml-2" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
+                                        <span class="flex items-center">Wim Maet <a
+                                                href="https://www.linkedin.com/in/wim-maet-24383913/" target="_blank"
+                                                rel="noopener noreferrer" class="text-blue-400 hover:underline ml-2"
+                                                title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
+                                        <span class="flex items-center">Kurt Sponik <a
+                                                href="https://www.linkedin.com/in/kurt-sponik-8544395/" target="_blank"
+                                                rel="noopener noreferrer" class="text-blue-400 hover:underline ml-2"
+                                                title="LinkedIn"><i class="fab fa-linkedin-in"></i></a></span>
                                     </div>
                                 </div>
                             </div>
@@ -367,7 +435,7 @@
                 <button id="expand-openinzichten"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-openinzichten"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -426,7 +494,7 @@
                 <button id="expand-shiftmanager"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-shiftmanager"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -502,7 +570,7 @@
                 </div>
                 <button id="mossel-rbgh"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="mossel-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                    <i id="mossel-icon-rbgh" class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -593,7 +661,7 @@
                 <!-- Expand card icon -->
                 <button id="expand-rbgh"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
-                    <i id="expand-icon-rbgh" class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                    <i id="expand-icon-rbgh" class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -667,7 +735,7 @@
                 <button id="expand-drsvoting"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-drsvoting"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -742,7 +810,7 @@
                 <button id="expand-pingpingding"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-pingpingding"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -815,7 +883,7 @@
                 <button id="expand-streetmasters"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-streetmasters"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -888,7 +956,7 @@
                 <button id="expand-jhsungarden"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-jhsungarden"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -971,9 +1039,10 @@
                 <button id="expand-barbiepoppenexpo"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-barbiepoppenexpo"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
+
 
             <!-- Connect 4 Project -->
             <div class="project-card project-school max-w-6xl w-full bg-gradient-to-r from-[#d9d9d91f] to-[#7373731f] mt-8 rounded-xl p-8 backdrop-blur-md relative"
@@ -1054,7 +1123,7 @@
                 <button id="expand-connect4"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-connect4"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -1127,7 +1196,7 @@
                 <button id="expand-mvcpeer"
                     class="absolute right-4 bottom-4 rounded-full p-1 hover:bg-blue-700 transition">
                     <i id="expand-icon-mvcpeer"
-                        class="fa-solid fa-chevron-up text-white text-xl transition-transform"></i>
+                        class="fa-solid fa-chevron-down text-white text-xl transition-transform"></i>
                 </button>
             </div>
 
@@ -1358,6 +1427,18 @@
                 });
             }
 
+            // Expand card logic for DRS Stream
+            const expandBtnDrsStream = document.getElementById('expand-drs-stream');
+            const extraInfoDrsStream = document.getElementById('drs-stream-extra');
+            const iconDrsStream = document.getElementById('expand-icon-drs-stream');
+            if (expandBtnDrsStream && extraInfoDrsStream && iconDrsStream) {
+                expandBtnDrsStream.addEventListener('click', function () {
+                    const expanded = !extraInfoDrsStream.classList.contains('hidden');
+                    extraInfoDrsStream.classList.toggle('hidden');
+                    iconDrsStream.classList.toggle('rotate-180', !expanded);
+                });
+            }
+
             // Expand card logic for OpenInzichten
             const expandBtnOpeninzichten = document.getElementById('expand-openinzichten');
             const extraInfoOpeninzichten = document.getElementById('openinzichten-extra');
@@ -1407,7 +1488,7 @@
                 when_value: "January 2025 - now",
                 when_value_drsvoting: "April 2025",
                 when_value_pingpingding: "September - December 2024",
-                when_value_streetmasters: "2023",
+                when_value_streetmasters: "2023 - now",
                 when_value_jhsungarden: "2024 - now",
                 when_value_barbiepoppenexpo: "2023",
                 when_value_connect4: "April - June 2023",
@@ -1419,6 +1500,12 @@
                 project_openinzichten_tech_docker: "Docker",
                 project_openinzichten_tech_mysql: "MySQL",
                 when_value_openinzichten: "September - December 2025",
+                project_drsstream_title: "DRS Stream",
+                project_drsstream_desc: "Self-created remote live-stream stack (Raspberry Pi → homelab). Instructions available on request.",
+                project_drsstream_button: "Request setup info",
+                when_value_drsstream: "2025 — Present",
+                project_drsstream_setup_label: "Setup:",
+                project_drsstream_setup_value: "Setup details and guidance available on request",
             },
             nl: {
                 nav_home: "Home",
@@ -1452,7 +1539,7 @@
                 when_value: "Januari 2025 - heden",
                 when_value_drsvoting: "April 2025",
                 when_value_pingpingding: "September - December 2024",
-                when_value_streetmasters: "2023",
+                when_value_streetmasters: "2023 - heden",
                 when_value_jhsungarden: "2024 - heden",
                 when_value_barbiepoppenexpo: "2023",
                 when_value_connect4: "April - Juni 2023",
@@ -1463,6 +1550,12 @@
                 project_openinzichten_tech_vue: "Vue",
                 project_openinzichten_tech_docker: "Docker",
                 project_openinzichten_tech_mysql: "MySQL",
+                project_drsstream_title: "DRS Stream",
+                project_drsstream_desc: "Zelfgemaakte remote live-stream stack (Raspberry Pi → homelab). Instructies op aanvraag.",
+                project_drsstream_button: "Vraag installatie-info aan",
+                when_value_drsstream: "2025 — heden",
+                project_drsstream_setup_label: "Installatie:",
+                project_drsstream_setup_value: "Installatie-instructies en begeleiding op aanvraag",
                 when_value_openinzichten: "September - December 2025",
             }
         };

@@ -1,0 +1,41 @@
+# Node
+node_modules/
+
+# Build output
+dist/
+build/
+.vite/
+out/
+
+# Local env files
+.env
+.env.*
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+
+# TypeScript
+*.tsbuildinfo
+
+# Cache
+.cache/
+.parcel-cache/
+coverage/
+
+# pnpm
+.pnpm-store/
+
+# Misc
+Thumbs.db

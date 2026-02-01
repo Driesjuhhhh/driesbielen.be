@@ -245,7 +245,7 @@ The platform features an interactive map interface that helps users discover the
       title: 'MosselSystem',
       description: 'A comprehensive management system originally built for Chiro Wilduraantjes featuring order forms, kitchen management, cash register, and hall management.',
       image: '../../../public/image/logo.png',
-      tags: ['HTML', 'CSS', 'JavaScript'],
+      tags: ['HTML', 'CSS', 'JavaScript', 'Java', 'SonarQube', 'Docker', 'MySQL', 'Java Spring Boot'],
       github: 'https://github.com/Driesjuhhhh/MosselSystem',
       demo: 'https://mossel.driesbielen.be/',
       duration: '2025',

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite",
-    "predeploy": "vite build",
+    "predeploy": "vite build && node ./scripts/write-cname.js",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {

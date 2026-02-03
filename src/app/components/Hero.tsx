@@ -1,12 +1,9 @@
 import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
+import { Badge } from '@/app/components/ui/badge';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-4">
-      <div aria-hidden className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute -left-20 -top-20 w-80 h-80 bg-gradient-to-tr from-cyan-400 to-teal-500 opacity-30 rounded-full filter blur-3xl animate-[pulse_5s_ease-in-out_infinite] mix-blend-screen" />
-        <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-gradient-to-br from-purple-600 via-pink-500 to-cyan-400 opacity-25 rounded-full filter blur-3xl animate-[pulse_5s_ease-in-out_infinite] mix-blend-overlay" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent px-4">
       <div data-aos="fade-up" className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
           <div className="relative w-32 h-32 mx-auto mb-6">
@@ -63,10 +60,10 @@ export function Hero() {
         </div>
 
         <div className="mt-6 flex flex-wrap justify-center gap-2">
-          {['React', 'TypeScript', 'Node', 'Tailwind', 'Vite', 'Next.js', 'Java', 'Spring Boot'].map((s) => (
-            <span key={s} className="px-3 py-1 rounded-full bg-slate-800 text-sm text-slate-200/90 border border-slate-700">
+          {['React', 'Angular', 'Vue', 'Typescript', 'Java', 'MySQL', 'Docker', 'Tailwind'].map((s) => (
+            <Badge key={s} variant="outline" className="border-cyan-500/30 text-cyan-400 text-sm">
               {s}
-            </span>
+            </Badge>
           ))}
         </div>
 

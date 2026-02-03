@@ -4,7 +4,6 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faLink as faSolidLink } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
-import { ImageWithFallback } from '@/app/components/image/ImageWithFallback';
 
 interface ProjectDetailProps {
   project: {
@@ -31,9 +30,12 @@ interface ProjectDetailProps {
 
 export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
   return (
-    <div className="fixed inset-0 bg-slate-900/95 z-50 overflow-y-auto">
-      <div className="min-h-screen px-4 py-8">
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="fixed inset-0 pointer-events-none" />
+      <div className="fixed inset-0 bg-transparent backdrop-blur-sm pointer-events-none" />
+      <div className="px-4 py-8 relative z-10">
         <div className="max-w-5xl mx-auto">
+          <div className="bg-transparent rounded-xl border p-6">
           {/* Close Button */}
           <div className="flex justify-end mb-4">
             <Button
@@ -149,7 +151,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
           {/* Project Info Cards */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {project.duration && (
-              <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Calendar className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm text-slate-400">Duration</span>
@@ -158,7 +160,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
               </div>
             )}
             {project.team && (
-              <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Users className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm text-slate-400">Team Size</span>
@@ -167,7 +169,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
               </div>
             )}
             {project.role && (
-              <div className="bg-slate-900 border border-slate-800 rounded-lg p-4">
+              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
                 <div className="flex items-center gap-2 mb-2">
                   <Code2 className="w-5 h-5 text-cyan-400" />
                   <span className="text-sm text-slate-400">My Role</span>
@@ -179,7 +181,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
 
           {/* Full Description */}
           {project.fullDescription && (
-            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
+            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
               <h2 className="text-2xl font-semibold text-cyan-400 mb-4">About the Project</h2>
               <p className="text-slate-300 leading-relaxed whitespace-pre-line">
                 {project.fullDescription}
@@ -189,7 +191,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
 
           {/* Features */}
           {project.features && project.features.length > 0 && (
-            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
+            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
               <h2 className="text-2xl font-semibold text-cyan-400 mb-4">Key Features</h2>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
@@ -204,7 +206,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
 
           {/* Challenges */}
           {project.challenges && (
-            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
+            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
               <h2 className="text-2xl font-semibold text-cyan-400 mb-4">Challenges & Solutions</h2>
               <p className="text-slate-300 leading-relaxed whitespace-pre-line">
                 {project.challenges}
@@ -214,13 +216,14 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
 
           {/* Learnings */}
           {project.learnings && (
-            <div className="bg-slate-900 border border-slate-800 rounded-lg p-6 mb-6">
+            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
               <h2 className="text-2xl font-semibold text-cyan-400 mb-4">What I Learned</h2>
               <p className="text-slate-300 leading-relaxed whitespace-pre-line">
                 {project.learnings}
               </p>
             </div>
           )}
+          </div>
         </div>
       </div>
     </div>

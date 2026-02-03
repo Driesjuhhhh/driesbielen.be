@@ -3,7 +3,6 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
-import { ProjectDetail } from '@/app/components/ProjectDetail';
 
 interface Project {
   title: string;
@@ -72,7 +71,7 @@ export function Projects() {
       title: 'RBGH (Red Bull Gaming Hub)',
       description: 'A mobile app for the Red Bull Gaming Hub with integrated Java backend, Discord bot, and security system for volunteers.',
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1080',
-      tags: ['Flutter', 'Firebase', 'Java', 'Docker', 'Github Actions'],
+      tags: ['React', 'Firebase', 'Java', 'Docker', 'Github Actions'],
       github: '',
       demo: 'https://app.pxlgaming.be',
       duration: 'January 2025 - Present',
@@ -90,8 +89,8 @@ Volunteers can log in, choose their shifts, and check in with friends, creating 
         'Real-time data synchronization',
         'Cross-platform support (iOS & Android)'
       ],
-      challenges: 'Integrating multiple systems (Flutter frontend, Java backend, Firebase, Discord bot) while maintaining real-time synchronization required careful architecture planning.',
-      learnings: 'I gained extensive experience with Flutter mobile development, Firebase integration, and building complex multi-service applications.'
+      challenges: 'Integrating multiple systems (React frontend, Java backend, Firebase, Discord bot) while maintaining real-time synchronization required careful architecture planning.',
+      learnings: 'I gained extensive experience with react mobile development, Firebase integration, and building complex multi-service applications.'
       ,
       reference: [
         { type: 'email', label: 'Mike Vandebriel', value: 'mailto:mike.vandebriel@pxl.be' },
@@ -330,7 +329,7 @@ The platform features an interactive map interface that helps users discover the
 
   return (
     <>
-      <section className="py-20 px-4 bg-slate-900" id="projects">
+      <section className="py-20 px-4 bg-transparent" id="projects">
         <div data-aos="fade-up" className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4 text-white">
             Featured Projects
@@ -344,10 +343,23 @@ The platform features an interactive map interface that helps users discover the
             {featuredProjects.map((project, index) => (
               <Card 
                 key={index} 
-                className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-slate-800 border-slate-700 cursor-pointer"
-                onClick={() => setSelectedProject(project)}
+                className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer"
+                onClick={() => {
+                  try {
+                    const json = JSON.stringify(project);
+                    const b64 = typeof window !== 'undefined' && window.btoa ? window.btoa(unescape(encodeURIComponent(json))) : encodeURIComponent(json);
+                    const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
+                    window.open(url, '_blank');
+                  } catch (e) {
+                    console.error('Failed to open project page', e);
+                    const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
+                    window.open(url, '_blank');
+                  }
+                }}
               >
-                <div className="p-6">
+                <div className="p-6 bg-transparent">
                   <h3 className="text-xl font-semibold mb-2 text-white">
                     {project.title}
                   </h3>
@@ -407,11 +419,24 @@ The platform features an interactive map interface that helps users discover the
               {additionalProjects.map((project, index) => (
                 <Card 
                   key={index} 
-                  className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-slate-800 border-slate-700 flex-shrink-0 cursor-pointer"
+                  className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 flex-shrink-0 cursor-pointer"
                   style={{ width: '320px' }}
-                  onClick={() => setSelectedProject(project)}
-                >
-                  <div className="p-5">
+                  onClick={() => {
+                    try {
+                      const json = JSON.stringify(project);
+                      const b64 = typeof window !== 'undefined' && window.btoa ? window.btoa(unescape(encodeURIComponent(json))) : encodeURIComponent(json);
+                      const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                      const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
+                      window.open(url, '_blank');
+                    } catch (e) {
+                      console.error('Failed to open project page', e);
+                      const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                      const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
+                      window.open(url, '_blank');
+                    }
+                  }}
+                  >
+                  <div className="p-5 bg-transparent">
                     <h4 className="text-lg font-semibold mb-2 text-white">
                       {project.title}
                     </h4>
@@ -474,13 +499,7 @@ The platform features an interactive map interface that helps users discover the
         </div>
       </section>
 
-      {/* Project Detail Modal */}
-      {selectedProject && (
-        <ProjectDetail 
-          project={selectedProject} 
-          onClose={() => setSelectedProject(null)} 
-        />
-      )}
+      {/* Project Detail Modal: removed in favor of dedicated project page */}
     </>
   );
 }

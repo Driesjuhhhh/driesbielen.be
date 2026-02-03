@@ -8,16 +8,18 @@ import { TechStack } from '@/app/components/TechStack';
 import { Projects } from '@/app/components/Projects';
 import { Footer } from '@/app/components/Footer';
 import { NotFound } from '@/app/components/NotFound';
+import { AnimatedBackground } from '@/app/components/AnimatedBackground';
+import ProjectPage from '@/app/components/ProjectPage';
 
 function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative z-10">
+      <AnimatedBackground />
       <Header />
       <Hero />
       <About />
       <Stats />
       <TechStack />
-      <Skills />
       <Projects />
       <Footer />
     </div>
@@ -29,6 +31,7 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/project/:name" element={<ProjectPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>

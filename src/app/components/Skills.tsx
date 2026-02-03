@@ -89,12 +89,12 @@ function getIcon(icon: any) {
 
 export function Skills() {
   return (
-    <section className="py-20 md:py-32 px-4 bg-slate-900" id="skills">
+    <section className="py-20 md:py-32 px-4 bg-transparent" id="skills">
       <div data-aos="fade-up" className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-4 text-white">Skills</h2>
         <p className="text-center text-slate-400 mb-8 max-w-2xl mx-auto">Everything I have ever used</p>
 
-        <Card className="p-6 bg-slate-800 border-slate-700">
+        <Card className="p-6 bg-transparent border-slate-700">
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-6 justify-items-center">
             {skills.map((s) => (
               <div

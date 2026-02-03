@@ -2,7 +2,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export function NotFound() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 px-4">
+    <section className="min-h-screen flex items-center justify-center bg-transparent px-4">
       <div className="text-center space-y-6 max-w-md">
         <div className="space-y-4">
           <h1 className="text-7xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 to-teal-500 bg-clip-text text-transparent">

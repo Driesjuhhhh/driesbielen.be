@@ -126,7 +126,9 @@
 
   body {
     /* Ensure a consistent dark background while scrolling/animations occur */
-    @apply bg-slate-950 text-foreground;
+    /* animated background will provide the visuals; keep text color */
+      background: linear-gradient(120deg, rgb(9, 15, 44) 0%, rgb(5, 10, 30) 100%);
+      color: var(--color-foreground);
   }
 
   /**

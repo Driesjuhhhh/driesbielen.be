@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-12 px-4 border-t border-slate-800" id="contact">
+    <footer className="bg-transparent text-white py-12 px-4 border-t border-slate-800" id="contact">
       <div data-aos="fade-up" className="max-w-6xl mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold mb-2">Let's Connect</h3>
@@ -12,7 +12,7 @@ export function Footer() {
           <div className="flex gap-4 justify-center">
             <a
               href="mailto:hello@driesbielen.be"
-              className="p-3 bg-slate-900 hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
+              className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
               aria-label="Email"
             >
               <Mail className="w-6 h-6 text-cyan-400" />
@@ -21,7 +21,7 @@ export function Footer() {
               href="https://github.com/driesjuhhhh"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-slate-900 hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
+              className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
               aria-label="GitHub"
             >
               <Github className="w-6 h-6 text-cyan-400" />
@@ -30,7 +30,7 @@ export function Footer() {
               href="https://www.linkedin.com/in/driesbielen/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-slate-900 hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
+              className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-6 h-6 text-cyan-400" />

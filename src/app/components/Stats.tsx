@@ -34,7 +34,7 @@ export function Stats() {
   ];
 
   return (
-    <section className=" px-4 bg-slate-900">
+    <section className=" px-4 bg-transparent">
       <div data-aos="fade-up" className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {stats.map((stat, index) => {
@@ -42,7 +42,7 @@ export function Stats() {
             return (
               <div
                 key={index}
-                className="text-center p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all"
+                className="text-center p-6 bg-transparent rounded-xl border border-slate-800 hover:border-cyan-500/50 transition-all"
               >
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full ${stat.bgColor} flex items-center justify-center`}>
                   <Icon className={`w-8 h-8 ${stat.color}`} />

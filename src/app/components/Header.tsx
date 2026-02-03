@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail } from 'lucide-react'
 
 export function Header() {
   return (
-    <header className="w-full bg-slate-950 text-white border-b border-slate-800 sticky top-0 z-50">
+    <header className="w-full text-white border-b border-slate-800 sticky top-0 z-50" style={{ background: 'linear-gradient(120deg, rgb(9, 15, 44) 0%, rgb(5, 10, 30) 100%)' }}>
       <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" className="text-white font-bold text-lg flex items-center gap-3">
           <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-slate-900 font-bold shadow-md shadow-cyan-500/30">
@@ -34,10 +34,10 @@ export function Header() {
             <Mail className="w-4 h-4" /> Contact
           </a>
 
-          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-900 hover:bg-cyan-500/10 border border-slate-800" aria-label="GitHub">
+          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="GitHub">
             <Github className="w-5 h-5 text-cyan-400" />
           </a>
-          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-slate-900 hover:bg-cyan-500/10 border border-slate-800" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="LinkedIn">
             <Linkedin className="w-5 h-5 text-cyan-400" />
           </a>
         </nav>

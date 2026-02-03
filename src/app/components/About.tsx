@@ -4,7 +4,7 @@ import { ImageWithFallback } from "@/app/components/image/ImageWithFallback";
 
 export function About() {
   return (
-    <section className="py-28 md:py-32 px-4 bg-slate-900" id="about">
+    <section className="py-28 md:py-32 px-4 bg-transparent" id="about">
       <div data-aos="fade-up" className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
           About Me
@@ -13,7 +13,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-8 items-stretch md:h-[36rem]">
           {/* Left: avatar (hidden on small screens) */}
           <div className="hidden md:block">
-            <Card className="p-0 bg-slate-800 border-slate-700 overflow-hidden h-full">
+            <Card className="p-0 bg-transparent border-slate-700 overflow-hidden h-full">
               <div className="w-full h-full bg-slate-900">
                 <ImageWithFallback
                   src="/image/dries.jpeg"
@@ -25,7 +25,7 @@ export function About() {
           </div>
 
           {/* Right: about + education */}
-          <Card className="p-8 bg-slate-800 border-slate-700 h-full flex flex-col justify-center">
+          <Card className="p-8 bg-transparent border-slate-700 h-full flex flex-col justify-center">
             <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
               About me
             </h3>

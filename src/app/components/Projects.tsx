@@ -349,12 +349,14 @@ The platform features an interactive map interface that helps users discover the
                     const json = JSON.stringify(project);
                     const b64 = typeof window !== 'undefined' && window.btoa ? window.btoa(unescape(encodeURIComponent(json))) : encodeURIComponent(json);
                     const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                    const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
+                    const base = `${window.location.origin}${window.location.pathname}`;
+                    const url = `${base}#/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
                     window.open(url, '_blank');
                   } catch (e) {
                     console.error('Failed to open project page', e);
                     const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                    const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
+                    const base = `${window.location.origin}${window.location.pathname}`;
+                    const url = `${base}#/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
                     window.open(url, '_blank');
                   }
                 }}
@@ -426,12 +428,14 @@ The platform features an interactive map interface that helps users discover the
                       const json = JSON.stringify(project);
                       const b64 = typeof window !== 'undefined' && window.btoa ? window.btoa(unescape(encodeURIComponent(json))) : encodeURIComponent(json);
                       const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                      const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
+                      const base = `${window.location.origin}${window.location.pathname}`;
+                      const url = `${base}#/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(b64)}`;
                       window.open(url, '_blank');
                     } catch (e) {
                       console.error('Failed to open project page', e);
                       const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-                      const url = `/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
+                      const base = `${window.location.origin}${window.location.pathname}`;
+                      const url = `${base}#/project/${encodeURIComponent(slug)}?data=${encodeURIComponent(JSON.stringify(project))}`;
                       window.open(url, '_blank');
                     }
                   }}

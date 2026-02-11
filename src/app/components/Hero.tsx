@@ -1,5 +1,8 @@
 import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faReact, faVuejs, faJava, faDocker, faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
 
 export function Hero() {
   return (
@@ -59,12 +62,53 @@ export function Hero() {
           </a>
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          {['React', 'Angular', 'Vue', 'Typescript', 'Java', 'MySQL', 'Docker', 'Tailwind'].map((s) => (
-            <Badge key={s} variant="outline" className="border-cyan-500/30 text-cyan-400 text-sm">
-              {s}
-            </Badge>
-          ))}
+        <div className="mt-6 w-full">
+          <style>{`
+              .tech-container{overflow:hidden}
+              .tech-track{display:flex;gap:0.75rem;align-items:center;animation:techScroll 18s linear infinite}
+              .tech-track > *{flex-shrink:0}
+              .tech-item{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border-radius:9999px;border:1px solid rgba(148,163,184,0.06);background:rgba(2,6,23,0.5);color:rgba(241,245,249,0.9);font-weight:600}
+              .tech-item svg{width:1.5rem;height:1.5rem}
+              @keyframes techScroll{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}
+            `}</style>
+
+          {/* tech icons use Font Awesome icons — mirror TechStack markup/colors */}
+          {(() => {
+            const icons = [
+              { name: 'React', icon: faReact },
+              { name: 'Angular', icon: faAngular },
+              { name: 'Vue', icon: faVuejs },
+              { name: 'TypeScript', icon: faCode },
+              { name: 'Java', icon: faJava },
+              { name: 'MySQL', icon: faDatabase },
+              { name: 'Docker', icon: faDocker },
+              { name: 'Tailwind', icon: faCode }
+            ];
+
+            return (
+              <div className="tech-container">
+                <div className="tech-track" aria-hidden>
+                  {icons.map((it) => (
+                    <div key={it.name} className="tech-item">
+                      <div className="text-cyan-400 text-2xl">
+                        <FontAwesomeIcon icon={it.icon} />
+                      </div>
+                      <span className="text-sm text-slate-100">{it.name}</span>
+                    </div>
+                  ))}
+
+                  {icons.map((it) => (
+                    <div key={it.name + '-dup'} className="tech-item">
+                      <div className="text-cyan-400 text-2xl">
+                        <FontAwesomeIcon icon={it.icon} />
+                      </div>
+                      <span className="text-sm text-slate-100">{it.name}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })()}
         </div>
 
       </div>

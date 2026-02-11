@@ -1,4 +1,4 @@
-import { Code2, Coffee, GitBranch, Users } from 'lucide-react';
+import { Code2, CupSoda, GitBranch, Users } from 'lucide-react';
 
 export function Stats() {
   const stats = [
@@ -8,8 +8,7 @@ export function Stats() {
       label: 'Projects Completed',
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/20'
-    }
-    ,
+    },
     {
       icon: GitBranch,
       number: '1000+',
@@ -18,9 +17,9 @@ export function Stats() {
       bgColor: 'bg-teal-500/20'
     },
     {
-      icon: Coffee,
+      icon: CupSoda,
       number: '∞',
-      label: 'Cups of Coffee',
+      label: 'Cans of RedBull',
       color: 'text-emerald-400',
       bgColor: 'bg-emerald-500/20'
     },

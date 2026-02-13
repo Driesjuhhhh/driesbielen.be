@@ -1,6 +1,17 @@
+import type React from 'react'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
+type SectionClickHandler = (event: React.MouseEvent<HTMLAnchorElement>) => void
+
 export function Header() {
+  const handleSectionClick = (sectionId: string): SectionClickHandler => (event) => {
+    event.preventDefault()
+    const target = document.getElementById(sectionId)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <header className="w-full text-white border-b border-slate-800 sticky top-0 z-50" style={{ background: 'linear-gradient(120deg, rgb(9, 15, 44) 0%, rgb(5, 10, 30) 100%)' }}>
       <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
@@ -27,9 +38,9 @@ export function Header() {
         </a>
 
         <nav className="flex items-center gap-4 text-slate-300">
-          <a href="#about" className="hover:text-white">About</a>
-          <a href="#projects" className="hover:text-white">Projects</a>
-          <a href="#techstack" className="hover:text-white">Tech</a>
+          <a href="#about" onClick={handleSectionClick('about')} className="hover:text-white">About</a>
+          <a href="#projects" onClick={handleSectionClick('projects')} className="hover:text-white">Projects</a>
+          <a href="#techstack" onClick={handleSectionClick('techstack')} className="hover:text-white">Tech</a>
           <a href="mailto:hello@driesbielen.be" className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500 text-slate-900 font-medium"> 
             <Mail className="w-4 h-4" /> Contact
           </a>

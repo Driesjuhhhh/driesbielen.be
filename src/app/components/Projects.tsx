@@ -105,7 +105,7 @@ Volunteers can log in, choose their shifts, and check in with friends, creating 
       image: 'https://images.unsplash.com/photo-1553722284-5e8239249935?w=1080',
       tags: ['Java Spring Boot', 'Vue', 'Docker', 'MySQL'],
       github: '',
-      demo: 'staging.openinzichten.be',
+      demo: 'https://openinzicht.driesbielen.be',
       duration: 'September - December 2025',
       team: '6 developers',
       role: 'Backend Developer',

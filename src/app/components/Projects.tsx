@@ -228,7 +228,6 @@ The platform features an interactive map interface that helps users discover the
       duration: '2025 - Present',
       team: 'Solo Project',
       role: 'DevOps Engineer',
-      demo: '/contact',
       fullDescription: `A custom remote live-streaming infrastructure built from scratch, connecting a Raspberry Pi to a homelab setup. The system uses Docker Compose for orchestration and includes networking solutions for remote accessibility.`,
       features: [
         'Raspberry Pi streaming capture',
@@ -310,7 +309,6 @@ The platform features an interactive map interface that helps users discover the
       image: '../../../public/image/connect4.png',
       tags: ['HTML', 'CSS', 'JavaScript', '.NET', 'Docker'],
       github: 'https://github.com/Driesjuhhhh/CONNECT4',
-      demo: '/no-demo-available',
       duration: 'April - June 2023',
       team: '4 developers',
       role: 'Frontend Developer',

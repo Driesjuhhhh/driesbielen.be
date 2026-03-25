@@ -6,193 +6,191 @@
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/</loc>
+    <loc>https://driesbielen.be/project/streetmasters</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.90</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/streetmasters/</loc>
+    <loc>https://driesbielen.be/project/rbgh-red-bull-gaming-hub</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/rbgh-red-bull-gaming-hub/</loc>
+    <loc>https://driesbielen.be/project/openinzichten</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/openinzichten/</loc>
+    <loc>https://driesbielen.be/project/jh-sungarden</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/jh-sungarden/</loc>
+    <loc>https://driesbielen.be/project/mvc-peer</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/mvc-peer/</loc>
+    <loc>https://driesbielen.be/project/shiftmanager</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/shiftmanager/</loc>
+    <loc>https://driesbielen.be/project/drs-voting</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/drs-voting/</loc>
+    <loc>https://driesbielen.be/project/drs-stream</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/drs-stream/</loc>
+    <loc>https://driesbielen.be/project/mosselsystem</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/mosselsystem/</loc>
+    <loc>https://driesbielen.be/project/pingpingding</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/pingpingding/</loc>
+    <loc>https://driesbielen.be/project/barbiepoppen-expo</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://driesbielen.be/work/barbiepoppen-expo/</loc>
+    <loc>https://driesbielen.be/project/connect-4</loc>
     <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://driesbielen.be/work/connect-4/</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.85</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/PINGPINGDING/index.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/index.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/index.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/barbieafterthemovie.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/barbiealsmodeicoon.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/barbiealssprookjesfiguur.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/barbiecandoanything.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/debuurtendekanaalkom.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/facebook.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/grondplan.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/hollywoodboulevard.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/instagram.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/themovie.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V1/tiktok.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
+
+  <!-- V2 pages -->
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/barbieafterthemovie.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/barbiealsmodeicoon.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/barbiealssprookjesfiguur.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/barbiecandoanything.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/debuurtendekanaalkom.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/facebook.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/grondplan.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/hollywoodboulevard.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/instagram.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/themovie.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/JKA/V2/tiktok.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.50</priority>
+    <lastmod>2026-02-01</lastmod>
+    <priority>0.5</priority>
   </url>
+
 </urlset>

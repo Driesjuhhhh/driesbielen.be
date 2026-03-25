@@ -2,8 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://driesbielen.be/</loc>
-    <lastmod>2026-02-01</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/streetmasters</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/rbgh-red-bull-gaming-hub</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/openinzichten</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/jh-sungarden</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/mvc-peer</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/shiftmanager</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/drs-voting</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/drs-stream</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/mosselsystem</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/pingpingding</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/barbiepoppen-expo</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://driesbielen.be/project/connect-4</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://driesbielen.be/PROJECTS/PINGPINGDING/index.html</loc>

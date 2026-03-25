@@ -3,18 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dries Bielen — Portfolio</title>
-    <meta name="description" content="Dries Bielen — Portfolio" />
+    <title>Dries Bielen | Full Stack Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Dries Bielen, a full stack developer from Belgium building web apps, mobile apps, backend systems, and real-world client projects."
+    />
     <meta
       name="keywords"
-      content="Dries Bielen, Limburg, Belgie, Limburg Belgie, Peer, Hasselt, Programmeur, Website maken, portfolio, front-end, web developer, web designer, React, Vite"
+      content="Dries Bielen, full stack developer, web developer Belgium, React developer, mobile developer, portfolio, software engineer, Limburg, Peer, Hasselt"
     />
     <link rel="canonical" href="https://driesbielen.be/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Dries Bielen — Portfolio" />
-    <meta property="og:description" content="Dries Bielen — Portfolio" />
+    <meta property="og:title" content="Dries Bielen | Full Stack Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Dries Bielen, a full stack developer from Belgium building web apps, mobile apps, backend systems, and real-world client projects."
+    />
     <meta property="og:url" content="https://driesbielen.be/" />
     <meta property="og:site_name" content="Dries Bielen" />
     <!-- Use existing profile image for social previews -->
@@ -26,9 +32,12 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dries Bielen — Portfolio" />
-    <meta name="twitter:description" content="Dries Bielen — Portfolio" />
-    <meta name="twitter:image" content="/image/og-image.png" />
+    <meta name="twitter:title" content="Dries Bielen | Full Stack Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Dries Bielen, a full stack developer from Belgium building web apps, mobile apps, backend systems, and real-world client projects."
+    />
+    <meta name="twitter:image" content="https://driesbielen.be/image/dries.jpeg" />
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <!-- Favicon and touch icon (uses existing public/image/dries.jpeg) -->
@@ -67,6 +76,15 @@
         ],
         "description": "Portfolio of Dries Bielen, Fullstack Developer from Belgium. Explore web, mobile, and backend projects, skills, and contact information."
       }
+    </script>
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("spa-redirect");
+        if (!redirect) return;
+
+        sessionStorage.removeItem("spa-redirect");
+        window.history.replaceState(null, "", redirect);
+      })();
     </script>
   </head>
 

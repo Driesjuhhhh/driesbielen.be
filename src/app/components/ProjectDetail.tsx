@@ -4,27 +4,10 @@ import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faLink as faSolidLink } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
+import type { Project } from '@/app/data/projects';
 
 interface ProjectDetailProps {
-  project: {
-    title: string;
-    description: string;
-    image: string;
-    tags: string[];
-    github?: string;
-    demo?: string;
-    fullDescription?: string;
-    features?: string[];
-    challenges?: string;
-    learnings?: string;
-    duration?: string;
-    team?: string;
-    role?: string;
-    reference?:
-      | string
-      | { type?: 'linkedin' | 'email' | 'phone' | 'url'; label?: string; value: string }
-      | Array<string | { type?: 'linkedin' | 'email' | 'phone' | 'url'; label?: string; value: string }>;
-  };
+  project: Project;
   onClose: () => void;
 }
 

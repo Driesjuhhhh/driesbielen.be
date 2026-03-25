@@ -10,7 +10,6 @@ import 'aos/dist/aos.css'
 init({
   domain: 'driesbielen.be',
   endpoint: 'https://plausible.driesbielen.be/api/event',
-  hashBasedRouting: true,
 })
 
   function Main() {

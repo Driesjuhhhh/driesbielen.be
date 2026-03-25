@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRS-Voting | Project by Dries Bielen</title>
+    <meta name="description" content="DRS-Voting is a real-time voting application that lets audiences vote for their favorite acts during live events. The system includes secure vote counting, live result updates, and an admin dashboard for organizers." />
+    <meta name="keywords" content="Dries Bielen, DRS-Voting, Flutter, Appwrite, Docker, project, portfolio, case study" />
+    <meta name="author" content="Dries Bielen" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://driesbielen.be/work/drs-voting/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="DRS-Voting | Project by Dries Bielen" />
+    <meta property="og:description" content="DRS-Voting is a real-time voting application that lets audiences vote for their favorite acts during live events. The system includes secure vote counting, live result updates, and an admin dashboard for organizers." />
+    <meta property="og:url" content="https://driesbielen.be/work/drs-voting/" />
+    <meta property="og:site_name" content="Dries Bielen" />
+    <meta property="og:image" content="https://driesbielen.be/image/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="DRS-Voting | Project by Dries Bielen" />
+    <meta name="twitter:description" content="DRS-Voting is a real-time voting application that lets audiences vote for their favorite acts during live events. The system includes secure vote counting, live result updates, and an admin dashboard for organizers." />
+    <meta name="twitter:image" content="https://driesbielen.be/image/logo.png" />
+    <script type="application/ld+json">[{"@context":"https://schema.org","@type":"CreativeWork","name":"DRS-Voting","headline":"DRS-Voting","description":"DRS-Voting is a real-time voting application that lets audiences vote for their favorite acts during live events. The system includes secure vote counting, live result updates, and an admin dashboard for organizers.","url":"https://driesbielen.be/work/drs-voting/","image":"https://driesbielen.be/image/logo.png","author":{"@type":"Person","name":"Dries Bielen","url":"https://driesbielen.be/"},"keywords":"Flutter, Appwrite, Docker","about":["Flutter","Appwrite","Docker"]},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://driesbielen.be/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://driesbielen.be/work/"},{"@type":"ListItem","position":3,"name":"DRS-Voting","item":"https://driesbielen.be/work/drs-voting/"}]}]</script>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #020617;
+        --panel: rgba(15, 23, 42, 0.88);
+        --line: rgba(56, 189, 248, 0.18);
+        --text: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #22d3ee;
+        --accent-strong: #67e8f9;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        background:
+          radial-gradient(circle at top, rgba(34, 211, 238, 0.18), transparent 36rem),
+          linear-gradient(180deg, #020617, #0f172a 55%, #020617);
+        color: var(--text);
+      }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-strong); }
+      .wrap { width: min(960px, calc(100% - 2rem)); margin: 0 auto; }
+      header { padding: 2rem 0 1rem; }
+      .breadcrumbs { font-size: 0.95rem; color: var(--muted); }
+      .hero {
+        padding: 1.5rem 0 2rem;
+        display: grid;
+        gap: 1.5rem;
+      }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 1.25rem;
+        padding: 1.5rem;
+        backdrop-filter: blur(14px);
+      }
+      h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 0 0 0.75rem; }
+      h2 { font-size: 1.35rem; margin: 0 0 1rem; }
+      p { line-height: 1.7; color: var(--text); }
+      .lead { font-size: 1.1rem; color: #cbd5e1; max-width: 70ch; }
+      .meta, .tags, .links, .grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+      .meta span, .tags span {
+        border: 1px solid var(--line);
+        background: rgba(15, 23, 42, 0.72);
+        border-radius: 999px;
+        padding: 0.5rem 0.85rem;
+        color: #cbd5e1;
+        font-size: 0.95rem;
+      }
+      .links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(8, 47, 73, 0.42);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        margin: 1.5rem 0;
+      }
+      ul { margin: 0; padding-left: 1.2rem; color: #cbd5e1; line-height: 1.8; }
+      footer { padding: 2rem 0 3rem; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <header class="wrap">
+      <div class="breadcrumbs"><a href="/">Dries Bielen</a> / <a href="/work/">Work</a> / DRS-Voting</div>
+    </header>
+    <main class="wrap hero">
+      <section class="card">
+        <h1>DRS-Voting</h1>
+        <p class="lead">Real-time voting app for live events with audience participation and instant result updates.</p>
+        <div class="meta">
+          <span>Role: Full Stack Developer</span>
+          <span>Team: Solo Project</span>
+          <span>Duration: April 2025</span>
+        </div>
+        <div class="tags" style="margin-top:1rem;">
+          <span>Flutter</span><span>Appwrite</span><span>Docker</span>
+        </div>
+        <div class="links" style="margin-top:1.25rem;">
+          
+          <a href="https://github.com/driesjuhhhh/DRS-VOTING" target="_blank" rel="noopener noreferrer">Source code</a>
+          <a href="/">Back to portfolio</a>
+        </div>
+      </section>
+      <section class="card">
+        <h2>About this project</h2>
+        <p>DRS-Voting is a real-time voting application that lets audiences vote for their favorite acts during live events. The system includes secure vote counting, live result updates, and an admin dashboard for organizers.</p>
+      </section>
+      <section class="card"><h2>Key features</h2><ul><li>Real-time voting system</li><li>Live result updates and visualization</li><li>Admin dashboard for event management</li><li>Secure vote counting</li><li>Support for multiple voting scenarios</li><li>Cross-platform availability</li></ul></section>
+      <section class="card"><h2>Challenges</h2><p>Ensuring reliable real-time synchronization across many concurrent voters while maintaining vote integrity.</p></section>
+      <section class="card"><h2>What I learned</h2><p>I gained experience with high-concurrency thinking, live event tooling, and real-time platform design using Appwrite.</p></section>
+      
+    </main>
+    <footer class="wrap">
+      <p>DRS-Voting is part of the portfolio of Dries Bielen, a full stack developer from Belgium.</p>
+    </footer>
+  </body>
+</html>

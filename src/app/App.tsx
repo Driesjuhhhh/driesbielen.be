@@ -11,6 +11,7 @@ import { NotFound } from '@/app/components/NotFound';
 import { AnimatedBackground } from '@/app/components/AnimatedBackground';
 import ProjectPage from '@/app/components/ProjectPage';
 import { Seo } from '@/app/components/Seo';
+import { ChatWidget } from '@/app/components/ChatWidget';
 
 function Home() {
   return (
@@ -56,6 +57,7 @@ function Home() {
       <TechStack />
       <Projects />
       <Footer />
+      <ChatWidget />
     </div>
   );
 }

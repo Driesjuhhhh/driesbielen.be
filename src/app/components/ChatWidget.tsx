@@ -19,7 +19,7 @@ type ChatResponse = {
 
 const API_BASE_URL =
   import.meta.env.VITE_DRS_AI_CHAT_API_BASE_URL ?? 'https://drs-ai-chat.driesbielen.be';
-const API_KEY = import.meta.env.VITE_DRS_AI_CHAT_API_KEY ?? '';
+const API_KEY = (import.meta.env.VITE_DRS_AI_CHAT_API_KEY ?? '').trim();
 
 export function ChatWidget() {
   const [isOnline, setIsOnline] = useState(false);
@@ -70,6 +70,11 @@ export function ChatWidget() {
 
   useEffect(() => {
     if (!canUseChat) return;
+    if (!API_KEY) {
+      console.warn(
+        '[ChatWidget] Missing VITE_DRS_AI_CHAT_API_KEY at build time; requests to /api/chat may return 401.'
+      );
+    }
 
     let isMounted = true;
     const checkStatus = async () => {

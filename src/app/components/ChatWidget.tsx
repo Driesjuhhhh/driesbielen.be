@@ -8,6 +8,7 @@ type Message = {
 
 type StatusResponse = {
   status?: string;
+  ok?: boolean;
 };
 
 type ChatResponse = {
@@ -87,11 +88,12 @@ export function ChatWidget() {
 
           try {
             const data = (await response.json()) as StatusResponse;
-            if (data.status !== 'ok') {
+            const hasHealthyStatus = data.status === 'ok' || data.ok === true;
+            if (!hasHealthyStatus) {
               continue;
             }
           } catch {
-            continue;
+            // Some deployments may return a non-JSON health response.
           }
 
           if (isMounted) {
@@ -158,7 +160,7 @@ export function ChatWidget() {
     }
   };
 
-  if (!canUseChat || !isOnline) return null;
+  if (!canUseChat) return null;
 
   return (
     <>
@@ -166,7 +168,11 @@ export function ChatWidget() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="group fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-xl transition hover:scale-105 hover:bg-cyan-400"
+          className="group fixed z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-xl transition hover:scale-105 hover:bg-cyan-400"
+          style={{
+            bottom: 'max(1.5rem, env(safe-area-inset-bottom))',
+            right: 'max(1.5rem, env(safe-area-inset-right))'
+          }}
           aria-label="Open chat"
         >
           <MessageCircle size={24} />
@@ -177,7 +183,7 @@ export function ChatWidget() {
       )}
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-950 md:inset-auto md:bottom-6 md:right-6 md:h-[620px] md:w-[380px] md:rounded-2xl md:border md:border-white/10">
+        <div className="fixed inset-0 z-[70] bg-slate-950 md:inset-auto md:bottom-6 md:right-6 md:h-[620px] md:w-[380px] md:rounded-2xl md:border md:border-white/10">
           <div className="flex h-full flex-col md:rounded-2xl md:bg-slate-900">
             <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
               <p className="text-sm font-semibold text-white">Want to know more?</p>
@@ -225,6 +231,11 @@ export function ChatWidget() {
             </div>
 
             <form onSubmit={handleSubmit} className="border-t border-white/10 p-3">
+              {!isOnline && (
+                <p className="mb-2 text-xs text-amber-300">
+                  Chat service is temporarily unavailable. You can still try sending a message.
+                </p>
+              )}
               <div className="flex items-center gap-2 rounded-xl border border-white/15 bg-slate-950 px-2 py-2">
                 <input
                   ref={inputRef}

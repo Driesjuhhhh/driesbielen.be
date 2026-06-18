@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
+import { getCvUrl } from '@/app/lib/cv';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faVuejs, faJava, faDocker, faAngular } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
@@ -48,17 +49,17 @@ export function Hero() {
         </p>
         
         <div className="flex flex-wrap gap-3 sm:gap-4 justify-center items-center">
-          <a href="mailto:hello@driesbielen.be" className="inline-flex w-44 justify-center items-center gap-2 px-6 py-3 rounded-md bg-cyan-500 hover:bg-cyan-600 text-slate-900 font-medium">
-            <Mail className="w-5 h-5" />
-            Contact Me
+          <a href="mailto:hello@driesbielen.be" aria-label="Contact Me" title="Contact Me" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
+            <Mail className="w-6 h-6 text-cyan-400" />
           </a>
-          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="inline-flex w-44 justify-center items-center gap-2 px-6 py-3 rounded-md border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white">
-            <Github className="w-5 h-5" />
-            GitHub
+          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
+            <Github className="w-6 h-6 text-cyan-400" />
           </a>
-          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="inline-flex w-44 justify-center items-center gap-2 px-6 py-3 rounded-md border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white">
-            <Linkedin className="w-5 h-5" />
-            LinkedIn
+          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
+            <Linkedin className="w-6 h-6 text-cyan-400" />
+          </a>
+          <a href={getCvUrl()} target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
+            <FileText className="w-6 h-6 text-cyan-400" />
           </a>
         </div>
 

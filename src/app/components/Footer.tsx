@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, FileText } from 'lucide-react';
+import { getCvUrl } from '@/app/lib/cv';
 
 export function Footer() {
   return (
@@ -34,6 +35,15 @@ export function Footer() {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-6 h-6 text-cyan-400" />
+            </a>
+            <a
+              href={getCvUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
+              aria-label="CV"
+            >
+              <FileText className="w-6 h-6 text-cyan-400" />
             </a>
           </div>
         </div>

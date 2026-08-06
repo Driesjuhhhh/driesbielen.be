@@ -20,10 +20,12 @@ type ChatResponse = {
 const API_BASE_URL =
   import.meta.env.VITE_DRS_AI_CHAT_API_BASE_URL ?? 'https://drs-ai-chat.driesbielen.be';
 const API_KEY = (import.meta.env.VITE_DRS_AI_CHAT_API_KEY ?? '').trim();
+const GREETING_STORAGE_KEY = 'drsai-chat-greeting-dismissed';
 
 export function ChatWidget() {
   const [isOnline, setIsOnline] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [showGreeting, setShowGreeting] = useState(false);
   const [input, setInput] = useState('');
   const [isSending, setIsSending] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -56,6 +58,36 @@ export function ChatWidget() {
     if (!container) return;
     container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
   }, [messages, isSending, isOpen]);
+
+  const dismissGreeting = () => {
+    setShowGreeting(false);
+    try {
+      window.sessionStorage.setItem(GREETING_STORAGE_KEY, '1');
+    } catch {
+      // Ignore storage errors (e.g. private browsing).
+    }
+  };
+
+  useEffect(() => {
+    if (isOpen) {
+      dismissGreeting();
+      return;
+    }
+
+    try {
+      if (window.sessionStorage.getItem(GREETING_STORAGE_KEY)) return;
+    } catch {
+      // If storage is unavailable, fall back to showing the greeting.
+    }
+
+    const showTimer = window.setTimeout(() => setShowGreeting(true), 1200);
+    const hideTimer = window.setTimeout(() => dismissGreeting(), 9000);
+
+    return () => {
+      window.clearTimeout(showTimer);
+      window.clearTimeout(hideTimer);
+    };
+  }, [isOpen]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -173,7 +205,7 @@ export function ChatWidget() {
         <button
           type="button"
           onClick={() => setIsOpen(true)}
-          className="group fixed z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-xl transition hover:scale-105 hover:bg-cyan-400"
+          className="fixed z-[70] flex h-14 w-14 items-center justify-center rounded-full bg-cyan-500 text-slate-950 shadow-xl transition hover:scale-105 hover:bg-cyan-400"
           style={{
             bottom: 'max(1.5rem, env(safe-area-inset-bottom))',
             right: 'max(1.5rem, env(safe-area-inset-right))'
@@ -181,10 +213,33 @@ export function ChatWidget() {
           aria-label="Open chat"
         >
           <MessageCircle size={24} />
-          <span className="pointer-events-none absolute right-16 whitespace-nowrap rounded-full bg-slate-900 px-3 py-1 text-xs text-white opacity-0 transition group-hover:opacity-100">
-            Questions? Ask away!
-          </span>
         </button>
+      )}
+
+      {!isOpen && showGreeting && (
+        <div
+          className="fixed z-[70] flex origin-right animate-in items-center gap-2 rounded-full border border-white/10 bg-slate-900 py-3 pl-4 pr-2 text-sm text-white shadow-xl fade-in slide-in-from-right-4 duration-300"
+          style={{
+            bottom: 'calc(max(1.5rem, env(safe-area-inset-bottom)) + 1.1rem)',
+            right: 'calc(max(1.5rem, env(safe-area-inset-right)) + 4.25rem)'
+          }}
+        >
+          <button
+            type="button"
+            onClick={() => setIsOpen(true)}
+            className="whitespace-nowrap pl-1"
+          >
+            👋 Feel free to ask questions!
+          </button>
+          <button
+            type="button"
+            onClick={dismissGreeting}
+            className="rounded-full p-1 text-slate-400 transition hover:bg-white/10 hover:text-white"
+            aria-label="Dismiss"
+          >
+            <X size={14} />
+          </button>
+        </div>
       )}
 
       {isOpen && (

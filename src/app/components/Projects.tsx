@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
@@ -7,7 +7,6 @@ import { Badge } from '@/app/components/ui/badge';
 import { featuredProjects, additionalProjects } from '@/app/data/projects';
 
 export function Projects() {
-  const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -42,56 +41,56 @@ export function Projects() {
           {/* Top 4 Featured Projects */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {featuredProjects.map((project, index) => (
-              <Card 
-                key={index} 
-                className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer"
-                onClick={() => navigate(`/project/${project.slug}`)}
-              >
-                <div className="p-6 bg-transparent">
-                  <h3 className="text-xl font-semibold mb-2 text-white">
-                    {project.title}
-                  </h3>
-                  <p className="text-slate-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge key={tagIndex} variant="outline" className="border-cyan-500/30 text-cyan-400">
-                        {tag}
-                      </Badge>
-                    ))}
+              <Link key={index} to={`/project/${project.slug}`} className="block">
+                <Card className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer h-full">
+                  <div className="p-6 bg-transparent">
+                    <h3 className="text-xl font-semibold mb-2 text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag, tagIndex) => (
+                        <Badge key={tagIndex} variant="outline" className="border-cyan-500/30 text-cyan-400">
+                          {tag}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-3">
+                      {project.github && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(project.github, '_blank');
+                          }}
+                        >
+                          <Github className="w-4 h-4" />
+                          Code
+                        </Button>
+                      )}
+                      {project.demo && (
+                        <Button
+                          size="sm"
+                          className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            window.open(project.demo, '_blank');
+                          }}
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </Button>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex gap-3">
-                    {project.github && (
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.open(project.github, '_blank');
-                        }}
-                      >
-                        <Github className="w-4 h-4" />
-                        Code
-                      </Button>
-                    )}
-                    {project.demo && (
-                      <Button 
-                        size="sm" 
-                        className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          window.open(project.demo, '_blank');
-                        }}
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                        Live Demo
-                      </Button>
-                    )}
-                  </div>
-                </div>
-              </Card>
+                </Card>
+              </Link>
             ))}
           </div>
 
@@ -105,32 +104,34 @@ export function Projects() {
             <div ref={scrollRef} className="overflow-x-auto pb-4 -mx-4 px-4">
               <div className="flex gap-6" style={{ width: 'max-content' }}>
               {additionalProjects.map((project, index) => (
-                <Card 
-                  key={index} 
-                  className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 flex-shrink-0 cursor-pointer"
+                <Link
+                  key={index}
+                  to={`/project/${project.slug}`}
+                  className="flex-shrink-0"
                   style={{ width: '320px' }}
-                  onClick={() => navigate(`/project/${project.slug}`)}
-                  >
-                  <div className="p-5 bg-transparent">
-                    <h4 className="text-lg font-semibold mb-2 text-white">
-                      {project.title}
-                    </h4>
-                    <p className="text-slate-400 text-sm mb-3 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.tags.map((tag, tagIndex) => (
-                        <Badge 
-                          key={tagIndex} 
-                          variant="outline" 
-                          className="border-cyan-500/30 text-cyan-400 text-xs"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
+                >
+                  <Card className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer h-full">
+                    <div className="p-5 bg-transparent">
+                      <h3 className="text-lg font-semibold mb-2 text-white">
+                        {project.title}
+                      </h3>
+                      <p className="text-slate-400 text-sm mb-3 leading-relaxed">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.map((tag, tagIndex) => (
+                          <Badge
+                            key={tagIndex}
+                            variant="outline"
+                            className="border-cyan-500/30 text-cyan-400 text-xs"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               ))}
               </div>
             </div>

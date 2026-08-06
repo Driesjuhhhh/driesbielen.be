@@ -5,6 +5,7 @@ interface SeoProps {
   description: string;
   path: string;
   image?: string;
+  imageAlt?: string;
   type?: string;
   keywords?: string[];
   structuredData?: Record<string, unknown>;
@@ -44,6 +45,7 @@ export function Seo({
   description,
   path,
   image,
+  imageAlt,
   type = 'website',
   keywords = [],
   structuredData,
@@ -51,6 +53,7 @@ export function Seo({
   useEffect(() => {
     const canonicalUrl = `${SITE_URL}${path}`;
     const absoluteImage = image ? (image.startsWith('http') ? image : `${SITE_URL}${image}`) : DEFAULT_IMAGE;
+    const resolvedImageAlt = imageAlt ?? `${title} – Dries Bielen`;
     const scriptId = 'route-structured-data';
     let script = document.getElementById(scriptId) as HTMLScriptElement | null;
 
@@ -64,10 +67,12 @@ export function Seo({
     upsertMeta('meta[property="og:url"]', { property: 'og:url', content: canonicalUrl });
     upsertMeta('meta[property="og:site_name"]', { property: 'og:site_name', content: SITE_NAME });
     upsertMeta('meta[property="og:image"]', { property: 'og:image', content: absoluteImage });
+    upsertMeta('meta[property="og:image:alt"]', { property: 'og:image:alt', content: resolvedImageAlt });
     upsertMeta('meta[name="twitter:card"]', { name: 'twitter:card', content: 'summary_large_image' });
     upsertMeta('meta[name="twitter:title"]', { name: 'twitter:title', content: title });
     upsertMeta('meta[name="twitter:description"]', { name: 'twitter:description', content: description });
     upsertMeta('meta[name="twitter:image"]', { name: 'twitter:image', content: absoluteImage });
+    upsertMeta('meta[name="twitter:image:alt"]', { name: 'twitter:image:alt', content: resolvedImageAlt });
     upsertLink('canonical', canonicalUrl);
 
     if (structuredData) {
@@ -87,7 +92,7 @@ export function Seo({
         currentScript.remove();
       }
     };
-  }, [description, image, keywords, path, structuredData, title, type]);
+  }, [description, image, imageAlt, keywords, path, structuredData, title, type]);
 
   return null;
 }

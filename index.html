@@ -12,7 +12,14 @@
       name="keywords"
       content="Dries Bielen, full stack developer, web developer Belgium, React developer, mobile developer, portfolio, software engineer, Limburg, Peer, Hasselt"
     />
+    <meta name="author" content="Dries Bielen" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#06b6d4" />
     <link rel="canonical" href="https://driesbielen.be/" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -23,12 +30,10 @@
     />
     <meta property="og:url" content="https://driesbielen.be/" />
     <meta property="og:site_name" content="Dries Bielen" />
-    <!-- Use existing profile image for social previews -->
     <meta property="og:image" content="https://driesbielen.be/image/dries.jpeg" />
     <meta property="og:image:secure_url" content="https://driesbielen.be/image/dries.jpeg" />
     <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dries Bielen – Full Stack Developer from Belgium" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,6 +43,7 @@
       content="Portfolio of Dries Bielen, a full stack developer from Belgium building web apps, mobile apps, backend systems, and real-world client projects."
     />
     <meta name="twitter:image" content="https://driesbielen.be/image/dries.jpeg" />
+    <meta name="twitter:image:alt" content="Dries Bielen – Full Stack Developer from Belgium" />
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
     <!-- Privacy-friendly analytics by Plausible -->
@@ -67,20 +73,43 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dries Bielen",
-        "url": "https://driesbielen.be/",
-        "jobTitle": "Fullstack Developer",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "PXL University"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/in/dries-bielen-50b74b22a/",
-          "https://github.com/Driesjuhhhh",
-          "mailto:hello@driesbielen.be"
-        ],
-        "description": "Portfolio of Dries Bielen, Fullstack Developer from Belgium. Explore web, mobile, and backend projects, skills, and contact information."
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://driesbielen.be/#person",
+            "name": "Dries Bielen",
+            "url": "https://driesbielen.be/",
+            "image": "https://driesbielen.be/image/dries.jpeg",
+            "jobTitle": "Full Stack Developer",
+            "email": "hello@driesbielen.be",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "PXL University College",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hasselt",
+                "addressCountry": "BE"
+              }
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressRegion": "Limburg",
+              "addressCountry": "BE"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/dries-bielen-50b74b22a/",
+              "https://github.com/Driesjuhhhh"
+            ],
+            "description": "Portfolio of Dries Bielen, Full Stack Developer from Belgium. Explore web, mobile, and backend projects, skills, and contact information."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://driesbielen.be/#website",
+            "name": "Dries Bielen Portfolio",
+            "url": "https://driesbielen.be/",
+            "author": { "@id": "https://driesbielen.be/#person" }
+          }
+        ]
       }
     </script>
     <script>

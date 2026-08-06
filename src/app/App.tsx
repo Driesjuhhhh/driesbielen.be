@@ -21,6 +21,7 @@ function Home() {
         description="Portfolio of Dries Bielen, a full stack developer from Belgium building web apps, mobile apps, backend systems, and real-world client projects."
         path="/"
         image="/image/dries.jpeg"
+        imageAlt="Dries Bielen – Full Stack Developer from Belgium"
         keywords={[
           'Dries Bielen',
           'Full Stack Developer',

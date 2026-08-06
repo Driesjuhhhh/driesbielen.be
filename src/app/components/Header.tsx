@@ -37,12 +37,13 @@ export function Header() {
           <span className="hidden sm:inline">Dries Bielen</span>
         </a>
 
-        <nav className="flex items-center gap-4 text-slate-300">
+        <nav aria-label="Main navigation" className="flex items-center gap-4 text-slate-300">
           <a href="#about" onClick={handleSectionClick('about')} className="hover:text-white">About</a>
           <a href="#projects" onClick={handleSectionClick('projects')} className="hover:text-white">Projects</a>
           <a href="#techstack" onClick={handleSectionClick('techstack')} className="hover:text-white">Tech</a>
-          <a href="mailto:hello@driesbielen.be" className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500 text-slate-900 font-medium"> 
-            <Mail className="w-4 h-4" /> Contact
+          <a href="#contact" onClick={handleSectionClick('contact')} className="hover:text-white hidden md:inline">Contact</a>
+          <a href="mailto:hello@driesbielen.be" className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500 text-slate-900 font-medium">
+            <Mail className="w-4 h-4" /> Email
           </a>
 
           <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="GitHub">

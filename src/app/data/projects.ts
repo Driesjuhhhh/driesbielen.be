@@ -171,6 +171,40 @@ The platform features an interactive map interface that helps users discover the
 
 export const additionalProjects: Project[] = [
   {
+    slug: 'joke-bylemans',
+    title: 'Joke Bylemans',
+    description:
+      'A playful, responsive portfolio website for presenter, voice-over artist, and content creator Joke Bylemans.',
+    seoDescription:
+      'Joke Bylemans is a responsive media portfolio designed and developed by Dries Bielen with Vue, TypeScript, Tailwind CSS, and Vite.',
+    image: 'https://jokebylemans.be/og-joke-bylemans.jpg',
+    tags: ['Vue', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Driesjuhhhh/jokebylemans',
+    demo: 'https://jokebylemans.be',
+    duration: 'April 2026 - Present',
+    team: 'Solo Project',
+    role: 'Web Developer',
+    fullDescription:
+      'Joke Bylemans is a custom portfolio website that brings together her work as a presenter, voice-over artist, multicamera maker, content creator, and radio host. The design translates her energetic personality into a distinctive visual experience while keeping her projects easy to explore across desktop and mobile.',
+    features: [
+      'Responsive portfolio experience',
+      'Filterable audiovisual project showcase',
+      'Rich project detail views with video, audio, and photography',
+      'Live Radio Mol player integration',
+      'Search-optimized project pages and structured metadata',
+      'Custom domain deployment with GitHub Pages',
+    ],
+    challenges:
+      'Bringing a large collection of mixed media into one fast, coherent experience required careful attention to responsive layouts, media loading, navigation, and discoverability.',
+    learnings:
+      'This project strengthened my experience in designing personality-driven portfolios, structuring mixed-media content, and building search-friendly Vue applications.',
+    reference: {
+      type: 'url',
+      label: 'Joke Bylemans',
+      value: 'https://jokebylemans.be',
+    },
+  },
+  {
     slug: 'mvc-peer',
     title: 'MVC Peer',
     description:

@@ -4,7 +4,7 @@ export function Stats() {
   const stats = [
     {
       icon: Code2,
-      number: '12',
+      number: '13',
       label: 'Projects Completed',
       color: 'text-cyan-400',
       bgColor: 'bg-cyan-500/20'

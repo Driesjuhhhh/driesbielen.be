@@ -1,0 +1,39 @@
+# Dries Bielen
+
+> Portfolio of Dries Bielen, a full stack developer based in Belgium, building websites, mobile apps, backend systems, and tools for businesses and community organizations.
+
+Dries has a background in Application Development at PXL University College in Hasselt, Belgium. His project experience includes React, Vue, TypeScript, JavaScript, Java Spring Boot, .NET, Flutter, MySQL, Firebase, Appwrite, and Docker.
+
+This portfolio includes individual and team projects. The project pages describe his role, technologies, features, and development experience for each project.
+
+## Portfolio
+
+- [Home](https://driesbielen.be/): Profile, skills, technology stack, and project overview.
+- [About](https://driesbielen.be/#about): Background and education.
+- [Contact](https://driesbielen.be/#contact): Contact details and professional profiles.
+
+## Projects
+
+- [Streetmasters](https://driesbielen.be/project/streetmasters): Website for a car cleaning business in Houthalen-Helchteren, with services, pricing, and contact information.
+- [RBGH (Red Bull Gaming Hub)](https://driesbielen.be/project/rbgh-red-bull-gaming-hub): Volunteer management app with shift scheduling, a Java backend, Firebase, and Discord integrations.
+- [OpenInzichten](https://driesbielen.be/project/openinzichten): Community platform for people with invisible illnesses in Flanders, built with Java Spring Boot, Vue, Docker, and MySQL.
+- [JH Sungarden](https://driesbielen.be/project/jh-sungarden): Youth center website presenting activities, programs, and events in Zonhoven, Belgium.
+- [Joke Bylemans](https://driesbielen.be/project/joke-bylemans): Responsive media portfolio for a presenter, voice-over artist, and content creator, built with Vue, TypeScript, Tailwind CSS, and Vite.
+- [MVC Peer](https://driesbielen.be/project/mvc-peer): Volleyball club website with VolleyScores API integration for standings and match information; Dries's first website.
+- [ShiftManager](https://driesbielen.be/project/shiftmanager): Shift scheduling and contribution points tracking for clubs and organizations.
+- [DRS-Voting](https://driesbielen.be/project/drs-voting): Real-time audience voting app for events, built with Flutter, Appwrite, and Docker.
+- [DRS Stream](https://driesbielen.be/project/drs-stream): Remote livestream infrastructure connecting a Raspberry Pi to a homelab using Docker, Tailscale, MediaMTX, and Node.js.
+- [MosselSystem](https://driesbielen.be/project/mosselsystem): Management system for order processing, kitchen workflows, cash register operations, and hall management, originally built for Chiro Wilduraantjes.
+- [PingPingDing](https://driesbielen.be/project/pingpingding): School payment balance app built with Flutter, .NET, Docker, and API integration.
+- [Barbiepoppen Expo](https://driesbielen.be/project/barbiepoppen-expo): Exhibition website presenting the history and cultural impact of Barbie dolls.
+- [Connect 4](https://driesbielen.be/project/connect-4): Team school project combining a .NET backend with a responsive frontend for a two-player Connect 4 game.
+
+## Contact and profiles
+
+- [Email](mailto:hello@driesbielen.be): Contact Dries about collaborations or projects.
+- [GitHub](https://github.com/driesjuhhhh): Public repositories.
+- [LinkedIn](https://www.linkedin.com/in/driesbielen/): Professional profile.
+
+## Site index
+
+- [Sitemap](https://driesbielen.be/sitemap.xml): Index of portfolio pages and hosted project demos.

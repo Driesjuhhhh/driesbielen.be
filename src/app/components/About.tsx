@@ -47,6 +47,15 @@ export function About() {
               >
               streaming
               </a>
+              . I also enjoy photography and share my favorite shots on my{" "}
+              <a
+                href="https://pictures.driesbielen.be/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300"
+              >
+                photography website
+              </a>
               .
             </p>
 

@@ -1,4 +1,6 @@
-import { Github, Linkedin, Mail, Heart, FileText } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Mail, Heart, FileText } from 'lucide-react';
 import { getCvUrl } from '@/app/lib/cv';
 
 export function Footer() {
@@ -27,7 +29,7 @@ export function Footer() {
                 className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
                 aria-label="Dries Bielen on GitHub"
               >
-                <Github className="w-6 h-6 text-cyan-400" />
+                <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-cyan-400" />
               </a>
               <a
                 href="https://www.linkedin.com/in/driesbielen/"
@@ -36,7 +38,7 @@ export function Footer() {
                 className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all"
                 aria-label="Dries Bielen on LinkedIn"
               >
-                <Linkedin className="w-6 h-6 text-cyan-400" />
+                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-cyan-400" />
               </a>
               <a
                 href={getCvUrl()}

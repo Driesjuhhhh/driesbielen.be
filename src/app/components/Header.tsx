@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import type React from 'react'
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { Mail } from 'lucide-react'
 
 type SectionClickHandler = (event: React.MouseEvent<HTMLAnchorElement>) => void
 
@@ -47,10 +49,10 @@ export function Header() {
           </a>
 
           <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="GitHub">
-            <Github className="w-5 h-5 text-cyan-400" />
+            <FontAwesomeIcon icon={faGithub} className="w-5 h-5 text-cyan-400" />
           </a>
           <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="LinkedIn">
-            <Linkedin className="w-5 h-5 text-cyan-400" />
+            <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 text-cyan-400" />
           </a>
         </nav>
       </div>

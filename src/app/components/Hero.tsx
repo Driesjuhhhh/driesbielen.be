@@ -1,8 +1,8 @@
-import { Github, Linkedin, Mail, MapPin, FileText } from 'lucide-react';
+import { Mail, MapPin, FileText } from 'lucide-react';
 import { Badge } from '@/app/components/ui/badge';
 import { getCvUrl } from '@/app/lib/cv';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faVuejs, faJava, faDocker, faAngular } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faReact, faVuejs, faJava, faDocker, faAngular } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
 
 export function Hero() {
@@ -53,10 +53,10 @@ export function Hero() {
             <Mail className="w-6 h-6 text-cyan-400" />
           </a>
           <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <Github className="w-6 h-6 text-cyan-400" />
+            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-cyan-400" />
           </a>
           <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <Linkedin className="w-6 h-6 text-cyan-400" />
+            <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-cyan-400" />
           </a>
           <a href={getCvUrl()} target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
             <FileText className="w-6 h-6 text-cyan-400" />

@@ -1,6 +1,8 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Card } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
@@ -69,7 +71,7 @@ export function Projects() {
                             window.open(project.github, '_blank');
                           }}
                         >
-                          <Github className="w-4 h-4" />
+                          <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
                           Code
                         </Button>
                       )}

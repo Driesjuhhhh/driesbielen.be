@@ -1,6 +1,6 @@
-import { X, Github, ExternalLink, Calendar, Users, Code2, Link } from 'lucide-react';
+import { X, ExternalLink, Calendar, Users, Code2, Link } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faLink as faSolidLink } from '@fortawesome/free-solid-svg-icons';
 import { Button } from '@/app/components/ui/button';
 import { Badge } from '@/app/components/ui/badge';
@@ -59,7 +59,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                   className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
                   onClick={() => window.open(project.github, '_blank')}
                 >
-                  <Github className="w-5 h-5" />
+                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
                   View Code
                 </Button>
               )}

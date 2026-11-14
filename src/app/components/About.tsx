@@ -1,84 +1,59 @@
-import { GraduationCap } from "lucide-react";
-import { Card } from "@/app/components/ui/card";
-import { ImageWithFallback } from "@/app/components/image/ImageWithFallback";
+import { useState } from 'react';
+import { Stats } from './Stats';
+import { ArrowUpRight, ChevronDown } from 'lucide-react';
+import { SectionHeading } from './SectionHeading';
+
+const timeline = [
+  { organisation: 'Faros', role: 'Full Stack Developer', period: 'Nov 2026 — Present', type: 'Work', current: true },
+  { organisation: 'Red Bull Gaming Hub', role: 'Volunteer', period: 'Feb 2025 — Present', type: 'Volunteering', current: true, description: 'Co-developing an internal app for volunteers with React and Java.' },
+  { organisation: 'Advantive Belgium', role: 'Junior Microsoft 365 Consultant', period: 'Aug 2026 — Oct 2026', type: 'Work', current: false },
+  { organisation: 'Hogeschool PXL', role: 'Bachelor in Applied Computer Science', period: '2022 — 2026', type: 'Education', current: false, description: 'Application Development · Graduated with distinction.' },
+];
 
 export function About() {
-  return (
-    <section className="py-28 md:py-32 px-4 bg-transparent" id="about">
-      <div data-aos="fade-up" className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">
-          About Me
-        </h2>
+  const [expanded, setExpanded] = useState(false);
 
-        <div className="grid md:grid-cols-2 gap-8 items-stretch md:h-[36rem]">
-          {/* Left: avatar (hidden on small screens) */}
-          <div className="hidden md:block">
-            <Card className="p-0 bg-transparent border-slate-700 overflow-hidden h-full">
-              <div className="w-full h-full bg-slate-900">
-                <ImageWithFallback
-                  src="/image/dries.jpeg"
-                  alt="Dries Bielen"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </Card>
+  return (
+    <section className="viewport-section py-16 md:py-24 px-5 sm:px-8" id="about" aria-labelledby="about-title">
+      <div data-aos="fade-up" className="site-content">
+        <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16">
+          <div>
+            <SectionHeading id="about-title" index="01" label="About me">The person behind <span className="accent-text">the code.</span></SectionHeading>
+            <div className="space-y-5 text-base leading-relaxed text-slate-400">
+              <p>I'm Dries, a fullstack developer based in Belgium. I enjoy turning complex problems into practical, user-friendly software — and understanding how all the pieces fit together.</p>
+              <p>From frontend interfaces to backend systems, I like working across the entire stack. I'm currently working as a full stack developer at Faros, building on a background in both software development and Microsoft 365.</p>
+              <p>Outside of work, you'll find me gaming, occasionally <a href="https://twitch.tv/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="text-slate-200 underline decoration-white/25 underline-offset-4 hover:text-cyan-300">streaming</a>, or behind a camera. Photography gives me another way to explore, create and pay attention to the details.</p>
+            </div>
+            <a href="https://pictures.driesbielen.be/" target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-3 py-2 text-sm text-cyan-300 hover:text-cyan-200">See my photography<ArrowUpRight size={16} aria-hidden /></a>
           </div>
 
-          {/* Right: about + education */}
-          <Card className="p-8 bg-transparent border-slate-700 h-full flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold mb-4 text-cyan-400">
-              About me
+          <div>
+            <h3 className="mb-8 flex items-center gap-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-slate-400">
+              My journey<span aria-hidden className="h-px w-12 bg-cyan-400/40" />
+              <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex items-center gap-1.5 normal-case tracking-normal text-slate-500 hover:text-white">LinkedIn<ArrowUpRight size={13} aria-hidden /></a>
             </h3>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              I'm a passionate fullstack developer based in Belgium with a love
-              for creating seamless digital experiences. I thrive on turning
-              complex problems into elegant, user-friendly solutions.
-            </p>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              With a strong foundation in both frontend and backend
-              technologies, I enjoy working across the entire stack to build
-              robust applications. When I'm not coding, you can find me sipping
-              coffee, playing video games or maybe even{" "}
-              <a
-              href="https://twitch.tv/driesjuhhhh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyan-400 hover:text-cyan-300"
-              >
-              streaming
-              </a>
-              . I also enjoy photography and share my favorite shots on my{" "}
-              <a
-                href="https://pictures.driesbielen.be/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300"
-              >
-                photography website
-              </a>
-              .
-            </p>
-
-            <div className="flex items-start gap-4 mb-4">
-              <div className="p-3 bg-cyan-500/20 rounded-lg">
-                <GraduationCap className="w-8 h-8 text-cyan-400" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-2 text-cyan-400">
-                  Education
-                </h3>
-                <p className="text-slate-300">
-                  <span className="font-bold">Application Development</span>
-                  <br />
-                  <span className="font-semibold"> PXL University college</span>
-                  <br />
-                  Hasselt, Belgium
-                </p>
-              </div>
+            <div className={`journey ${expanded ? '' : 'journey--collapsed'}`}>
+              <ol id="about-timeline">
+                {timeline.map((item, index) => (
+                  <li key={item.organisation} hidden={!expanded && index >= 3} className={`journey-item ${item.current ? 'journey-item--current' : ''}`}>
+                    <span aria-hidden className="journey-dot" />
+                    <div className="flex flex-wrap items-center gap-3">
+                      <p className="font-mono text-xs text-slate-400">{item.period}</p>
+                      <span className="rounded-full border border-white/15 px-2.5 py-0.5 text-[11px] text-slate-400">{item.type}</span>
+                    </div>
+                    <h4 className="mt-2 text-3xl sm:text-4xl font-bold tracking-[-0.05em] text-white">{item.organisation}</h4>
+                    <p className={`mt-1 text-lg ${item.current ? 'text-cyan-300' : 'text-slate-300'}`}>{item.role}</p>
+                    {item.description && <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-400">{item.description}</p>}
+                  </li>
+                ))}
+              </ol>
+              <button type="button" aria-expanded={expanded} aria-controls="about-timeline" onClick={() => setExpanded(!expanded)} className="journey-toggle">
+                {expanded ? 'Show less' : 'Show full journey'}<ChevronDown size={15} aria-hidden className={`transition-transform motion-reduce:transition-none ${expanded ? 'rotate-180' : ''}`} />
+              </button>
             </div>
-
-          </Card>
+          </div>
         </div>
+        <Stats />
       </div>
     </section>
   );

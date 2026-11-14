@@ -31,11 +31,11 @@ export const featuredProjects: Project[] = [
       'A website for a car cleaning business in Houthalen-Helchteren, Belgium showcasing services, pricing, and contact information.',
     seoDescription:
       'Streetmasters is a business website project by Dries Bielen for a Belgian car cleaning company, focused on services, pricing, and conversion-friendly contact flows.',
-    image: 'https://images.unsplash.com/photo-1552997710-5017eb41f1a7?w=1080',
+    image: '/image/streetmasters-site.jpg',
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     github: 'https://github.com/seppesnoks/Streetmasters',
     demo: 'https://streetmasters.be',
-    duration: '2023',
+    duration: '2023 - Present',
     team: 'Solo Project',
     role: 'Web Developer',
     fullDescription:
@@ -98,6 +98,72 @@ Volunteers can log in, choose their shifts, and check in with friends, creating 
       },
     ],
   },
+  {
+    slug: 'joke-bylemans',
+    title: 'Joke Bylemans',
+    description:
+      'A playful, responsive portfolio website for presenter, voice-over artist, and content creator Joke Bylemans.',
+    seoDescription:
+      'Joke Bylemans is a responsive media portfolio designed and developed by Dries Bielen with Vue, TypeScript, Tailwind CSS, and Vite.',
+    image: 'https://jokebylemans.be/og-joke-bylemans.jpg',
+    tags: ['Vue', 'TypeScript', 'Tailwind CSS', 'Vite'],
+    github: 'https://github.com/Driesjuhhhh/jokebylemans',
+    demo: 'https://jokebylemans.be',
+    duration: 'April 2026 - Present',
+    team: 'Solo Project',
+    role: 'Web Developer',
+    fullDescription:
+      'Joke Bylemans is a custom portfolio website that brings together her work as a presenter, voice-over artist, multicamera maker, content creator, and radio host. The design translates her energetic personality into a distinctive visual experience while keeping her projects easy to explore across desktop and mobile.',
+    features: [
+      'Responsive portfolio experience',
+      'Filterable audiovisual project showcase',
+      'Rich project detail views with video, audio, and photography',
+      'Live Radio Mol player integration',
+      'Search-optimized project pages and structured metadata',
+      'Custom domain deployment with GitHub Pages',
+    ],
+    challenges:
+      'Bringing a large collection of mixed media into one fast, coherent experience required careful attention to responsive layouts, media loading, navigation, and discoverability.',
+    learnings:
+      'This project strengthened my experience in designing personality-driven portfolios, structuring mixed-media content, and building search-friendly Vue applications.',
+    reference: {
+      type: 'url',
+      label: 'Joke Bylemans',
+      value: 'https://jokebylemans.be',
+    },
+  },
+  {
+    slug: 'mvc-peer',
+    title: 'MVC Peer',
+    description:
+      'A website for the MVC-Peer volleyball club with integration to the VolleyScores API database. My first website ever created.',
+    seoDescription:
+      'MVC Peer is Dries Bielen’s first website project, built for a volleyball club with live API-powered standings and match data.',
+    image: '/image/mvcpeer-site.jpg',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    github: 'https://github.com/Driesjuhhhh/MVCPEER',
+    demo: 'https://mvcpeer.be',
+    duration: '2022 - Present',
+    team: 'Solo Project',
+    role: 'Web Developer',
+    fullDescription:
+      'MVC Peer is a volleyball club website featuring integration with the VolleyScores API to display current standings and match information. As my first website, it holds special significance in my development journey.',
+    features: [
+      'Club information',
+      'Team roster',
+      'Match schedule',
+      'Live standings via API',
+      'Contact information',
+    ],
+    challenges:
+      'Building my first website from scratch while learning web development fundamentals.',
+    learnings:
+      'This project was foundational - I learned HTML, CSS, JavaScript basics, and API integration.',
+    reference: { type: 'email', label: 'Volley Peer', value: 'mailto:volley_peer@hotmail.com' },
+  },
+];
+
+export const additionalProjects: Project[] = [
   {
     slug: 'openinzichten',
     title: 'OpenInzichten',
@@ -166,72 +232,6 @@ The platform features an interactive map interface that helps users discover the
     challenges: 'Building a welcoming website for youth that encourages participation.',
     learnings: 'I learned about community-focused web design and ongoing maintenance.',
     reference: { type: 'email', label: 'JH Sungarden', value: 'mailto:jh.sungarden@gmail.com' },
-  },
-];
-
-export const additionalProjects: Project[] = [
-  {
-    slug: 'joke-bylemans',
-    title: 'Joke Bylemans',
-    description:
-      'A playful, responsive portfolio website for presenter, voice-over artist, and content creator Joke Bylemans.',
-    seoDescription:
-      'Joke Bylemans is a responsive media portfolio designed and developed by Dries Bielen with Vue, TypeScript, Tailwind CSS, and Vite.',
-    image: 'https://jokebylemans.be/og-joke-bylemans.jpg',
-    tags: ['Vue', 'TypeScript', 'Tailwind CSS', 'Vite'],
-    github: 'https://github.com/Driesjuhhhh/jokebylemans',
-    demo: 'https://jokebylemans.be',
-    duration: 'April 2026 - Present',
-    team: 'Solo Project',
-    role: 'Web Developer',
-    fullDescription:
-      'Joke Bylemans is a custom portfolio website that brings together her work as a presenter, voice-over artist, multicamera maker, content creator, and radio host. The design translates her energetic personality into a distinctive visual experience while keeping her projects easy to explore across desktop and mobile.',
-    features: [
-      'Responsive portfolio experience',
-      'Filterable audiovisual project showcase',
-      'Rich project detail views with video, audio, and photography',
-      'Live Radio Mol player integration',
-      'Search-optimized project pages and structured metadata',
-      'Custom domain deployment with GitHub Pages',
-    ],
-    challenges:
-      'Bringing a large collection of mixed media into one fast, coherent experience required careful attention to responsive layouts, media loading, navigation, and discoverability.',
-    learnings:
-      'This project strengthened my experience in designing personality-driven portfolios, structuring mixed-media content, and building search-friendly Vue applications.',
-    reference: {
-      type: 'url',
-      label: 'Joke Bylemans',
-      value: 'https://jokebylemans.be',
-    },
-  },
-  {
-    slug: 'mvc-peer',
-    title: 'MVC Peer',
-    description:
-      'A website for the MVC-Peer volleyball club with integration to the VolleyScores API database. My first website ever created.',
-    seoDescription:
-      'MVC Peer is Dries Bielen’s first website project, built for a volleyball club with live API-powered standings and match data.',
-    image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=1080',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    github: 'https://github.com/Driesjuhhhh/MVCPEER',
-    demo: 'https://mvcpeer.be',
-    duration: '2022 - Present',
-    team: 'Solo Project',
-    role: 'Web Developer',
-    fullDescription:
-      'MVC Peer is a volleyball club website featuring integration with the VolleyScores API to display current standings and match information. As my first website, it holds special significance in my development journey.',
-    features: [
-      'Club information',
-      'Team roster',
-      'Match schedule',
-      'Live standings via API',
-      'Contact information',
-    ],
-    challenges:
-      'Building my first website from scratch while learning web development fundamentals.',
-    learnings:
-      'This project was foundational - I learned HTML, CSS, JavaScript basics, and API integration.',
-    reference: { type: 'email', label: 'Volley Peer', value: 'mailto:volley_peer@hotmail.com' },
   },
   {
     slug: 'shiftmanager',

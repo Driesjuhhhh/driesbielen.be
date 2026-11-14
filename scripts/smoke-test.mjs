@@ -17,7 +17,7 @@ try {
       }
     });
     await page.goto(base);
-    await page.getByRole('heading', { name: 'Featured Projects' }).waitFor();
+    await page.getByRole('heading', { name: 'Selected work.' }).waitFor();
     const projects = await page.locator('a[href^="/project/"]').evaluateAll(links =>
       links.map(link => ({ href: link.getAttribute('href'), title: link.querySelector('h3').textContent })),
     );
@@ -27,8 +27,26 @@ try {
     for (const href of await cvLinks.evaluateAll(links => links.map(link => link.href))) {
       assert.equal(href, 'https://canva.link/vxnu27dtrlh5cq0');
     }
-    await page.getByRole('navigation').getByRole('link', { name: 'Projects', exact: true }).click();
-    await page.waitForFunction(() => scrollY > 0);
+    assert.equal(await page.locator('#about-timeline li:visible').count(), 3);
+    await page.getByRole('button', { name: 'Show full journey', exact: true }).click();
+    assert.equal(await page.locator('#about-timeline li:visible').count(), 4);
+    await page.getByRole('button', { name: 'Show less', exact: true }).click();
+    assert.equal(await page.locator('#about-timeline li:visible').count(), 3);
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+    await page.waitForFunction(() => document.querySelector('header').hasAttribute('inert'));
+    assert.equal(await page.locator('header').getAttribute('inert'), '');
+    await page.evaluate(() => window.scrollTo({ top: 120, behavior: 'instant' }));
+    await page.waitForFunction(() => !document.querySelector('header').hasAttribute('inert'));
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+    await page.waitForFunction(() => document.querySelector('header').hasAttribute('inert'));
+    await page.getByRole('navigation', { name: 'Contents' }).getByRole('link', { name: 'Projects' }).click();
+    await page.waitForFunction(() => !document.querySelector('header').hasAttribute('inert'));
+    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Skills' }).click();
+    await page.waitForFunction(() => document.querySelector('a[href="#skills"][aria-current="location"]'));
+    assert.equal(await page.locator('#skills li').count(), 36);
+    assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+    await page.getByRole('navigation', { name: 'Main navigation' }).getByRole('link', { name: 'Projects' }).click();
+    await page.waitForFunction(() => document.querySelector('a[href="#projects"][aria-current="location"]'));
     if (width === 1440) {
       await page.getByRole('button', { name: 'Scroll right', exact: true }).click();
       await page.getByRole('button', { name: 'Scroll left', exact: true }).waitFor();

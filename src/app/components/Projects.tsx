@@ -1,12 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Card } from '@/app/components/ui/card';
-import { Button } from '@/app/components/ui/button';
-import { Badge } from '@/app/components/ui/badge';
+import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { featuredProjects, additionalProjects } from '@/app/data/projects';
+import { SectionHeading } from './SectionHeading';
+
+// logos look better than the stock photos in project.image
+const logos: Record<string, { src: string; invert?: boolean }> = {
+  'rbgh-red-bull-gaming-hub': { src: '/image/RBGH.png' },
+};
 
 export function Projects() {
   const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -31,79 +32,46 @@ export function Projects() {
 
   return (
     <>
-      <section className="py-20 px-4 bg-transparent" id="projects">
-        <div data-aos="fade-up" className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-white">
-            Featured Projects
-          </h2>
-          <p className="text-center text-slate-400 mb-12 max-w-2xl mx-auto">
-            A selection of projects showcasing my technical expertise and problem-solving abilities
-          </p>
-          
-          {/* Top 4 Featured Projects */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {featuredProjects.map((project, index) => (
-              <Link key={index} to={`/project/${project.slug}`} className="block">
-                <Card className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer h-full">
-                  <div className="p-6 bg-transparent">
-                    <h3 className="text-xl font-semibold mb-2 text-white">
-                      {project.title}
-                    </h3>
-                    <p className="text-slate-400 mb-4 leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="outline" className="border-cyan-500/30 text-cyan-400">
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-3">
-                      {project.github && (
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(project.github, '_blank');
-                          }}
-                        >
-                          <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-                          Code
-                        </Button>
-                      )}
-                      {project.demo && (
-                        <Button
-                          size="sm"
-                          className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            window.open(project.demo, '_blank');
-                          }}
-                        >
-                          <ExternalLink className="w-4 h-4" />
-                          Live Demo
-                        </Button>
-                      )}
-                    </div>
+      <section className="viewport-section py-20 md:py-32 px-5 sm:px-8 bg-transparent" id="projects" aria-labelledby="projects-title">
+        <div data-aos="fade-up" className="site-content">
+          <SectionHeading id="projects-title" index="03" label="Projects" intro="A selection of projects showcasing my technical expertise and problem-solving abilities.">
+            Selected <span className="accent-text">work.</span>
+          </SectionHeading>
+
+          <div className="grid md:grid-cols-2 gap-5 mb-20">
+            {featuredProjects.map((project, index) => {
+              const logo = logos[project.slug];
+              return (
+                <Link key={project.slug} to={`/project/${project.slug}`} className="project-card group">
+                  <div className="project-card-media">
+                    {logo
+                      ? <img src={logo.src} alt="" loading="lazy" className={`project-card-logo ${logo.invert ? 'invert' : ''}`} />
+                      : <img src={project.image} alt="" loading="lazy" className="h-full w-full object-cover" />}
+                    <span className="project-card-chip"><span className="text-cyan-300">0{index + 1}</span>{project.duration}</span>
                   </div>
-                </Card>
-              </Link>
-            ))}
+                  <div className="p-6">
+                    <h3 className="flex items-center justify-between gap-4 text-2xl font-bold tracking-tight text-white">
+                      {project.title}
+                      <ArrowUpRight aria-hidden size={22} className="shrink-0 text-slate-500 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-300 motion-reduce:transform-none" />
+                    </h3>
+                    <p className="mt-2 text-slate-400 leading-relaxed">{project.description}</p>
+                    <ul className="mt-5 flex flex-wrap gap-2">
+                      {project.tags.map(tag => <li key={tag} className="rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-slate-300">{tag}</li>)}
+                    </ul>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
 
           {/* Additional Projects - Horizontal Scroll */}
           <div className="mb-8">
-            <h3 className="text-2xl font-semibold text-white mb-4">More Projects</h3>
-            <p className="text-slate-400 mb-6">Scroll to explore additional work</p>
+            <h3 className="text-3xl sm:text-4xl font-bold tracking-[-0.05em] text-white">More <span className="accent-text">projects.</span></h3>
+            <p className="mt-2 text-slate-400">Scroll to explore additional work</p>
           </div>
           
           <div className="relative mb-4">
-            <div ref={scrollRef} className="overflow-x-auto pb-4 -mx-4 px-4">
+            <div ref={scrollRef} className="overflow-x-auto pt-2 pb-4 -mx-4 px-4">
               <div className="flex gap-6" style={{ width: 'max-content' }}>
               {additionalProjects.map((project, index) => (
                 <Link
@@ -112,9 +80,9 @@ export function Projects() {
                   className="flex-shrink-0"
                   style={{ width: '320px' }}
                 >
-                  <Card className="overflow-hidden hover:shadow-lg hover:shadow-cyan-500/10 transition-all bg-transparent border-slate-700 cursor-pointer h-full">
-                    <div className="p-5 bg-transparent">
-                      <h3 className="text-lg font-semibold mb-2 text-white">
+                  <div className="project-card group h-full">
+                    <div className="p-5">
+                      <h3 className="text-lg font-semibold mb-2 text-white transition-colors group-hover:text-cyan-300">
                         {project.title}
                       </h3>
                       <p className="text-slate-400 text-sm mb-3 leading-relaxed">
@@ -122,17 +90,11 @@ export function Projects() {
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, tagIndex) => (
-                          <Badge
-                            key={tagIndex}
-                            variant="outline"
-                            className="border-cyan-500/30 text-cyan-400 text-xs"
-                          >
-                            {tag}
-                          </Badge>
+                          <span key={tagIndex} className="rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-slate-300">{tag}</span>
                         ))}
                       </div>
                     </div>
-                  </Card>
+                  </div>
                 </Link>
               ))}
               </div>
@@ -148,7 +110,7 @@ export function Projects() {
                   if (!el) return;
                   el.scrollBy({ left: -Math.round(el.clientWidth * 0.8), behavior: 'smooth' });
                 }}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 bg-slate-900 text-white p-2 rounded-full shadow-lg hidden md:inline-flex"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 border border-white/15 bg-slate-950/80 backdrop-blur text-white p-2 rounded-full shadow-lg hover:border-cyan-300/50 hover:text-cyan-300 hidden md:inline-flex"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -163,7 +125,7 @@ export function Projects() {
                   if (!el) return;
                   el.scrollBy({ left: Math.round(el.clientWidth * 0.8), behavior: 'smooth' });
                 }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 bg-slate-900 text-white p-2 rounded-full shadow-lg hidden md:inline-flex"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 border border-white/15 bg-slate-950/80 backdrop-blur text-white p-2 rounded-full shadow-lg hover:border-cyan-300/50 hover:text-cyan-300 hidden md:inline-flex"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -171,7 +133,7 @@ export function Projects() {
           </div>
           
           {/* Scroll indicator */}
-          <div className="text-center mt-6 text-slate-500 text-sm">
+          <div className="text-center mt-6 font-mono text-[10px] uppercase tracking-widest text-slate-500">
             ← Scroll horizontally to see more projects →
           </div>
         </div>

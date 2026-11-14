@@ -1,119 +1,64 @@
-import { Mail, MapPin, FileText } from 'lucide-react';
-import { Badge } from '@/app/components/ui/badge';
+import { ArrowDown, ArrowUpRight, CodeXml, FileText, MapPin, Sparkles } from 'lucide-react';
+import { sections } from './Header';
 import { getCvUrl } from '@/app/lib/cv';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faReact, faVuejs, faJava, faDocker, faAngular } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-transparent px-4 py-20 sm:py-24">
-      <div data-aos="fade-up" className="w-full max-w-4xl mx-auto text-center">
-        <div className="mb-6 sm:mb-8">
-          <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-5 sm:mb-6">
-            <div aria-hidden className="absolute -inset-3 -z-10 rounded-full bg-gradient-to-tr from-cyan-400 to-teal-500 opacity-60 filter blur-2xl mix-blend-screen animate-[pulse_8s_ease-in-out_infinite]" />
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-slate-900 text-4xl sm:text-5xl font-bold">
-              <img
-                src="/image/dries.jpeg"
-                alt="Dries Bielen"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement
-                  target.style.display = 'none'
-                  const parent = target.parentElement
-                  if (parent) {
-                    const fallback = document.createElement('div')
-                    fallback.textContent = 'DB'
-                    fallback.className = 'w-full h-full flex items-center justify-center text-5xl font-bold text-slate-900'
-                    parent.appendChild(fallback)
-                  }
-                }}
-              />
+    <section id="home" aria-labelledby="hero-title" className="viewport-section hero-section px-5 sm:px-8 text-white">
+      <div className="site-content w-full">
+        <div className="hero-layout">
+          <div className="hero-intro">
+            <p className="flex items-center gap-4 text-xl sm:text-3xl tracking-tight text-slate-400">
+              Hi, I'm Dries Bielen
+              <img src="/image/dries.jpeg" alt="" width="56" height="56" className="hero-avatar" />
+            </p>
+            <h1 id="hero-title" className="hero-title">
+              <span className="block">Fullstack <span className="whitespace-nowrap">Developer <CodeXml aria-hidden className="hero-title-icon" /></span></span>
+              <span className="block">Great <span className="whitespace-nowrap"><span className="hero-title-accent">software.</span> <Sparkles aria-hidden className="hero-title-icon text-cyan-400/70" /></span></span>
+            </h1>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:text-base text-slate-300">
+              <span className="inline-flex items-center gap-2"><span aria-hidden className="hero-status-dot" />Full Stack Developer at Faros</span>
+              <span className="inline-flex items-center gap-2 text-slate-400"><MapPin size={16} aria-hidden />Belgium</span>
+            </div>
+            <p className="mt-5 max-w-md text-base leading-relaxed text-slate-400">
+              I turn complex problems into things that just work.
+              From the first interface to the last API endpoint.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center gap-3 text-sm">
+              <a href="#projects" className="group inline-flex items-center gap-3 rounded-lg bg-cyan-300 px-4 py-3 font-semibold text-slate-950 transition-colors hover:bg-cyan-200">
+                Explore my work<ArrowUpRight size={19} aria-hidden className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 motion-reduce:transform-none" />
+              </a>
+              <a href="mailto:hello@driesbielen.be" className="inline-flex items-center gap-3 rounded-lg border border-white/15 px-4 py-3 text-slate-200 transition-colors hover:border-white/40 hover:bg-white/5">Let's talk<ArrowUpRight size={18} aria-hidden /></a>
+              <span className="ml-2 flex flex-wrap items-center gap-5 text-slate-400">
+                <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-2 hover:text-white"><FontAwesomeIcon icon={faGithub} />GitHub</a>
+                <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-2 hover:text-white"><FontAwesomeIcon icon={faLinkedin} />LinkedIn</a>
+                <a href={getCvUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 py-2 hover:text-white"><FileText size={15} aria-hidden />CV<ArrowUpRight size={12} aria-hidden /></a>
+              </span>
             </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4 text-white">
-            Dries Bielen
-          </h1>
-          <p className="text-xl sm:text-2xl md:text-3xl text-cyan-400 mb-3 sm:mb-4">
-            Fullstack Developer
-          </p>
-          <div className="flex items-center justify-center gap-2 text-slate-400 mb-6 sm:mb-8">
-            <MapPin className="w-5 h-5" />
-            <span>Limburg | Belgium</span>
+
+          <div className="hero-portrait-wrap">
+            <span aria-hidden className="hero-portrait-glow" />
+            <span aria-hidden className="hero-portrait-outline" />
+            <figure className="hero-portrait">
+              <img src="/image/dries.jpeg" alt="Dries Bielen" width="886" height="886" fetchPriority="high" className="h-full w-full object-cover" />
+            </figure>
+            <div className="hero-portrait-label" aria-hidden><span className="text-cyan-300">&lt;/&gt;</span> Built with curiosity.</div>
+            <div className="hero-portrait-chip" aria-hidden><span className="hero-status-dot" />Currently @ Faros</div>
           </div>
         </div>
-        
-        <p className="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-          Passionate about crafting elegant solutions to complex problems. 
-          Specialized in building modern web applications with cutting-edge technologies.
-        </p>
-        
-        <div className="flex flex-wrap gap-3 sm:gap-4 justify-center items-center">
-          <a href="mailto:hello@driesbielen.be" aria-label="Contact Me" title="Contact Me" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <Mail className="w-6 h-6 text-cyan-400" />
-          </a>
-          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-cyan-400" />
-          </a>
-          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-cyan-400" />
-          </a>
-          <a href={getCvUrl()} target="_blank" rel="noopener noreferrer" aria-label="CV" title="CV" className="p-3 bg-transparent hover:bg-cyan-500/20 border border-slate-800 hover:border-cyan-500/50 rounded-full transition-all">
-            <FileText className="w-6 h-6 text-cyan-400" />
-          </a>
+
+        <div className="flex flex-wrap items-center justify-between gap-6 border-t border-white/10 pt-6">
+          <nav aria-label="Contents" className="flex flex-wrap gap-x-6 gap-y-4">
+            {sections.map(({ id, label }, index) => (
+              <a key={id} href={`#${id}`} className="py-1 text-sm text-slate-400 transition-colors hover:text-white"><span className="mr-2 font-mono text-[10px] text-cyan-400">0{index + 1}</span>{label}</a>
+            ))}
+          </nav>
+          <a href="#about" aria-label="Scroll to About" className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-widest text-slate-500 hover:text-cyan-300">Scroll to discover<ArrowDown size={15} aria-hidden /></a>
         </div>
-
-        <div className="mt-8 sm:mt-6 w-full">
-          <style>{`
-              .tech-container{overflow:hidden}
-              .tech-track{display:flex;gap:0.75rem;align-items:center;animation:techScroll 18s linear infinite}
-              .tech-track > *{flex-shrink:0}
-              .tech-item{display:inline-flex;align-items:center;gap:0.5rem;padding:0.5rem 1rem;border-radius:9999px;border:1px solid rgba(148,163,184,0.06);background:rgba(2,6,23,0.5);color:rgba(241,245,249,0.9);font-weight:600}
-              .tech-item svg{width:1.5rem;height:1.5rem}
-              @keyframes techScroll{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}
-            `}</style>
-
-          {/* tech icons use Font Awesome icons — mirror TechStack markup/colors */}
-          {(() => {
-            const icons = [
-              { name: 'React', icon: faReact },
-              { name: 'Angular', icon: faAngular },
-              { name: 'Vue', icon: faVuejs },
-              { name: 'TypeScript', icon: faCode },
-              { name: 'Java', icon: faJava },
-              { name: 'MySQL', icon: faDatabase },
-              { name: 'Docker', icon: faDocker },
-              { name: 'Tailwind', icon: faCode }
-            ];
-
-            return (
-              <div className="tech-container">
-                <div className="tech-track" aria-hidden>
-                  {icons.map((it) => (
-                    <div key={it.name} className="tech-item">
-                      <div className="text-cyan-400 text-2xl">
-                        <FontAwesomeIcon icon={it.icon} />
-                      </div>
-                      <span className="text-sm text-slate-100">{it.name}</span>
-                    </div>
-                  ))}
-
-                  {icons.map((it) => (
-                    <div key={it.name + '-dup'} className="tech-item">
-                      <div className="text-cyan-400 text-2xl">
-                        <FontAwesomeIcon icon={it.icon} />
-                      </div>
-                      <span className="text-sm text-slate-100">{it.name}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            );
-          })()}
-        </div>
-
       </div>
-
     </section>
   );
 }

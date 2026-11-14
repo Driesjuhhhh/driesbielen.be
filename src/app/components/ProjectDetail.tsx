@@ -16,8 +16,8 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="fixed inset-0 pointer-events-none" />
       <div className="fixed inset-0 bg-transparent backdrop-blur-sm pointer-events-none" />
-      <div className="px-4 py-8 relative z-10">
-        <div className="max-w-5xl mx-auto">
+      <div className="px-5 sm:px-8 py-8 relative z-10">
+        <div className="site-content">
           <div className="bg-transparent rounded-xl border p-6">
           {/* Close Button */}
           <div className="flex justify-end mb-4">

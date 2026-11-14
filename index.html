@@ -52,9 +52,10 @@
       window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
       plausible.init()
     </script>
-    <!-- Favicon and touch icon (uses existing public/image/dries.jpeg) -->
-    <link rel="icon" href="/image/dries.jpeg" />
-    <link rel="apple-touch-icon" href="/image/dries.jpeg" />
+    <!-- one dark-tile icon: readable on light and dark tabs, no media query (Safari ignores it) -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" sizes="180x180" href="/brand/favicon.png" />
+    <link rel="apple-touch-icon" href="/brand/favicon.png" />
     <!-- Google tag (gtag.js) -->
     <script
       async

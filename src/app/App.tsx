@@ -2,9 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from '@/app/components/Header';
 import { Hero } from '@/app/components/Hero';
 import { About } from '@/app/components/About';
-import { Stats } from '@/app/components/Stats';
 import { Skills } from '@/app/components/Skills';
-import { TechStack } from '@/app/components/TechStack';
 import { Projects } from '@/app/components/Projects';
 import { Footer } from '@/app/components/Footer';
 import { NotFound } from '@/app/components/NotFound';
@@ -55,8 +53,7 @@ function Home() {
       <Header />
       <Hero />
       <About />
-      <Stats />
-      <TechStack />
+      <Skills />
       <Projects />
       <Footer />
       {/* AI chat temporarily disabled (button, greeting popup, and chat window). */}

@@ -1,61 +1,46 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import type React from 'react'
-import { Mail } from 'lucide-react'
+import { useEffect, useState } from 'react';
 
-type SectionClickHandler = (event: React.MouseEvent<HTMLAnchorElement>) => void
+export const sections = [
+  { id: 'about', label: 'About' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'contact', label: 'Contact' },
+];
 
 export function Header() {
-  const handleSectionClick = (sectionId: string): SectionClickHandler => (event) => {
-    event.preventDefault()
-    const target = document.getElementById(sectionId)
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-  }
+  const [visible, setVisible] = useState(false);
+  const [active, setActive] = useState('');
+
+  useEffect(() => {
+    const updateNavigation = () => {
+      setVisible(window.scrollY > 80);
+      const current = sections.find(({ id }) => {
+        const bounds = document.getElementById(id)?.getBoundingClientRect();
+        return bounds && bounds.top <= window.innerHeight * 0.35 && bounds.bottom > window.innerHeight * 0.35;
+      });
+      setActive(current?.id ?? '');
+    };
+    updateNavigation();
+    window.addEventListener('scroll', updateNavigation, { passive: true });
+    window.addEventListener('resize', updateNavigation);
+    return () => {
+      window.removeEventListener('scroll', updateNavigation);
+      window.removeEventListener('resize', updateNavigation);
+    };
+  }, []);
 
   return (
-    <header className="w-full text-white border-b border-slate-800 sticky top-0 z-50" style={{ background: 'linear-gradient(120deg, rgb(9, 15, 44) 0%, rgb(5, 10, 30) 100%)' }}>
-      <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a href="#" className="text-white font-bold text-lg flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full overflow-hidden bg-gradient-to-br from-cyan-400 to-teal-500 flex items-center justify-center text-slate-900 font-bold shadow-md shadow-cyan-500/30">
-            <img
-              src="/image/dries.jpeg"
-              alt="Dries Bielen"
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
-                target.style.display = 'none'
-                const parent = target.parentElement
-                if (parent) {
-                  const fallback = document.createElement('div')
-                  fallback.textContent = 'DB'
-                  fallback.className = 'w-full h-full flex items-center justify-center text-base font-bold text-slate-900'
-                  parent.appendChild(fallback)
-                }
-              }}
-            />
-          </div>
-          <span className="hidden sm:inline">Dries Bielen</span>
-        </a>
-
-        <nav aria-label="Main navigation" className="flex items-center gap-4 text-slate-300">
-          <a href="#about" onClick={handleSectionClick('about')} className="hover:text-white">About</a>
-          <a href="#projects" onClick={handleSectionClick('projects')} className="hover:text-white">Projects</a>
-          <a href="#techstack" onClick={handleSectionClick('techstack')} className="hover:text-white">Tech</a>
-          <a href="#contact" onClick={handleSectionClick('contact')} className="hover:text-white hidden md:inline">Contact</a>
-          <a href="mailto:hello@driesbielen.be" className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-md bg-cyan-500 text-slate-900 font-medium">
-            <Mail className="w-4 h-4" /> Email
-          </a>
-
-          <a href="https://github.com/driesjuhhhh" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="GitHub">
-            <FontAwesomeIcon icon={faGithub} className="w-5 h-5 text-cyan-400" />
-          </a>
-          <a href="https://www.linkedin.com/in/driesbielen/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-transparent hover:bg-cyan-500/10 border border-slate-800" aria-label="LinkedIn">
-            <FontAwesomeIcon icon={faLinkedin} className="w-5 h-5 text-cyan-400" />
-          </a>
+    <header inert={!visible} aria-hidden={!visible} className={`site-header px-5 sm:px-8 fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#05070f]/80 text-white backdrop-blur-xl transition-transform duration-300 motion-reduce:transition-none ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+      <div className="site-content py-4 flex flex-wrap items-center justify-between gap-3">
+        <a href="#home" aria-label="Dries Bielen — home" className="inline-flex items-center py-2"><img src="/brand/logo-white.png" alt="DRS" width="112" height="27" className="h-auto w-28" /></a>
+        <nav aria-label="Main navigation" className="flex w-full sm:w-auto items-center justify-between gap-1 sm:gap-2">
+          {sections.map(({ id, label }, index) => (
+            <a key={id} href={`#${id}`} aria-current={active === id ? 'location' : undefined} className={`rounded-md px-2 sm:px-3 py-2 text-sm transition-colors hover:bg-white/5 hover:text-white ${active === id ? 'bg-white/5 text-white' : 'text-neutral-400'}`}>
+              <span className="mr-1.5 font-mono text-[10px] text-cyan-400">0{index + 1}</span>{label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
-  )
+  );
 }

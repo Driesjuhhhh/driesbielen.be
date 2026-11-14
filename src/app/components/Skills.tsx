@@ -1,4 +1,3 @@
-import { Card } from '@/app/components/ui/card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faReact,
@@ -32,83 +31,59 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
-const skills = [
-  // Frontend
-  { name: 'HTML', icon: faHtml5 },
-  { name: 'CSS', icon: faCss3Alt },
-  { name: 'Tailwind', icon: faCode },
-  { name: 'Bootstrap', icon: faBootstrap },
-  { name: 'Javascript', icon: faCode },
-  { name: 'Typescript', icon: faCode },
-  { name: 'React', icon: faReact },
-  { name: 'Vue', icon: faVuejs },
-  { name: 'Angular', icon: faAngular },
+import { SectionHeading } from './SectionHeading';
 
-  // Backend / APIs
-  { name: 'NodeJS', icon: faNodeJs },
-  { name: 'RestAPI', icon: faServer },
-  { name: 'Java', icon: faJava },
-  { name: 'Spring Boot', icon: faLeaf },
-  { name: 'PHP', icon: faPhp },
-  { name: 'Python', icon: faPython },
-  { name: 'Java Websockets', icon: faCode },
-  { name: '.NET', icon: faMicrosoft },
-
-  // Datastores
-  { name: 'MongoDB', icon: faDatabase },
-  { name: 'MySQL', icon: faDatabase },
-  { name: 'Firebase', icon: faCloud },
-  { name: 'Appwrite', icon: faCloud },
-
-  // DevOps / infra
-  { name: 'Docker', icon: faDocker },
-  { name: 'Azure', icon: faMicrosoft },
-  { name: 'AWS', icon: faAws },
-  { name: 'Git', icon: faGitAlt },
-  { name: 'Github actions', icon: faGithub },
-  { name: 'npm', icon: faNpm },
-  { name: 'Linux', icon: faLinux },
-  { name: 'macOS', icon: faApple },
-  { name: 'Windows', icon: faWindows },
-
-  // Mobile / other
-  { name: 'Flutter', icon: faCode },
-  { name: 'React Native', icon: faReact },
-
-  // Soft / process
-  { name: 'Agile/Scrum', icon: faToolbox },
-  { name: 'Project Management', icon: faProjectDiagram },
-  { name: 'Code Review', icon: faComments },
-  { name: 'Communication', icon: faComments }
+const groups = [
+  { title: 'Languages', skills: [
+    { name: 'JavaScript', icon: faCode }, { name: 'TypeScript', icon: faCode },
+    { name: 'Java', icon: faJava }, { name: 'PHP', icon: faPhp },
+    { name: 'Python', icon: faPython }, { name: 'HTML', icon: faHtml5 }, { name: 'CSS', icon: faCss3Alt },
+  ] },
+  { title: 'Frameworks & libraries', skills: [
+    { name: 'React', icon: faReact }, { name: 'Vue', icon: faVuejs }, { name: 'Angular', icon: faAngular },
+    { name: 'Node.js', icon: faNodeJs }, { name: 'Spring Boot', icon: faLeaf }, { name: '.NET', icon: faMicrosoft },
+    { name: 'Tailwind CSS', icon: faCode }, { name: 'Bootstrap', icon: faBootstrap },
+    { name: 'Flutter', icon: faCode }, { name: 'React Native', icon: faReact },
+  ] },
+  { title: 'Databases & APIs', skills: [
+    { name: 'MongoDB', icon: faDatabase }, { name: 'MySQL', icon: faDatabase },
+    { name: 'Firebase', icon: faCloud }, { name: 'Appwrite', icon: faCloud },
+    { name: 'REST APIs', icon: faServer }, { name: 'Java WebSockets', icon: faCode },
+  ] },
+  { title: 'Tools & platforms', skills: [
+    { name: 'Git', icon: faGitAlt }, { name: 'GitHub Actions', icon: faGithub },
+    { name: 'Docker', icon: faDocker }, { name: 'Azure', icon: faMicrosoft }, { name: 'AWS', icon: faAws },
+    { name: 'npm', icon: faNpm }, { name: 'Linux', icon: faLinux },
+    { name: 'macOS', icon: faApple }, { name: 'Windows', icon: faWindows },
+  ] },
+  { title: 'Collaboration', skills: [
+    { name: 'Agile / Scrum', icon: faToolbox }, { name: 'Project Management', icon: faProjectDiagram },
+    { name: 'Code Review', icon: faComments }, { name: 'Communication', icon: faComments },
+  ] },
 ];
-
-// Some icons above may not exist in the imported set (placeholders). Provide fallbacks.
-function getIcon(icon: any) {
-  return icon || faCode;
-}
 
 export function Skills() {
   return (
-    <section className="py-20 md:py-32 px-4 bg-transparent" id="skills">
-      <div data-aos="fade-up" className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-4 text-white">Skills</h2>
-        <p className="text-center text-slate-400 mb-8 max-w-2xl mx-auto">Everything I have ever used</p>
-
-        <Card className="p-6 bg-transparent border-slate-700">
-          <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-6 justify-items-center">
-            {skills.map((s) => (
-              <div
-                key={s.name}
-                className="flex flex-col items-center "
-              >
-                <div className="w-16 h-16 rounded-lg bg-slate-900 flex items-center justify-center text-cyan-400 text-2xl shadow-sm group-hover:scale-105 transition-transform transition-shadow transition-transform hover:shadow-xl hover:-translate-y-1 hover:shadow-cyan-400/20">
-                  <FontAwesomeIcon icon={getIcon(s.icon)} />
-                </div>
-                <span className="mt-2 text-sm text-slate-200 text-center">{s.name}</span>
-              </div>
-            ))}
-          </div>
-        </Card>
+    <section className="viewport-section py-20 md:py-32 px-5 sm:px-8" id="skills" aria-labelledby="skills-title">
+      <div data-aos="fade-up" className="site-content">
+        <span id="techstack" className="block" />
+        <SectionHeading id="skills-title" index="02" label="Skills">What I build <span className="accent-text">with.</span></SectionHeading>
+        <div className="border-t border-white/10">
+          {groups.map(group => (
+            <div key={group.title} className="grid gap-5 border-b border-white/10 py-7 md:grid-cols-[190px_1fr] md:gap-6">
+              <h3 className="flex items-baseline gap-3 text-sm font-medium text-neutral-300">
+                {group.title}<span className="font-mono text-xs text-neutral-600">{group.skills.length}</span>
+              </h3>
+              <ul className="flex flex-wrap gap-2.5">
+                {group.skills.map(skill => (
+                  <li key={skill.name} className="group flex items-center gap-2.5 rounded-lg border border-white/10 bg-white/[0.025] px-3 py-2 text-sm text-neutral-300 transition-all hover:-translate-y-0.5 hover:border-cyan-300/40 hover:bg-cyan-300/[0.06] hover:text-white hover:shadow-[0_8px_24px_rgb(34_211_238/0.12)] motion-reduce:transform-none">
+                    <FontAwesomeIcon icon={skill.icon} className="w-4 text-neutral-400 transition-colors group-hover:text-cyan-300" />{skill.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

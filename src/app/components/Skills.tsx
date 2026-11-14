@@ -27,7 +27,9 @@ import {
   faCloud,
   faToolbox,
   faProjectDiagram,
-  faComments
+  faComments,
+  faRobot,
+  faWandMagicSparkles
 } from '@fortawesome/free-solid-svg-icons';
 import { faLeaf } from '@fortawesome/free-solid-svg-icons';
 
@@ -55,6 +57,10 @@ const groups = [
     { name: 'Docker', icon: faDocker }, { name: 'Azure', icon: faMicrosoft }, { name: 'AWS', icon: faAws },
     { name: 'npm', icon: faNpm }, { name: 'Linux', icon: faLinux },
     { name: 'macOS', icon: faApple }, { name: 'Windows', icon: faWindows },
+  ] },
+  { title: 'AI tools', skills: [
+    { name: 'Codex', icon: faCode }, { name: 'Claude', icon: faWandMagicSparkles },
+    { name: 'Grok', icon: faRobot }, { name: 'Copilot', icon: faGithub },
   ] },
   { title: 'Collaboration', skills: [
     { name: 'Agile / Scrum', icon: faToolbox }, { name: 'Project Management', icon: faProjectDiagram },

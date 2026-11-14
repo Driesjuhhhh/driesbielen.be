@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { featuredProjects, additionalProjects } from '@/app/data/projects';
 import { SectionHeading } from './SectionHeading';
+import { ProjectDetail } from './ProjectDetail';
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
+import type { Project } from '@/app/data/projects';
 
 // logos look better than the stock photos in project.image
 const logos: Record<string, { src: string; invert?: boolean }> = {
@@ -10,6 +12,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
 };
 
 export function Projects() {
+  const [open, setOpen] = useState<Project | null>(null);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
@@ -42,7 +45,7 @@ export function Projects() {
             {featuredProjects.map((project, index) => {
               const logo = logos[project.slug];
               return (
-                <Link key={project.slug} to={`/project/${project.slug}`} className="project-card group">
+                <button key={project.slug} type="button" onClick={() => setOpen(project)} className="project-card group text-left">
                   <div className="project-card-media">
                     {logo
                       ? <img src={logo.src} alt="" loading="lazy" className={`project-card-logo ${logo.invert ? 'invert' : ''}`} />
@@ -59,7 +62,7 @@ export function Projects() {
                       {project.tags.map(tag => <li key={tag} className="rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-slate-300">{tag}</li>)}
                     </ul>
                   </div>
-                </Link>
+                </button>
               );
             })}
           </div>
@@ -74,10 +77,11 @@ export function Projects() {
             <div ref={scrollRef} className="overflow-x-auto pt-2 pb-4 -mx-4 px-4">
               <div className="flex gap-6" style={{ width: 'max-content' }}>
               {additionalProjects.map((project, index) => (
-                <Link
+                <button
                   key={index}
-                  to={`/project/${project.slug}`}
-                  className="flex-shrink-0"
+                  type="button"
+                  onClick={() => setOpen(project)}
+                  className="flex-shrink-0 text-left"
                   style={{ width: '320px' }}
                 >
                   <div className="project-card group h-full">
@@ -95,7 +99,7 @@ export function Projects() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </button>
               ))}
               </div>
             </div>
@@ -139,7 +143,13 @@ export function Projects() {
         </div>
       </section>
 
-      {/* Project Detail Modal: removed in favor of dedicated project page */}
+      <Dialog open={!!open} onOpenChange={o => !o && setOpen(null)}>
+        <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl overflow-y-auto border-white/10 bg-slate-950 p-6 text-white sm:max-w-3xl sm:p-10">
+          <DialogTitle className="sr-only">{open?.title}</DialogTitle>
+          <DialogDescription className="sr-only">{open?.description}</DialogDescription>
+          {open && <ProjectDetail project={open} />}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }

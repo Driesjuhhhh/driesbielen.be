@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { ProjectDetail } from './ProjectDetail';
 import { AnimatedBackground } from '@/app/components/AnimatedBackground';
 import { getProjectBySlug } from '@/app/data/projects';
@@ -7,7 +7,6 @@ import { NotFound } from './NotFound';
 import { Seo } from './Seo';
 
 export default function ProjectPage() {
-  const navigate = useNavigate();
   const { name } = useParams();
   const project = useMemo(() => getProjectBySlug(name), [name]);
 
@@ -40,7 +39,12 @@ export default function ProjectPage() {
         }}
       />
       <AnimatedBackground />
-      <ProjectDetail project={project} onClose={() => navigate('/#projects')} />
+      <main className="viewport-section px-5 sm:px-8 py-12 md:py-20">
+        <div className="site-content">
+          <Link to="/#projects" className="mb-10 inline-block font-mono text-xs uppercase tracking-widest text-slate-400 hover:text-cyan-300">← Back to projects</Link>
+          <ProjectDetail project={project} />
+        </div>
+      </main>
     </div>
   );
 }

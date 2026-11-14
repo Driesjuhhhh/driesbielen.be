@@ -1,81 +1,32 @@
-import { X, ExternalLink, Calendar, Users, Code2, Link } from 'lucide-react';
+import { ExternalLink, Calendar, Users, Code2, Link } from 'lucide-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone, faLink as faSolidLink } from '@fortawesome/free-solid-svg-icons';
-import { Button } from '@/app/components/ui/button';
-import { Badge } from '@/app/components/ui/badge';
 import type { Project } from '@/app/data/projects';
 
-interface ProjectDetailProps {
-  project: Project;
-  onClose: () => void;
-}
+const btn = 'inline-flex items-center gap-2 rounded-lg border border-cyan-300/40 bg-cyan-400/10 px-4 py-2 font-mono text-xs uppercase tracking-widest text-cyan-200 transition-colors hover:bg-cyan-400/20';
+const panel = 'rounded-2xl border border-white/10 bg-white/[0.02] p-6';
+const label = 'font-mono text-[10px] sm:text-xs uppercase tracking-widest text-slate-400';
 
-export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+// Content only: rendered inside the project popup and on the /project/:name page.
+export function ProjectDetail({ project }: { project: Project }) {
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="fixed inset-0 pointer-events-none" />
-      <div className="fixed inset-0 bg-transparent backdrop-blur-sm pointer-events-none" />
-      <div className="px-5 sm:px-8 py-8 relative z-10">
-        <div className="site-content">
-          <div className="bg-transparent rounded-xl border p-6">
-          {/* Close Button */}
-          <div className="flex justify-end mb-4">
-            <Button
-              onClick={onClose}
-              variant="outline"
-              size="icon"
-              className="border-slate-700 text-slate-400 hover:bg-slate-800 hover:text-white"
-            >
-              <X className="w-5 h-5" />
-            </Button>
-          </div>
-
-
-          {/* Project Header */}
-          <div className="mb-8">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              {project.title}
-            </h1>
-            <p className="text-xl text-slate-300 mb-6">
-              {project.description}
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tags.map((tag, index) => (
-                <Badge 
-                  key={index} 
-                  variant="outline" 
-                  className="border-cyan-500/30 text-cyan-400 text-sm"
-                >
-                  {tag}
-                </Badge>
-              ))}
-            </div>
-
-            <div className="flex gap-4">
-              {project.github && (
-                <Button 
-                  className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                  onClick={() => window.open(project.github, '_blank')}
-                >
-                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
-                  View Code
-                </Button>
-              )}
-              {project.demo && (
-                <Button 
-                  className="gap-2 bg-cyan-500 hover:bg-cyan-600 text-slate-900"
-                  onClick={() => window.open(project.demo, '_blank')}
-                >
-                  <ExternalLink className="w-5 h-5" />
-                  Live Demo
-                </Button>
-              )}
-            </div>
-            {project.reference && (
-              <div className="mt-4">
-                <span className="text-sm text-slate-400 mr-2 flex items-center gap-2">
+    <div>
+      <p className={`mb-4 flex items-center gap-3 ${label}`}>
+        <span className="text-cyan-400">[Project]</span>{project.duration}<span aria-hidden className="h-px w-12 bg-cyan-400/40" />
+      </p>
+      <h1 className="section-title">{project.title}</h1>
+      <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-400">{project.description}</p>
+      <ul className="mt-5 flex flex-wrap gap-2">
+        {project.tags.map(tag => <li key={tag} className="rounded-md border border-white/10 px-2 py-1 font-mono text-[11px] text-slate-300">{tag}</li>)}
+      </ul>
+      <div className="mt-6 flex flex-wrap gap-3">
+        {project.github && <a href={project.github} target="_blank" rel="noreferrer" className={btn}><FontAwesomeIcon icon={faGithub} className="h-4 w-4" />View code</a>}
+        {project.demo && <a href={project.demo} target="_blank" rel="noreferrer" className={btn}><ExternalLink className="h-4 w-4" />Live demo</a>}
+      </div>
+      {project.reference && (
+              <div className="mt-5">
+                <span className="mr-2 flex font-mono text-[10px] sm:text-xs uppercase tracking-widest text-slate-400 items-center gap-2">
                   <Link className="w-4 h-4 text-cyan-400" />
                   Reference
                 </span>
@@ -129,86 +80,33 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                 </div>
               </div>
             )}
+
+      <div className="my-8 grid gap-4 md:grid-cols-3">
+        {([[Calendar, 'Duration', project.duration], [Users, 'Team size', project.team], [Code2, 'My role', project.role]] as const).map(([Icon, name, value]) => value && (
+          <div key={name} className={panel}>
+            <p className={`mb-2 flex items-center gap-2 ${label}`}><Icon className="h-4 w-4 text-cyan-400" />{name}</p>
+            <p className="font-semibold text-white">{value}</p>
           </div>
-
-          {/* Project Info Cards */}
-          <div className="grid md:grid-cols-3 gap-4 mb-8">
-            {project.duration && (
-              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Calendar className="w-5 h-5 text-cyan-400" />
-                  <span className="text-sm text-slate-400">Duration</span>
-                </div>
-                <p className="text-white font-semibold">{project.duration}</p>
-              </div>
-            )}
-            {project.team && (
-              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Users className="w-5 h-5 text-cyan-400" />
-                  <span className="text-sm text-slate-400">Team Size</span>
-                </div>
-                <p className="text-white font-semibold">{project.team}</p>
-              </div>
-            )}
-            {project.role && (
-              <div className="bg-transparent border border-slate-800 rounded-lg p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <Code2 className="w-5 h-5 text-cyan-400" />
-                  <span className="text-sm text-slate-400">My Role</span>
-                </div>
-                <p className="text-white font-semibold">{project.role}</p>
-              </div>
-            )}
-          </div>
-
-          {/* Full Description */}
-          {project.fullDescription && (
-            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
-              <h2 className="text-2xl font-semibold text-cyan-400 mb-4">About the Project</h2>
-              <p className="text-slate-300 leading-relaxed whitespace-pre-line">
-                {project.fullDescription}
-              </p>
-            </div>
-          )}
-
-          {/* Features */}
-          {project.features && project.features.length > 0 && (
-            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
-              <h2 className="text-2xl font-semibold text-cyan-400 mb-4">Key Features</h2>
-              <ul className="space-y-3">
-                {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-cyan-400 mt-1">✓</span>
-                    <span className="text-slate-300">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Challenges */}
-          {project.challenges && (
-            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
-              <h2 className="text-2xl font-semibold text-cyan-400 mb-4">Challenges & Solutions</h2>
-              <p className="text-slate-300 leading-relaxed whitespace-pre-line">
-                {project.challenges}
-              </p>
-            </div>
-          )}
-
-          {/* Learnings */}
-          {project.learnings && (
-            <div className="bg-transparent border border-slate-800 rounded-lg p-6 mb-6">
-              <h2 className="text-2xl font-semibold text-cyan-400 mb-4">What I Learned</h2>
-              <p className="text-slate-300 leading-relaxed whitespace-pre-line">
-                {project.learnings}
-              </p>
-            </div>
-          )}
-          </div>
-        </div>
+        ))}
       </div>
+
+      {([['About the project', project.fullDescription], ['Challenges & solutions', project.challenges], ['What I learned', project.learnings]] as const).map(([title, text]) => text && (
+        <div key={title} className={`${panel} mb-4`}>
+          <h2 className="mb-3 text-xl font-bold tracking-tight text-white">{title}</h2>
+          <p className="whitespace-pre-line leading-relaxed text-slate-400">{text}</p>
+        </div>
+      ))}
+
+      {project.features && project.features.length > 0 && (
+        <div className={panel}>
+          <h2 className="mb-3 text-xl font-bold tracking-tight text-white">Key features</h2>
+          <ul className="space-y-3">
+            {project.features.map((f, i) => (
+              <li key={i} className="flex items-start gap-3"><span className="text-cyan-400">✓</span><span className="text-slate-400">{f}</span></li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

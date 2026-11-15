@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowUpRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { featuredProjects, additionalProjects } from '@/app/data/projects';
 import { SectionHeading } from './SectionHeading';
 import { ProjectDetail } from './ProjectDetail';
-import { Dialog, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
+import { Dialog, DialogClose, DialogContent, DialogTitle, DialogDescription } from './ui/dialog';
 import type { Project } from '@/app/data/projects';
 
 // logos look better than the stock photos in project.image
@@ -144,7 +144,9 @@ export function Projects() {
       </section>
 
       <Dialog open={!!open} onOpenChange={o => !o && setOpen(null)}>
-        <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-3xl overflow-y-auto border-white/10 bg-slate-950 p-6 text-white sm:max-w-3xl sm:p-10">
+        <DialogContent className="[&>button:last-child]:hidden h-dvh max-h-none w-full max-w-none rounded-none border-0 overflow-y-auto bg-slate-950 p-6 text-white sm:h-auto sm:max-h-[90vh] sm:w-[calc(100%-2rem)] sm:max-w-3xl sm:rounded-lg sm:border sm:border-white/10 sm:p-10">
+          {/* Sticky so the X stays visible while scrolling; replaces the default (scrolling) X */}
+          <DialogClose aria-label="Close" className="sticky top-0 z-10 -mb-12 justify-self-end flex h-10 w-10 items-center justify-center rounded-lg border border-cyan-300/40 bg-slate-950/80 text-cyan-200 backdrop-blur transition-colors hover:bg-cyan-400/20"><X className="h-4 w-4" /></DialogClose>
           <DialogTitle className="sr-only">{open?.title}</DialogTitle>
           <DialogDescription className="sr-only">{open?.description}</DialogDescription>
           {open && <ProjectDetail project={open} />}
